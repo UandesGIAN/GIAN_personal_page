@@ -1,0 +1,9 @@
+{
+  "name": "mi-pagina-personal",
+  "version": "1.0.0",
+  "license": "GIAN",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41"
+  }
+}

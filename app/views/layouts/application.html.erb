@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <title>GIAN WEBPAGE</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header>
+    <nav class="bg-gray-800 p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <%= link_to root_path do %>
+            <%= image_tag "GIANlogo.png", alt: "Mi Logo", class: "rounded-full h-16 w-16 mr-4" %>
+          <% end %>
+          <%= link_to "GIAN", root_path, class: "text-white text-xl font-bold" %>
+        </div>
+
+        <ul class="flex space-x-4">
+          <li><%= link_to "Inicio", root_path, class: "text-gray-300 hover:text-white" %></li>
+          <li><%= link_to "Sobre GIAN", about_me_path, class: "text-gray-300 hover:text-white" %></li>
+          <li><%= link_to "PROYECTOS", proyectos_path, class: "text-gray-300 hover:text-white" %></li>
+          <li><%= link_to "COMPUTACIÓN", computacion_path, class: "text-gray-300 hover:text-white" %></li>
+          <li><%= link_to "FILOSOFÍA", filosofia_path, class: "text-gray-300 hover:text-white" %></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
+  </footer>
+</body>
+</html>
