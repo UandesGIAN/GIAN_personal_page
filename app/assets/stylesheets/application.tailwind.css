@@ -85,3 +85,29 @@
 .animated-element-fade-in {
   opacity: 0;
 }
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.rotate-icon {
+  transition: transform 0s ease;
+}
+
+.rotate-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.computacion-home {
+  color: #008000;
+  text-decoration: underline;
+}
+
+.filosofia-home {
+  color: #d85c14;
+  text-decoration: underline;
+}
+
+#show-navbar {
+  display: none;
+}
