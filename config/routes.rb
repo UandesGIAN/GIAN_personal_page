@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get "pages/proyectos"
   get "pages/filosofia"
   get "pages/computacion"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
@@ -13,11 +12,10 @@ Rails.application.routes.draw do
   # Render dynamic PWA files from app/views/pwa/*
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
-  
-  root 'pages#home'
-  get 'about_me', to: 'pages#about_me'
-  get 'proyectos', to: 'pages#proyectos'
-  get 'filosofia', to: 'pages#filosofia'
-  get 'computacion', to: 'pages#computacion'
 
+  root "pages#home"
+  get "about_me", to: "pages#about_me"
+  get "proyectos(/:section(/:sub_section))", to: "pages#proyectos", as: "proyectos_subsection"
+  get "computacion(/:section(/:sub_section))", to: "pages#computacion", as: "computacion_subsection"
+  get "filosofia(/:section(/:sub_section))", to: "pages#filosofia", as: "filosofia_subsection"
 end

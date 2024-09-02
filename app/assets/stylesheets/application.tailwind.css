@@ -36,6 +36,15 @@
   .text-shadow-gian {
     text-shadow: 0px 0px 20px rgba(14, 149, 167, 0.6);
   }
+  .text-shadow-proyectos {
+    text-shadow: 0px 2px 20px rgba(14, 80, 167, 0.6);
+  }
+  .text-mmd {
+    color: rgb(38, 186, 245);
+  }
+  .text-experimentos {
+    color: rgb(153, 88, 28);
+  }
 
   .banner-container {
     width: 100%;
@@ -46,12 +55,10 @@
 /* Textos y efectos customs */
 .computacion-home {
   color: #008000;
-  text-decoration: underline;
 }
 
 .filosofia-home {
   color: #d85c14;
-  text-decoration: underline;
 }
 
 /* Navbar */

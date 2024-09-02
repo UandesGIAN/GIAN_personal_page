@@ -11,6 +11,7 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
@@ -31,17 +32,17 @@
         <div id="overlay" class="hidden fixed top-14 right-2 bg-gray-800 text-white p-2 rounded-lg shadow-lg z-50">
           <p><%= link_to "Inicio", root_path, class: "text-gray-300 hover:text-white" %></p>
           <p><%= link_to "Sobre GIAN", about_me_path, class: "text-gray-300 hover:text-white" %></p>
-          <p><%= link_to "PROYECTOS", proyectos_path, class: "text-gray-300 hover:text-white" %></p>
-          <p><%= link_to "COMPUTACIÓN", computacion_path, class: "text-gray-300 hover:text-white" %></p>
-          <p><%= link_to "FILOSOFÍA", filosofia_path, class: "text-gray-300 hover:text-white" %></p>
+          <p><%= link_to "PROYECTOS", proyectos_subsection_path, class: "text-gray-300 hover:text-white" %></p>
+          <p><%= link_to "COMPUTACIÓN", computacion_subsection_path, class: "text-gray-300 hover:text-white" %></p>
+          <p><%= link_to "FILOSOFÍA", filosofia_subsection_path, class: "text-gray-300 hover:text-white" %></p>
         </div>
 
         <ul class="hidden md:block space-x-4 mt-4 md:mt-0 md:flex-row flex-col">
           <li><%= link_to "Inicio", root_path, class: "text-gray-300 hover:text-white" %></li>
           <li><%= link_to "Sobre GIAN", about_me_path, class: "text-gray-300 hover:text-white" %></li>
-          <li><%= link_to "PROYECTOS", proyectos_path, class: "text-gray-300 hover:text-white" %></li>
-          <li><%= link_to "COMPUTACIÓN", computacion_path, class: "text-gray-300 hover:text-white" %></li>
-          <li><%= link_to "FILOSOFÍA", filosofia_path, class: "text-gray-300 hover:text-white" %></li>
+          <li><%= link_to "PROYECTOS", proyectos_subsection_path, class: "text-gray-300 hover:text-white" %><li>
+          <li><%= link_to "COMPUTACIÓN", computacion_subsection_path, class: "text-gray-300 hover:text-white" %></li>
+          <li><%= link_to "FILOSOFÍA", filosofia_subsection_path, class: "text-gray-300 hover:text-white" %></li>
         </ul>
 
       </div>

@@ -1,0 +1,78 @@
+<div id="movable-button" class="fixed left-5 p-3 bg-gray-500 opacity-55 text-white rounded-full cursor-pointer">
+  Índice
+</div>
+
+<div id="dropdown-menu" class="hidden fixed w-60 bg-white border mt-10 border-gray-300 rounded-lg shadow-lg p-4 text-gray-800">
+  <ul class="list-inside ml-4 mt-2">
+    <% section.each_with_index do |section, index| %>
+      <li>
+      <% section_fix = section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_') %>
+      <a href="<%= send("#{type_url}_subsection_path", section: section_fix) %>" class="text-blue-700 text-xl font-bold underline">
+        <%= "#{index + 1}. #{section}" %>
+      </a>
+      </li>
+      <% subsections_key = section %>
+      <% if subsections[subsections_key].present? %>
+        <ul class="list-inside ml-4 mt-2">
+          <% subsections[subsections_key].each_with_index do |sub_section, sub_index| %>
+            <li>
+              <a href="<%= send("#{type_url}_subsection_path", section: section_fix, sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-gray-700 text-lg font-bold underline">
+                <%= "#{index + 1}.#{sub_index + 1} #{sub_section}" %>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    <% end %> 
+  </ul> 
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const button = document.getElementById('movable-button');
+  const menu = document.getElementById('dropdown-menu');
+  let isDragging = false;
+  let offsetX, offsetY;
+
+  button.onmousedown = function (event) {
+      isDragging = true;
+
+      offsetX = event.clientX - button.getBoundingClientRect().left;
+      offsetY = event.clientY - button.getBoundingClientRect().top;
+
+      function moveAt(clientX, clientY) {
+      if (isDragging) {
+          button.style.left = clientX - offsetX + 'px';
+          button.style.top = clientY - offsetY + 'px';
+
+          menu.style.left = button.style.left;
+          menu.style.top = (clientY - offsetY + button.offsetHeight) + 'px';
+      }
+      }
+
+      function onMouseMove(event) {
+      moveAt(event.clientX, event.clientY);
+      }
+
+      document.addEventListener('mousemove', onMouseMove);
+
+      button.onmouseup = function () {
+      isDragging = false;
+      document.removeEventListener('mousemove', onMouseMove);
+      button.onmouseup = null;
+      };
+  };
+
+  button.ondragstart = function () {
+      return false;
+  };
+
+  button.addEventListener('click', function () {
+      if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+      } else {
+      menu.classList.add('hidden');
+      }
+  });
+  });
+</script>

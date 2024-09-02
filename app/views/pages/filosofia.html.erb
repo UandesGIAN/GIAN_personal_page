@@ -1,4 +1,51 @@
-<div>
-  <h1 class="font-bold text-4xl">Pages#filosofia</h1>
-  <p>Find me in app/views/pages/filosofia.html.erb</p>
+<div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
+  <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-2 text-shadow-orange filosofia-home animate-slide-in-right">
+    Filosofía
+  </h1>
+</div>
+
+<%= @indice_content %>
+
+<div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
+  <section class="p-6 bg-gray-100 text-gray-800">
+    <p class="mb-6 ml-6 mt-4 text-lg ">
+        Corresponde a una compilación de proyectos, estudios, ejercicios y creaciones que poseen relación con la informática, computación, tecnología, electrónica e ingeniería.<br>
+        <br>Tendrá una estructura de guía para aprender al respecto de todo ello a través de resúmenes y ejercicios aplicados.
+    </p>
+
+    <h2 class="text-5xl mt-14 text-center font-bold mb-4 filosofia-home">Secciones:</h2>
+
+    <a href="<%= filosofia_subsection_path(section: 'el_metodo_de_gian') %>" class="text-green-600">
+      <h2 class="text-3xl mt-14 ml-6 font-bold mb-2 underline">1. EL MÉTODO DE GIAN</h2>
+    </a>
+    <% if @subsections['EL MÉTODO DE GIAN'].present? %>
+      <ul class="list-inside ml-12 mt-2">
+        <% @subsections['EL MÉTODO DE GIAN'].each_with_index do |sub_section, index| %>
+          <li>
+            <a href="<%= filosofia_subsection_path(section: 'el_metodo_de_gian', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-blue-700 text-lg font-bold underline">
+              <%= "1.#{index + 1} #{sub_section.capitalize}" %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <a href="<%= filosofia_subsection_path(section: 'consejos') %>" class="text-blue-400">
+      <h2 class="text-3xl mt-14 ml-6 font-bold mb-2 underline text-blue-400">2. Consejos</h2>
+    </a>
+
+    <% if @subsections['Consejos'].present? %>
+      <ul class="list-inside ml-12 mt-2">
+        <% @subsections['Consejos'].each_with_index do |sub_section, index| %>
+          <li>
+            <a href="<%= filosofia_subsection_path(section: 'consejos', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-blue-700 text-lg font-bold underline">
+              <%= "2.#{index + 1} #{sub_section.capitalize}" %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
+
+  </section>
 </div>

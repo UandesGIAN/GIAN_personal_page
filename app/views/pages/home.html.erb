@@ -4,7 +4,7 @@
   <h1 class="font-bold text-6xl mb-2 text-white animate__animated animate__fadeInDown">BIENVENIDO A MI PÁGINA WEB PERSONAL</h1>
   <p class="text-lg mb-2 text-gray-100 animate__animated animate__fadeIn animate__delay-1s">(Alpha v0.1)</p>
   <h4 class="text-3xl font-semibold text-white animate__animated animate__fadeInDown animate__delay-0s">
-    <a href="#sobre-la-pagina" class="text-white">Explora los contenidos</a>
+    <a href="#sobre-la-pagina" class="text-white underline">Explora los contenidos</a>
   </h4> 
 </div>
 
@@ -49,13 +49,13 @@
           Información acerca del creador de este sitio web y gran parte de su contenido.<br>
           Un resumen sobre mis estudios, conocimientos, intereses, objetivos, pasatiempos y personalidad.<br><br>
         </p>
-        <%= link_to "¡Ve a echárle un vistazo!", about_me_path, class: "text-lg font-semibold text-blue-900 underline" %>
+        <%= link_to "¡Ve a echárle un vistazo!", about_me_path, class: "text-lg font-semibold text-blue-800 underline" %>
       </div>
     </div>
 
     <div class="mb-4 mt-24">
       <div class="flex justify-center cursor-pointer" onclick="toggleCard('card2')">
-        <%= link_to "Mis PROYECTOS", proyectos_path, class: "text-4xl font-semibold text-blue-800 underline" %>
+        <%= link_to "Mis PROYECTOS", proyectos_subsection_path, class: "text-4xl font-semibold text-blue-800 underline" %>
         <i id="icon-card2" class="material-icons ml-4 text-blue-900 rotate-icon"  style="margin-top: 4px; font-size: 32px;">keyboard_arrow_up</i>
       </div>
 
@@ -64,13 +64,13 @@
           Artículos y espacios donde compartir mis proyectos de internet, específicamente canales de Youtube, animaciones de Splatoon y páginas de Instagram u otras redes sociales.<br>
         <br>También se comparten proyectos o notas personales hechas por diversión.<br><br>
         </p>
-        <%= link_to "¡Ve a echárle un vistazo!", proyectos_path, class: "text-lg font-semibold text-blue-800 underline" %>
+        <%= link_to "¡Ve a echárle un vistazo!", proyectos_subsection_path, class: "text-lg font-semibold text-blue-800 underline" %>
       </div>
     </div>
 
     <div class="mb-4 mt-24">
       <div class="flex justify-center cursor-pointer" onclick="toggleCard('card3')">
-        <%= link_to "COMPUTACIÓN", computacion_path, class: "text-4xl font-semibold computacion-home" %>
+        <%= link_to "COMPUTACIÓN", computacion_subsection_path, class: "text-4xl font-semibold computacion-home underline" %>
         <i id="icon-card3" class="material-icons ml-4 rotate-icon" style="color: #008000; margin-top: 4px; font-size: 32px;">keyboard_arrow_up</i>
       </div>
 
@@ -79,13 +79,13 @@
           Puede que sea el apartado más completo y extenso del sitio.<br>Corresponde a una compilación de proyectos, estudios, ejercicios y creaciones que poseen relación con la informática, computación, tecnología, electrónica e ingeniería.<br>
         <br>Tendrá una estructura de guía para aprender al respecto de todo ello a través de resúmenes y ejercicios aplicados.<br><br>
         </p>
-        <%= link_to "¡Ve a echárle un vistazo!", computacion_path, class: "text-lg font-semibold text-blue-800 underline" %>
+        <%= link_to "¡Ve a echárle un vistazo!", computacion_subsection_path, class: "text-lg font-semibold text-blue-800 underline" %>
       </div>
     </div>
 
     <div class="mb-4 mt-24">
       <div class="flex justify-center cursor-pointer" onclick="toggleCard('card4')">
-        <%= link_to "FILOSOFÍA", filosofia_path, class: "text-4xl font-semibold filosofia-home"%>
+        <%= link_to "FILOSOFÍA", filosofia_subsection_path, class: "text-4xl font-semibold filosofia-home underline"%>
         <i id="icon-card4" class="material-icons ml-4 rotate-icon" style="color: #d85c14; margin-top: 4px; font-size: 32px;">keyboard_arrow_up</i>
       </div>
 
@@ -95,7 +95,7 @@
           Corresponde a una compilación de proyectos, estudios, ejercicios y creaciones que poseen relación con la reflexión y la vida real, es una faceta de mí más personal y oculta.<br>
         <br>Se centra en documentos e investigaciones de filosofía, psicología y autoayuda. Pretende ayudar a quienes requieran consejos o deseen enfrentar sus problemas personales.<br><br>
         </p>
-        <%= link_to "¡Ve a echárle un vistazo!", filosofia_path, class: "text-lg font-semibold text-blue-800 underline" %>
+        <%= link_to "¡Ve a echárle un vistazo!", filosofia_subsection_path, class: "text-lg font-semibold text-blue-800 underline" %>
       </div>
     </div>
     

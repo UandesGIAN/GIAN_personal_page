@@ -1,4 +1,94 @@
-<div>
-  <h1 class="font-bold text-4xl">Pages#proyectos</h1>
-  <p>Find me in app/views/pages/proyectos.html.erb</p>
+<div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
+  <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-2 text-shadow-proyectos text-blue-700 animate-slide-in-right">
+    Mis proyectos
+  </h1>
+</div>
+
+<%= @indice_content %>
+
+<div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
+  <section class="p-6 bg-gray-100 text-gray-800">
+    <p class="mb-6 ml-6 mt-4 text-lg ">
+        Artículos y espacios donde compartir mis proyectos de internet, específicamente canales de Youtube, animaciones de Splatoon y páginas de Instagram u otras redes sociales.<br>
+        <br>También se comparten proyectos o notas personales hechas por diversión.
+    </p>
+
+    <h2 class="text-5xl mt-14 text-center font-bold mb-4 text-blue-700">Secciones:</h2>
+
+    <a href="<%= proyectos_subsection_path(section: 'youtube') %>" class="text-red-700">
+      <h2 class="text-3xl mt-14 ml-6 font-bold mb-2 underline">1. Youtube</h2>
+    </a>
+    <% if @subsections['Youtube'].present? %>
+      <ul class="list-inside ml-12 mt-2">
+        <% @subsections['Youtube'].each_with_index do |sub_section, index| %>
+          <li>
+            <a href="<%= proyectos_subsection_path(section: 'youtube', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-red-700 text-lg font-bold underline">
+              <%= "1.#{index + 1} #{sub_section.capitalize}" %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
+
+    <a href="<%= proyectos_subsection_path(section: 'mikumikudance') %>" class="text-mmd">
+      <h2 class="text-3xl mt-6 ml-6 font-bold text-mmd underline">2. MikuMikuDance</h2>
+    </a>
+    <% if @subsections['MikuMikuDance'].present? %>
+      <ul class="list-inside ml-12 mt-2 text-mmd">
+        <% @subsections['MikuMikuDance'].each_with_index do |sub_section, index| %>
+          <li>
+            <a href="<%= proyectos_subsection_path(section: 'mikumikudance', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-mmd text-lg font-bold underline">
+              <%= "2.#{index + 1} #{sub_section.capitalize}" %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <a href="<%= proyectos_subsection_path(section: 'videos_y_documentos') %>" class="text-purple-700">
+      <h2 class="text-3xl mt-6 ml-6 font-bold underline">3. Videos y documentos</h2>
+    </a>
+    <% if @subsections['Vídeos y Documentos'].present? %>
+      <ul class="list-inside ml-12 mt-2">
+        <% @subsections['Vídeos y Documentos'].each_with_index do |sub_section, index| %>
+          <li>
+            <a href="<%= proyectos_subsection_path(section: 'videos_y_documentos', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-purple-700 text-lg font-bold underline">
+              <%= "3.#{index + 1} #{sub_section.capitalize}" %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <a href="<%= proyectos_subsection_path(section: 'experimentos') %>" class="text-experimentos">
+      <h2 class="text-3xl mt-6 ml-6 font-bold text-experimentos underline">4. Experimentos</h2>
+    </a>
+    <% if @subsections['Experimentos'].present? %>
+      <ul class="list-inside ml-12 text-experimentos mt-2">
+        <% @subsections['Experimentos'].each_with_index do |sub_section, index| %>
+          <li>
+            <a href="<%= proyectos_subsection_path(section: 'experimentos', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-experimentos text-lg font-bold underline">
+              <%= "4.#{index + 1} #{sub_section.capitalize}" %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <a href="<%= proyectos_subsection_path(section: 'por_aburrimiento') %>" class="text-gray-700">
+      <h2 class="text-3xl mt-6 ml-6 font-bold underline">5. Por aburrimiento</h2>
+    </a>
+    <% if @subsections['Por aburrimiento'].present? %>
+      <ul class="list-inside ml-12 mt-2 text-gray-700">
+        <% @subsections['Por aburrimiento'].each_with_index do |sub_section, index| %>
+          <li>
+            <a href="<%= proyectos_subsection_path(section: 'por_aburrimiento', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-gray-700 text-lg font-bold underline">
+              <%= "5.#{index + 1} #{sub_section.capitalize}" %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </section>
 </div>
