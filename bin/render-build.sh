@@ -2,7 +2,8 @@
 # exit on error
 set -o errexit
 
-bundle install --without development test
+bundle config set without 'development test'
+bundle install 
 bundle exec rails assets:precompile
 bundle exec rails assets:clean
 
