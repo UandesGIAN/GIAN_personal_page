@@ -12,4 +12,4 @@ bundle exec rails assets:clean
 # Uncomment the following line:
 
 # bundle exec rails db:migrate
-RAILS_ENV=production rails server
+bundle exec rails server
