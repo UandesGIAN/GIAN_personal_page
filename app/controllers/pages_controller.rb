@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-
   def home
   end
 
@@ -11,15 +10,15 @@ class PagesController < ApplicationController
     @sub_section = params[:sub_section]
 
     @subsections = {
-      "Youtube" => [ "Origen", "Tutoriales", "Reviews" ],
+      "Youtube" => [ "Origen", "Contenidos", "Proyectos Principales" ],
       "MikuMikuDance" => [ "Origen", "Tutoriales" ],
       "Vídeos y Documentos" => [ "Videos", "Documentos" ],
       "Experimentos" => [ "PC", "Laboratorio" ],
       "Por aburrimiento" => [ "Juegos", "Artículos" ]
     }
 
-    @indice_content = render_to_string(partial: 'shared/indice', locals: {
-      type_url: 'proyectos',
+    @indice_content = render_to_string(partial: "shared/indice", locals: {
+      type_url: "proyectos",
       section: @subsections.keys,
       sub_section: @sub_section,
       subsections: @subsections
@@ -46,11 +45,11 @@ class PagesController < ApplicationController
     @sub_section = params[:sub_section]
 
     @subsections = {
-      "Python" => [ "Historia y Origen", "Tutoriales", "Reviews" ]
+      "Python" => [ "Historia y Origen", "Básico", "Intermedio", "Algebra Lineal", "Ecuaciones Diferenciales", "Estadística" ]
     }
 
-    @indice_content = render_to_string(partial: 'shared/indice', locals: {
-      type_url: 'computacion',
+    @indice_content = render_to_string(partial: "shared/indice", locals: {
+      type_url: "computacion",
       section: @subsections.keys,
       sub_section: @sub_section,
       subsections: @subsections
@@ -77,12 +76,12 @@ class PagesController < ApplicationController
     @sub_section = params[:sub_section]
 
     @subsections = {
-    "EL MÉTODO DE GIAN" => [],
-    "Consejos" => []
+    "EL MÉTODO DE GIAN" => [ "Las Bases", "Los Principios", "Las Opciones", "Los Consejos" ],
+    "LAS MANERAS" => []
     }
 
-    @indice_content = render_to_string(partial: 'shared/indice', locals: {
-      type_url: 'filosofia',
+    @indice_content = render_to_string(partial: "shared/indice", locals: {
+      type_url: "filosofia",
       section: @subsections.keys,
       sub_section: @sub_section,
       subsections: @subsections

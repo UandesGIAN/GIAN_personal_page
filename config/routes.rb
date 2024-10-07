@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get "pages/home"
+  get "pages/historial"
   get "pages/about_me"
   get "pages/proyectos"
   get "pages/filosofia"
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
 
   root "pages#home"
   get "about_me", to: "pages#about_me"
+  get "historial", to: "pages#historial"
   get "proyectos(/:section(/:sub_section))", to: "pages#proyectos", as: "proyectos_subsection"
   get "computacion(/:section(/:sub_section))", to: "pages#computacion", as: "computacion_subsection"
   get "filosofia(/:section(/:sub_section))", to: "pages#filosofia", as: "filosofia_subsection"

@@ -164,3 +164,27 @@
     left: -6px
   }
 }
+
+.console {
+  background-color: #1e1e1e; /* Color de fondo de la consola */
+  color: #dcdcdc; /* Color del texto */
+  font-family: monospace; /* Fuente monoespaciada */
+  padding: 10px;
+  border-radius: 5px; /* Bordes redondeados */
+  overflow: auto; /* Permitir el desbordamiento */
+}
+.comment {
+  color: #6a9955; /* Color para comentarios */
+}
+.string {
+  color: #d19a66; /* Color para cadenas */
+}
+.function {
+  color: #61afef; /* Color para funciones */
+}
+.number {
+  color: #d55fde; /* Color para números */
+}
+.keyword {
+  color: #c678dd; /* Color para palabras clave */
+}

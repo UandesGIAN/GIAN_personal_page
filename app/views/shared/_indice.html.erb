@@ -29,50 +29,76 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-  const button = document.getElementById('movable-button');
-  const menu = document.getElementById('dropdown-menu');
-  let isDragging = false;
-  let offsetX, offsetY;
+    const button = document.getElementById('movable-button');
+    const menu = document.getElementById('dropdown-menu');
+    let isDragging = false;
+    let offsetX, offsetY;
 
-  button.onmousedown = function (event) {
+    // Function to move the button
+    function moveAt(clientX, clientY) {
+      if (isDragging) {
+        button.style.left = clientX - offsetX + 'px';
+        button.style.top = clientY - offsetY + 'px';
+
+        menu.style.left = button.style.left;
+        menu.style.top = (parseInt(button.style.top) + button.offsetHeight) + 'px';
+      }
+    }
+
+    // Mouse events for desktops
+    button.onmousedown = function(event) {
       isDragging = true;
-
       offsetX = event.clientX - button.getBoundingClientRect().left;
       offsetY = event.clientY - button.getBoundingClientRect().top;
 
-      function moveAt(clientX, clientY) {
-      if (isDragging) {
-          button.style.left = clientX - offsetX + 'px';
-          button.style.top = clientY - offsetY + 'px';
-
-          menu.style.left = button.style.left;
-          menu.style.top = (clientY - offsetY + button.offsetHeight) + 'px';
-      }
-      }
-
       function onMouseMove(event) {
-      moveAt(event.clientX, event.clientY);
+        moveAt(event.clientX, event.clientY);
       }
 
       document.addEventListener('mousemove', onMouseMove);
 
-      button.onmouseup = function () {
-      isDragging = false;
-      document.removeEventListener('mousemove', onMouseMove);
-      button.onmouseup = null;
+      button.onmouseup = function() {
+        isDragging = false;
+        document.removeEventListener('mousemove', onMouseMove);
       };
-  };
 
-  button.ondragstart = function () {
+      button.onmouseleave = function() {
+        isDragging = false;
+        document.removeEventListener('mousemove', onMouseMove);
+      };
+    };
+
+    button.ondragstart = function() {
       return false;
-  };
+    };
 
-  button.addEventListener('click', function () {
-      if (menu.classList.contains('hidden')) {
-      menu.classList.remove('hidden');
-      } else {
-      menu.classList.add('hidden');
+    // Touch events for mobile
+    button.ontouchstart = function(event) {
+      isDragging = true;
+      const touch = event.touches[0];
+      offsetX = touch.clientX - button.getBoundingClientRect().left;
+      offsetY = touch.clientY - button.getBoundingClientRect().top;
+
+      function onTouchMove(event) {
+        const touch = event.touches[0];
+        moveAt(touch.clientX, touch.clientY);
       }
-  });
+
+      document.addEventListener('touchmove', onTouchMove);
+
+      button.ontouchend = function() {
+        isDragging = false;
+        document.removeEventListener('touchmove', onTouchMove);
+      };
+    };
+
+    // Toggle menu visibility
+    button.addEventListener('click', function() {
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+      } else {
+        menu.classList.add('hidden');
+      }
+    });
   });
 </script>

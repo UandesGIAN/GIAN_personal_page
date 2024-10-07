@@ -1,0 +1,191 @@
+<div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
+  <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-2 text-shadow-green computacion-home animate-slide-in-right">
+    Computación: <p class="text-blue-700 mt-10 text-center" style="text-shadow: 0px 2px 20px rgba(0, 0, 200, 0.6);">Python</p>
+  </h1>
+</div>
+
+<%= @indice_content %>
+
+<div class="text-container max-w-7xl mx-auto mt-20 px-4 flex flex-col pb-8">
+  <section class="p-6 bg-gray-100 text-gray-800">
+    <h2 class="text-5xl mt-2 text-center font-bold mb-4 text-blue-700">2. Básico</h2>
+    
+		<p class="mb-6 text-lg">
+			<strong>Para darle un valor a una variable se hace:</strong> <br>
+			var = <span class="text-red-700">string</span>/<span class="text-green-700">int</span>/<span class="text-blue-700">float</span>
+			<br>
+			<span class="text-red-700">strings en “ ”</span>, <span style="color: rgba(200, 125, 0, 1.0);">carácteres en ‘ ’</span>.
+		</p>
+
+		<p class="mb-6 text-lg">
+			<strong>Funciones básicas para interactuar con la consola</strong> 
+			<br>
+			<div class="console flex flex-start w-3/4  mb-6 text-lg">
+        <code>
+            <span class="function">print</span>()<span class="comment"> # Imprime un string, con ',' se agrega un espacio y con '+' se juntan</span><br>
+            <span class="function">print</span>(<span class="string">"Hola"</span>,<span class="string">'y'</span>+<span class="string">"Adios"</span>)
+						<span class="comment"> # Tendrá de output: Hola yAdios</span><br>
+						<br>
+						<span class="function">input</span>()<span class="comment"> # Entrada del usuario. Lee strings.</span><br>
+						<span class="function">input</span>(<span class="string">"Tambien puede imprimir texto"</span>)<br>
+        </code>
+    	</div>
+		</p>
+
+		<p class="mb-6 text-lg">
+			Convertir string a int: int(*var*) 
+			<br>
+			a string: str(*var*) 
+			<br>
+			a float: float(*var*) 
+			<br>
+			De carácter a unicode: ord().  # ej. ord(‘A’) retorna 65. 
+			<br>
+			De ASCII a carácter: chr()  # ej. chr(95) retorna ‘A’.
+		</p>
+
+		<p class="mb-6 text-lg">
+			<strong>Operadores:</strong>
+		</p>
+
+		<p class="mb-6 text-lg">
+			- Aritmeticos(entre números): suma(+), resta(-), multiplicación(*), división(/), potencia(**), división entera(//), módulo/resto(%). 
+			<br>
+			- Relacionales(retorna True o False): menor(<), mayor(>), igual(==), menor ó igual(<=), mayor ó igual(>=), distinto(!=). 
+			<br>
+			- Bit a bit(binario): and(&), or(|), xor/ó(^), not(~), 1 binario a la derecha(>>), 1 binario a la izquierda(<<). 
+			<br>
+			- Asignación(aplica la operación): igual(=), sumar(+=), restar(-=), multiplicar(*=), dividir(/=), elevar(**=), dividir entero(//=), resto(%=), y(&=), o(|=), ó(^=), a la derecha(>>=), a la izquierda(<<=). 
+			<br>
+			- Lógicos: y(and), o(or), no(not). 
+			<br>
+			- Identidad(retorna True o False): ¿mismo objeto?(is), ¿no lo es?(is not). 
+			<br>
+			- Pertenencia(retorna True o False): ¿está en?(in), ¿no está en?(not in).
+		</p>
+
+		<p class="mb-6 text-lg">
+			<strong>Números aleatorios:</strong>
+		</p>
+
+		<p class="mb-6 text-lg">
+			Usar numpy: from numpy import random 
+			<br>
+			random.randint(*número_menor*, *número_mayor*). Sólo enteros, por defecto parte desde el 0 hasta el *número_mayor*. 
+			<br>
+			random.random(). Decimales entre 0 y 1.
+		</p>
+
+		<p class="mb-6 text-lg">
+			<strong>Control de flujo:</strong>
+		</p>
+
+		<p class="mb-6 text-lg">
+			if(___): (“si…”)    
+			<br>
+			elif(___): (“o si…”)   
+			<br>
+			else: (“si no…”)  
+			<br>
+			while(___): (“mientras [condición]…”) 
+			<br>
+			for(*elemento* in *conjunto*): (“para cada elemento en el conjunto…”) 
+			<br>
+			con break se sale del ciclo más próximo. 
+			<br>
+			con continue se salta a la siguiente iteración(en while vuelve al principio). 
+			<br>
+			While True: es un ciclo infinito.
+		</p>
+
+		<p class="mb-6 text-lg">
+			<strong>Listas:</strong> conjunto = [] 
+			<br>
+			conjunto.append(*valor*). Añade *valor* a conjunto. 
+			<br>
+			conjunto.insert(*índice, valor*). Añade *valor* a conjunto en la posición *índice(desde el 0)*. 
+			<br>
+			conjunto.extend(*conjunto2*). Agrega los elementos de la lista conjunto2 al final de conjunto. 
+			<br>
+			conjunto.pop(*índice*). Elimina el elemento de la posición *índice* de conjunto. Si se usa .pop() elimina el último elemento. 
+			<br>
+			conjunto.remove(*valor*). Elimina el primer elemento igual a *valor* del conjunto. 
+			<br>
+			conjunto.reverse(). Invierte el orden de conjunto. 
+			<br>
+			conjunto.sort(). Ordena de menor a mayor o alfabéticamente los elementos de conjunto. Si se quiere de mayor a menor o orden alfabético invertido, usar .sort(reverse=True). 
+			<br>
+			conjunto.index(*valor*). Retorna la posición del primer elemento igual a *valor* de conjunto. 
+			<br>
+			conjunto.count(*valor*). Retorna la cantidad de veces que está *valor* dentro del conjunto. 
+			<br>
+			conjunto[*índice*]. Accede al elemento en la posición *índice*(desde el 0) de conjunto. 
+			<br>
+			len(conjunto). Retorna la longitud de la lista conjunto(conteo desde el 1).
+		</p>
+
+		<p class="mb-6 text-lg">
+			<strong>Métodos de string:</strong>
+		</p>
+
+		<p class="mb-6 text-lg">
+			len(string). Retorna la longitud de string. 
+			<br>
+			string.find(*texto*). Retorna la posición que ocupa el substring igual a *texto* en el string. Si se hace string.find(*texto, índice*) busca la posición donde encuentra el substring igual a *texto* desde la posición *índice*. 
+			<br>
+			string.lower(). Retorna el string pero con todas las letras en minúsculas. 
+			<br>
+			string.upper(). Retorna el string pero con todas las letras en mayúsculas. 
+			<br>
+			string.replace(texto, texto2). Copia string reemplazando todas las apariciones de los substrings texto, por texto2. 
+			<br>
+			string.split(‘*char*’). Da una lista de strings dividiendo string por el delimitador *char*(puede ser un substring), no incluye el delimitador en la lista. 
+			<br>
+			string.strip(‘*char*’). Retorna una copia de string quitando cada ‘*char*’ presente en el texto original. *char* puede ser un substring.
+		</p>
+
+		<p class="mb-6 text-lg">
+			<strong>Generador de listas:</strong>
+		</p>
+
+		<p class="mb-6 text-lg">
+			list(enumerate(número_mayor*, número_menor*)). Realiza una lista que enumera desde el *número_menor* al *número_mayor*. Se puede usar enumerate(número_mayor) para enumerar desde el 0 al *número_mayor.* 
+			<br>
+			range(*número*). Realiza una lista desde el 0, de uno en uno hasta *número*. No incluye a *número* en ella. Si se hace range(*número_menor, número_mayor, incremento*) cada elemento se encuentra separado por *incremento* unidades desde *número_menor* hasta lo más cercano a *número_mayor.* 
+			<br>
+			Al hacer for x in range(*num_menor*, *num_mayor*):  es lo mismo que un while x < num_mayor: 
+			<br>
+			x += 1 
+		</p>
+
+		<p class="mb-6 text-lg">
+			<strong>PRO TIP:</strong> Usar for i in range(len(conjunto)): para acceder a cada índice (con el nombre de variable ‘i’) de conjunto para cada iteración.
+		</p>
+
+		<p class="mb-6 text-lg">
+			<strong>Sublistas:</strong> conjunto[*índice_elemento_inferior*:*índice_elemento_superior*]. Crea otra lista, copia de conjunto, pero a partir de la posición *indice_elemento_inferior* hasta *índice_elemento_superior*-1. 
+			<br>
+			Para hacer una copia se puede hacer copia = conjunto[:]. 
+			<br>
+			Si se hace conjunto[:-1], copia conjunto desde el principio hasta el último elemento. Si se hace conjunto[-1:] copia desde el último elemento hasta el primero. 
+			<br>
+			Al hacer conjunto = [[],[]] se crea una lista de listas. Para acceder a un elemento se usa conjunto[*índice_primera_lista][índice_segunda_lista]. 
+			<br>
+			# ej. Sea lista[[‘a’,’b’,’c’],[‘d’,’e’,’f’]]. print(lista[0][2]). Imprime “c”.
+		</p>
+		
+		<div class="flex justify-between items-center">
+			<div>
+				<a href="<%= computacion_subsection_path(section: 'python', sub_section: 'historia_y_origen') %>" class="bg-blue-700 text-white py-3 px-4 rounded-md hover:bg-blue-800 transition-all">
+					Anterior capítulo
+				</a>
+			</div>
+			<div>
+				<a href="<%= computacion_subsection_path(section: 'python', sub_section: 'intermedio') %>" class="bg-blue-700 text-white py-3 px-4 rounded-md hover:bg-blue-800 transition-all">
+					Siguiente capítulo
+				</a>
+			</div>
+		</div>
+
+  </section>
+</div>

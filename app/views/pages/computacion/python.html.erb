@@ -1,1 +1,32 @@
+<div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
+  <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-2 text-shadow-green computacion-home animate-slide-in-right">
+    Computación: <p class="text-blue-700 mt-10 text-center" style="text-shadow: 0px 2px 20px rgba(0, 0, 200, 0.6);">Python</p>
+  </h1>
+</div>
+
 <%= @indice_content %>
+
+<div class="text-container max-w-7xl mx-auto mt-20 px-4 flex flex-col pb-8">
+  <section class="p-6 bg-gray-100 text-gray-800">
+    <p class="mb-6 text-lg ">
+      Guia realizada por mí en relación al lenguaje de programación Python.
+      <br><br><i>Work In Progress</i>
+    </p>
+
+    <h2 class="text-5xl mt-14 text-center font-bold mb-4 text-blue-700">Secciones:</h2>
+    
+    <a href="<%= computacion_subsection_path(section: 'python') %>" class="text-red-700 text-center">
+    <% if @subsections['Python'].present? %>
+      <ul class="list-inside ml-12 mt-2">
+        <% @subsections['Python'].each_with_index do |sub_section, index| %>
+          <li>
+            <a href="<%= computacion_subsection_path(section: 'python', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-blue-700 text-lg font-bold underline">
+              <%= "#{index + 1} #{sub_section.capitalize}" %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
+  </section>
+</div>

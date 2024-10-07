@@ -92,10 +92,10 @@
           <img src="/assets/github_icon.png" alt="GitHub" class="w-6 h-6">
           <span>GitHub de la página</span>
         </a>
-        <a href="/historial" target="_blank" class="flex items-center space-x-2 hover:text-blue-800 text-white">
-          <img src="/assets/log_icon.png" alt="logs" class="w-7 h-7">
+        <%= link_to historial_path, target: "_blank", class: "flex items-center space-x-2 hover:text-blue-800 text-white" do %>
+          <%= image_tag "log_icon.png", alt: "logs", class: "w-7 h-7" %>
           <span>Historial de versiones</span>
-        </a>
+        <% end %>
       </div>
     </div>
 
