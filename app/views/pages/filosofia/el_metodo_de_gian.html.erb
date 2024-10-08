@@ -1,1 +1,44 @@
+<div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
+  <h1 class="font-bold text-4xl sm:text-5xl text-center md:text-6xl lg:text-7xl xl:text-8xl mb-2 text-shadow-orange filosofia-home animate-slide-in-right">
+    Filosofía <p class="text-green-600 mt-10" style="text-shadow: 0px 2px 20px rgba(0, 150, 200, 0.6);">EL MÉTODO DE GIAN</p>
+  </h1>
+</div>
+
 <%= @indice_content %>
+
+<div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
+  <section class="p-6 bg-gray-100 text-gray-800">
+    <p class="mb-6 text-lg ">
+        Esta es <strong>una</strong> <strong>forma</strong> para afrontar obstáculos durante la vida.
+        Es un <em>método</em> con las <em>bases</em> y <em>principios</em> necesarios <strong>según Gian</strong> para que cada persona logre <em>enfrentar problemas internos, externos y absolutos
+        </em> con <em>opciones y</em> <em>consejos</em> que permitan <em>crear</em> y <em>utilizar</em> una <em>filosofía de vida, forma de vida, recursos propios</em> y <em>plan de vida</em>
+         a fin de cumplir <em>objetivos</em>.
+        <br><br>
+        Todo esto solo es una postura personal de Gian; en la que se hallan todas las herramientas que él considera, son <em>útiles</em> y <em>aplicables</em> a la gran mayoría de casos para enfrentar
+         problemas internos y externos con <strong>opciones</strong> y <strong>consejos</strong> que permitan crear y utilizar una filosofía de vida, forma de vida y objetivos propios para cumplir ciertos <strong>objetivos</strong>.
+        Sin embargo, este Método, al igual que el de otros, tiene la finalidad de ayudar a cada persona que lo lea; y, aunque a algunos les bastará con leerlo, a otros con explicaciones y a otros con argumentos; es cierto que hay una parte de 
+        quienes necesitan ayuda, que se hallan sin esperanza, compresión, fuerzas o intereses en algún <em>Método</em> o <em>ayuda</em>; pues aunque pueden leer y entender el Método que se les está dando, estos no saben <strong>cómo</strong> aplicar el método, ya que no tienen el <strong>funcionamiento</strong> 
+        de las <em>herramientas</em> aún con su propia voluntad (aquí se considera que todo individuo tiene un método propio y pensamiento que aspira dar una solución a problemas que impiden vivir de una mejor forma).
+        <br><br>
+        Por esto, si buscas ayudar a alguien en este estado, visita el apartado de <a href="<%= filosofia_subsection_path(section: 'el_metodo_de_gian', sub_section: 'las_opciones') %>" class="text-lg underline">
+        LAS MANERAS</a>, el cual va dirigido <strong>a quien comparta el método, no a quien lo reciba</strong>.
+        
+    </p>
+
+    <h2 class="text-5xl mt-14 text-center font-bold mb-4 text-green-600">Secciones:</h2>
+    
+    <a href="<%= filosofia_subsection_path(section: 'el_metodo_de_gian') %>" class="text-green-600 text-center">
+    </a>
+    <% if @subsections['EL MÉTODO DE GIAN'].present? %>
+      <ul class="list-inside ml-12 mt-2">
+        <% @subsections['EL MÉTODO DE GIAN'].each_with_index do |sub_section, index| %>
+          <li>
+            <a href="<%= filosofia_subsection_path(section: 'el_metodo_de_gian', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-green-600 text-2xl font-bold underline">
+              <%= "#{index + 1} #{sub_section.capitalize}" %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </section>
+</div>

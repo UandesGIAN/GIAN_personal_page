@@ -45,15 +45,14 @@
         <% end %>
       </ul>
     <% end %>
-
-    <a href="<%= proyectos_subsection_path(section: 'videos_y_documentos') %>" class="text-purple-700">
-      <h2 class="text-3xl mt-6 ml-6 font-bold underline">3. Videos y documentos</h2>
+    <a href="<%= proyectos_subsection_path(section: 'favores') %>" class="text-purple-700"></a>
+      <h2 class="text-3xl mt-6 ml-6 font-bold underline">3. Favores</h2>
     </a>
-    <% if @subsections['Vídeos y Documentos'].present? %>
+    <% if @subsections['Favores'].present? %>
       <ul class="list-inside ml-12 mt-2">
-        <% @subsections['Vídeos y Documentos'].each_with_index do |sub_section, index| %>
+        <% @subsections['Favores'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'videos_y_documentos', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-purple-700 text-lg font-bold underline">
+            <a href="<%= proyectos_subsection_path(section: 'favores', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-purple-700 text-lg font-bold underline">
               <%= "3.#{index + 1} #{sub_section.capitalize}" %>
             </a>
           </li>
@@ -61,14 +60,14 @@
       </ul>
     <% end %>
 
-    <a href="<%= proyectos_subsection_path(section: 'experimentos') %>" class="text-experimentos">
-      <h2 class="text-3xl mt-6 ml-6 font-bold text-experimentos underline">4. Experimentos</h2>
+    <a href="<%= proyectos_subsection_path(section: 'por_aburrimiento') %>" class="text-gray-700">
+      <h2 class="text-3xl mt-6 ml-6 font-bold underline">4. Por aburrimiento</h2>
     </a>
-    <% if @subsections['Experimentos'].present? %>
-      <ul class="list-inside ml-12 text-experimentos mt-2">
-        <% @subsections['Experimentos'].each_with_index do |sub_section, index| %>
+    <% if @subsections['Por aburrimiento'].present? %>
+      <ul class="list-inside ml-12 mt-2 text-gray-700">
+        <% @subsections['Por aburrimiento'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'experimentos', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-experimentos text-lg font-bold underline">
+            <a href="<%= proyectos_subsection_path(section: 'por_aburrimiento', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-gray-700 text-lg font-bold underline">
               <%= "4.#{index + 1} #{sub_section.capitalize}" %>
             </a>
           </li>
@@ -76,19 +75,21 @@
       </ul>
     <% end %>
 
-    <a href="<%= proyectos_subsection_path(section: 'por_aburrimiento') %>" class="text-gray-700">
-      <h2 class="text-3xl mt-6 ml-6 font-bold underline">5. Por aburrimiento</h2>
+    <a href="<%= proyectos_subsection_path(section: 'experimentos') %>" class="text-experimentos">
+      <h2 class="text-3xl mt-6 ml-6 font-bold text-experimentos underline">5. Experimentos</h2>
     </a>
-    <% if @subsections['Por aburrimiento'].present? %>
-      <ul class="list-inside ml-12 mt-2 text-gray-700">
-        <% @subsections['Por aburrimiento'].each_with_index do |sub_section, index| %>
+    <% if @subsections['Experimentos'].present? %>
+      <ul class="list-inside ml-12 text-experimentos mt-2">
+        <% @subsections['Experimentos'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'por_aburrimiento', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-gray-700 text-lg font-bold underline">
+            <a href="<%= proyectos_subsection_path(section: 'experimentos', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-experimentos text-lg font-bold underline">
               <%= "5.#{index + 1} #{sub_section.capitalize}" %>
             </a>
           </li>
         <% end %>
       </ul>
     <% end %>
+
+    
   </section>
 </div>

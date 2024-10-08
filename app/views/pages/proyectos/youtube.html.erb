@@ -17,6 +17,7 @@
     <h2 class="text-5xl mt-14 text-center font-bold mb-4 text-red-700">Secciones:</h2>
     
     <a href="<%= proyectos_subsection_path(section: 'youtube') %>" class="text-red-700 text-center">
+    </a>
     <% if @subsections['Youtube'].present? %>
       <ul class="list-inside ml-12 mt-2">
         <% @subsections['Youtube'].each_with_index do |sub_section, index| %>
