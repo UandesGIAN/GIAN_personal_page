@@ -10,11 +10,11 @@ class PagesController < ApplicationController
     @sub_section = params[:sub_section]
 
     @subsections = {
-      "Youtube" => [ "Origen", "Contenidos", "Proyectos Principales" ],
-      "MikuMikuDance" => [ "Origen", "Tutoriales" ],
-      "Vídeos y Documentos" => [ "Videos", "Documentos" ],
-      "Experimentos" => [ "PC", "Laboratorio" ],
-      "Por aburrimiento" => [ "Juegos", "Artículos" ]
+      "Youtube" => [ "Origen", "Contenidos", "Proyectos Principales", "Logros"],
+      "MikuMikuDance" => [ "Origen", "Proyectos Principales", "Logros" ],
+      "Por aburrimiento" => [ "Escritos", "Tier Lists", "Juegos" ],
+      "Favores" => [ "Videos", "Documentos" ],
+      "Experimentos" => [ "PC", "Electrónica" ],
     }
 
     @indice_content = render_to_string(partial: "shared/indice", locals: {

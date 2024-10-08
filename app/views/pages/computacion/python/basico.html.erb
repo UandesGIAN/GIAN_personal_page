@@ -18,161 +18,169 @@
 		</p>
 
 		<p class="mb-6 text-lg">
-			<strong>Funciones básicas para interactuar con la consola</strong> 
-			<br>
-			<div class="console flex flex-start w-3/4  mb-6 text-lg">
+		<strong>Funciones básicas para interactuar con la consola</strong> 
+		<br>
+		</p>
+		<div class="console flex flex-center w-3/4 mb-6 text-lg">
         <code>
             <span class="function">print</span>()<span class="comment"> # Imprime un string, con ',' se agrega un espacio y con '+' se juntan</span><br>
             <span class="function">print</span>(<span class="string">"Hola"</span>,<span class="string">'y'</span>+<span class="string">"Adios"</span>)
-						<span class="comment"> # Tendrá de output: Hola yAdios</span><br>
-						<br>
-						<span class="function">input</span>()<span class="comment"> # Entrada del usuario. Lee strings.</span><br>
-						<span class="function">input</span>(<span class="string">"Tambien puede imprimir texto"</span>)<br>
+			<span class="comment"> # Tendrá de output: Hola yAdios</span><br>
+			<br>
+			<span class="function">input</span>()<span class="comment"> # Entrada del usuario. Lee strings.</span><br>
+			<span class="function">input</span>(<span class="string">"Tambien puede imprimir texto"</span>)<br>
         </code>
     	</div>
+
+		<p class="mb-6 text-lg">
+		Convertir variable a <u>int</u>: <span class="text-green-700">int</span>(<i style="color: rgba(100,100,100,1.0);">variable</i>) 
+		<br>
+		A <u>string</u>: <span style="color: rgba(255,0,0,1.0);">str</span>(<i style="color: rgba(100,100,100,1.0);">variable</i>) 
+		<br>
+		A <u>float</u>: <span class="text-blue-700">float</span>(<i style="color: rgba(100,100,100,1.0);">variable</i>) 
+		<br><br>
+		De carácter a <u>unicode</u>:
+		<div class="console flex flex-center w-3/4 mb-8 text-lg">
+		<code><span class="function">ord</span>()<span class="comment"> # ej. ord(‘A’) retorna 65.</span></code></div>
+		De ASCII a <u>carácter</u>:
+		<div class="console flex flex-center w-3/4 mb-6 text-lg">
+		<code><span class="function">chr</span>()<span class="comment"> # ej. chr(95) retorna ‘A’.</span></code></div>
 		</p>
 
 		<p class="mb-6 text-lg">
-			Convertir string a int: int(*var*) 
-			<br>
-			a string: str(*var*) 
-			<br>
-			a float: float(*var*) 
-			<br>
-			De carácter a unicode: ord().  # ej. ord(‘A’) retorna 65. 
-			<br>
-			De ASCII a carácter: chr()  # ej. chr(95) retorna ‘A’.
+		<strong>Operadores</strong>
+		</p>
+
+		<ul class="mb-6 text-lg">
+			<li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-black-800">•</span><p class="mt-1"><span style="color: rgba(200,120,20,1.0);">Aritméticos (entre números)</span>: suma (<span style="color: rgba(200,120,20,1.0);">+</span>), resta (<span style="color: rgba(200,120,20,1.0);">-</span>), multiplicación (<span style="color: rgba(200,120,20,1.0);">*</span>), división (<span style="color: rgba(200,120,20,1.0);">/</span>), potencia (<span style="color: rgba(200,120,20,1.0);">**</span>), división entera (<span style="color: rgba(200,120,20,1.0);">//</span>), módulo/resto (<span style="color: rgba(200,120,20,1.0);">%</span>).</p></li>
+			<li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-black-800">•</span><p class="mt-1"><span style="color: rgba(178,0,255,1.0);">Relacionales (retorna True o False)</span>: menor (<span style="color: rgba(178,0,255,1.0);">&lt;</span>), mayor (<span style="color: rgba(178,0,255,1.0);">&gt;</span>), igual (<span style="color: rgba(178,0,255,1.0);">==</span>), menor o igual (<span style="color: rgba(178,0,255,1.0);">&lt;=</span>), mayor o igual (<span style="color: rgba(178,0,255,1.0);">&gt;=</span>), distinto (<span style="color: rgba(178,0,255,1.0);">!=</span>).</p></li>
+			<li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-black-800">•</span><p class="mt-1"><span style="color: rgba(0,150,0,1.0);">Bit a bit (binario)</span>: and (<span style="color: rgba(0,150,0,1.0);">&amp;</span>), or (<span style="color: rgba(0,150,0,1.0);">|</span>), xor/ó (<span style="color: rgba(0,150,0,1.0);">^</span>), not (<span style="color: rgba(0,150,0,1.0);">~</span>), 1 binario a la derecha (<span style="color: rgba(0,150,0,1.0);">&gt;&gt;</span>), 1 binario a la izquierda (<span style="color: rgba(0,150,0,1.0);">&lt;&lt;</span>).</p></li>
+			<li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-black-800">•</span><p class="mt-1"><span style="color: rgba(255,0,0,1.0);">Asignación (aplica la operación)</span>: igual (<span style="color: rgba(255,0,0,1.0);">=</span>), sumar (<span style="color: rgba(255,0,0,1.0);">+=</span>), restar (<span style="color: rgba(255,0,0,1.0);">-=</span>), multiplicar (<span style="color: rgba(255,0,0,1.0);">*=</span>), dividir (<span style="color: rgba(255,0,0,1.0);">/=</span>), elevar (<span style="color: rgba(255,0,0,1.0);">**=</span>), dividir entero (<span style="color: rgba(255,0,0,1.0);">//=</span>), resto (<span style="color: rgba(255,0,0,1.0);">%=</span>), y (<span style="color: rgba(255,0,0,1.0);">&amp;=</span>), o (<span style="color: rgba(255,0,0,1.0);">|=</span>), ó (<span style="color: rgba(255,0,0,1.0);">^=</span>), a la derecha (<span style="color: rgba(255,0,0,1.0);">&gt;&gt;=</span>), a la izquierda (<span style="color: rgba(255,0,0,1.0);">&lt;&lt;=</span>).</p></li>
+			<li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-black-800">•</span><p class="mt-1"><span style="color: rgba(100,80,0,1.0);">Lógicos</span>: y (<span style="color: rgba(100,80,0,1.0);">and</span>), o (<span style="color: rgba(100,80,0,1.0);">or</span>), no (<span style="color: rgba(100,80,0,1.0);">not</span>).</p></li>
+			<li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-black-800">•</span><p class="mt-1"><span style="color: rgba(0,200,220,1.0);">Identidad (retorna True o False)</span>: ¿mismo objeto? (<span style="color: rgba(0,200,220,1.0);">is</span>), ¿no lo es? (<span style="color: rgba(0,200,220,1.0);">is not</span>).</p></li>
+			<li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-black-800">•</span><p class="mt-1"><span style="color: rgba(0,0,150,1.0);">Pertenencia (retorna True o False)</span>: ¿está en? (<span style="color: rgba(0,0,150,1.0);">in</span>), ¿no está en? (<span style="color: rgba(0,0,150,1.0);">not in</span>).</p></li>
+		</ul>
+
+		<p class="mb-6 text-lg">
+		<strong>Números aleatorios:</strong>
 		</p>
 
 		<p class="mb-6 text-lg">
-			<strong>Operadores:</strong>
-		</p>
+			Usar numpy:
+			</p>
+		<div class="console flex flex-start mb-6 text-lg">
+			<code>
+				<span class="keyword">from</span> <span class="string">numpy</span> <span class="keyword">import</span> <span class="function">random</span><br>
+				<br>
+				<span class="function">random.randint</span>(<span class="keyword">número_menor</span>, <span class="keyword">número_mayor</span>)<span class="comment"> # Sólo enteros, por defecto parte desde el 0 hasta el número_mayor.</span><br>
+				<span class="function">random.random</span>()<span class="comment"> # Decimales entre 0 y 1.</span><br>
+			</code>
+		</div>
 
 		<p class="mb-6 text-lg">
-			- Aritmeticos(entre números): suma(+), resta(-), multiplicación(*), división(/), potencia(**), división entera(//), módulo/resto(%). 
-			<br>
-			- Relacionales(retorna True o False): menor(<), mayor(>), igual(==), menor ó igual(<=), mayor ó igual(>=), distinto(!=). 
-			<br>
-			- Bit a bit(binario): and(&), or(|), xor/ó(^), not(~), 1 binario a la derecha(>>), 1 binario a la izquierda(<<). 
-			<br>
-			- Asignación(aplica la operación): igual(=), sumar(+=), restar(-=), multiplicar(*=), dividir(/=), elevar(**=), dividir entero(//=), resto(%=), y(&=), o(|=), ó(^=), a la derecha(>>=), a la izquierda(<<=). 
-			<br>
-			- Lógicos: y(and), o(or), no(not). 
-			<br>
-			- Identidad(retorna True o False): ¿mismo objeto?(is), ¿no lo es?(is not). 
-			<br>
-			- Pertenencia(retorna True o False): ¿está en?(in), ¿no está en?(not in).
+		<strong>Control de flujo:</strong>
 		</p>
 
-		<p class="mb-6 text-lg">
-			<strong>Números aleatorios:</strong>
-		</p>
+		<div class="console flex flex-start mb-6 text-lg">
+			<code>
+				<span class="keyword">if</span>(<span class="italic">___</span>): <span class="comment"> # (“si [condición]…”)</span><br>
+				<span class="keyword">elif</span>(<span class="italic">___</span>): <span class="comment"> # (“o si [condición]…”)</span><br>
+				<span class="keyword">else</span>: <span class="comment"> # (“si no…”)</span><br>
+				<br>
+				<span class="keyword">while</span>(<span class="italic">___</span>): <span class="comment"> # (“mientras [condición]…”)</span><br>
+				<br>
+				<span class="keyword">for</span>(<span class="string">elemento</span> <span class="keyword">in</span> <span class="string">conjunto</span>): <span class="comment"> # (“para cada elemento en el conjunto…”)</span><br>
+				<span class="keyword ml-6">break</span><span class="comment"> # se sale del ciclo más próximo.</span><br>
+				<span class="keyword ml-6">continue</span><span class="comment"> # se salta a la siguiente iteración (en while vuelve al principio).</span><br>
+				<br>
+				<span class="keyword">while</span> <span class="keyword">True</span>: <span class="comment"> # es un ciclo infinito.</span><br>
+			</code>
+		</div>
 
-		<p class="mb-6 text-lg">
-			Usar numpy: from numpy import random 
-			<br>
-			random.randint(*número_menor*, *número_mayor*). Sólo enteros, por defecto parte desde el 0 hasta el *número_mayor*. 
-			<br>
-			random.random(). Decimales entre 0 y 1.
-		</p>
-
-		<p class="mb-6 text-lg">
-			<strong>Control de flujo:</strong>
-		</p>
-
-		<p class="mb-6 text-lg">
-			if(___): (“si…”)    
-			<br>
-			elif(___): (“o si…”)   
-			<br>
-			else: (“si no…”)  
-			<br>
-			while(___): (“mientras [condición]…”) 
-			<br>
-			for(*elemento* in *conjunto*): (“para cada elemento en el conjunto…”) 
-			<br>
-			con break se sale del ciclo más próximo. 
-			<br>
-			con continue se salta a la siguiente iteración(en while vuelve al principio). 
-			<br>
-			While True: es un ciclo infinito.
-		</p>
-
-		<p class="mb-6 text-lg">
-			<strong>Listas:</strong> conjunto = [] 
-			<br>
-			conjunto.append(*valor*). Añade *valor* a conjunto. 
-			<br>
-			conjunto.insert(*índice, valor*). Añade *valor* a conjunto en la posición *índice(desde el 0)*. 
-			<br>
-			conjunto.extend(*conjunto2*). Agrega los elementos de la lista conjunto2 al final de conjunto. 
-			<br>
-			conjunto.pop(*índice*). Elimina el elemento de la posición *índice* de conjunto. Si se usa .pop() elimina el último elemento. 
-			<br>
-			conjunto.remove(*valor*). Elimina el primer elemento igual a *valor* del conjunto. 
-			<br>
-			conjunto.reverse(). Invierte el orden de conjunto. 
-			<br>
-			conjunto.sort(). Ordena de menor a mayor o alfabéticamente los elementos de conjunto. Si se quiere de mayor a menor o orden alfabético invertido, usar .sort(reverse=True). 
-			<br>
-			conjunto.index(*valor*). Retorna la posición del primer elemento igual a *valor* de conjunto. 
-			<br>
-			conjunto.count(*valor*). Retorna la cantidad de veces que está *valor* dentro del conjunto. 
-			<br>
-			conjunto[*índice*]. Accede al elemento en la posición *índice*(desde el 0) de conjunto. 
-			<br>
-			len(conjunto). Retorna la longitud de la lista conjunto(conteo desde el 1).
-		</p>
+		<p class="mb-6 text-lg"><strong>Listas:</strong></p>
+		<div class="console flex flex-start mb-6 text-lg">
+			<code>
+				<span class="keyword">conjunto</span> = <span class="keyword">[]</span>  <br>
+				<span class="keyword">conjunto</span>.<span class="function">append</span>(<span class="string">valor</span>)  <span class="comment"># Añade *valor* a conjunto.</span><br>
+				<span class="keyword">conjunto</span>.<span class="function">insert</span>(<span class="string">índice</span>, <span class="string">valor</span>)  <span class="comment"># Añade *valor* a conjunto en la posición índice (desde el 0).</span><br>
+				<span class="keyword">conjunto</span>.<span class="function">extend</span>(<span class="string">conjunto2</span>)  <span class="comment"># Agrega los elementos de la lista conjunto2 al final de conjunto.</span><br>
+				<span class="keyword">conjunto</span>.<span class="function">pop</span>(<span class="string">índice</span>)  <span class="comment"># Elimina el elemento de la posición *índice* de conjunto. Si se usa .pop() elimina el último elemento.</span><br>
+				<span class="keyword">conjunto</span>.<span class="function">remove</span>(<span class="string">*valor*</span>)  <span class="comment"># Elimina el primer elemento igual a *valor* del conjunto.</span><br>
+				<br>
+				<span class="keyword">conjunto</span>.<span class="function">reverse</span>()  <span class="comment"># Invierte el orden de conjunto.</span><br>
+				<span class="keyword">conjunto</span>.<span class="function">sort</span>()  <span class="comment"># Ordena de menor a mayor o alfabéticamente los elementos de conjunto.</span><br>
+				<span class="keyword">conjunto</span>.<span class="function">sort</span>(<span class="keyword">reverse</span>=<span class="keyword">True</span>)  <span class="comment"># Ordena de mayor a menor o alfabéticamente invertido.</span><br>
+				<span class="keyword">conjunto</span>.<span class="function">index</span>(<span class="string">valor</span>)  <span class="comment"># Retorna la posición del primer elemento igual a valor de conjunto.</span><br>
+				<span class="keyword">conjunto</span>.<span class="function">count</span>(<span class="string">valor</span>)  <span class="comment"># Retorna la cantidad de veces que valor está dentro del conjunto.</span><br>
+				<span class="keyword">conjunto</span>[<span class="string">índice</span>]  <span class="comment"># Accede al elemento en la posición índice (desde el 0) de conjunto.</span><br>
+				<span class="function">len</span>(<span class="keyword">conjunto</span>)  <span class="comment"># Retorna la longitud de la lista conjunto (conteo desde el 1).</span><br>
+			</code>
+		</div>
 
 		<p class="mb-6 text-lg">
 			<strong>Métodos de string:</strong>
 		</p>
 
-		<p class="mb-6 text-lg">
-			len(string). Retorna la longitud de string. 
-			<br>
-			string.find(*texto*). Retorna la posición que ocupa el substring igual a *texto* en el string. Si se hace string.find(*texto, índice*) busca la posición donde encuentra el substring igual a *texto* desde la posición *índice*. 
-			<br>
-			string.lower(). Retorna el string pero con todas las letras en minúsculas. 
-			<br>
-			string.upper(). Retorna el string pero con todas las letras en mayúsculas. 
-			<br>
-			string.replace(texto, texto2). Copia string reemplazando todas las apariciones de los substrings texto, por texto2. 
-			<br>
-			string.split(‘*char*’). Da una lista de strings dividiendo string por el delimitador *char*(puede ser un substring), no incluye el delimitador en la lista. 
-			<br>
-			string.strip(‘*char*’). Retorna una copia de string quitando cada ‘*char*’ presente en el texto original. *char* puede ser un substring.
-		</p>
+		<div class="console flex flex-start mb-6 text-lg">
+			<code>
+				<span class="function">len</span>(<span class="string">string</span>) <span class="comment"># Retorna la longitud de string.</span><br>
+				<br>
+				<span class="string">string</span>.<span class="function">find</span>(<span class="string">texto</span>) <span class="comment"># Retorna la posición que ocupa el substring igual a texto en el string.</span> 
+				<br>
+				<span class="string">string</span>.<span class="function">find</span>(<span class="string">texto</span>, <span class="string">índice</span>) <span class="comment"># Busca la posición donde encuentra el substring igual a texto desde la posición índice.</span><br>
+				<span class="string">string</span>.<span class="function">lower</span>() <span class="comment"># Retorna el string pero con todas las letras en minúsculas.</span><br>
+				<span class="string">string</span>.<span class="function">upper</span>() <span class="comment"># Retorna el string pero con todas las letras en mayúsculas.</span><br>
+				<br>
+				<span class="string">string</span>.<span class="function">replace</span>(<span class="string">texto</span>, <span class="string">texto2</span>) <span class="comment"># Copia string reemplazando todas las apariciones de los substrings texto, por texto2.</span><br>
+				<span class="string">string</span>.<span class="function">split</span>(<span class="string">‘char’</span>) <span class="comment"># Da una lista de strings dividiendo string por el delimitador char (puede ser un substring), no incluye el delimitador en la lista.</span><br>
+				<span class="string">string</span>.<span class="function">strip</span>(<span class="string">‘char’</span>) <span class="comment"># Retorna una copia de string quitando cada ‘char’ presente en el texto original. char puede ser un substring.</span><br>
+			</code>
+		</div>
 
 		<p class="mb-6 text-lg">
 			<strong>Generador de listas:</strong>
 		</p>
 
-		<p class="mb-6 text-lg">
-			list(enumerate(número_mayor*, número_menor*)). Realiza una lista que enumera desde el *número_menor* al *número_mayor*. Se puede usar enumerate(número_mayor) para enumerar desde el 0 al *número_mayor.* 
-			<br>
-			range(*número*). Realiza una lista desde el 0, de uno en uno hasta *número*. No incluye a *número* en ella. Si se hace range(*número_menor, número_mayor, incremento*) cada elemento se encuentra separado por *incremento* unidades desde *número_menor* hasta lo más cercano a *número_mayor.* 
-			<br>
-			Al hacer for x in range(*num_menor*, *num_mayor*):  es lo mismo que un while x < num_mayor: 
-			<br>
-			x += 1 
-		</p>
+		<div class="console flex flex-start mb-6 text-lg">
+			<code>
+				<span class="function">list</span>(<span class="function">enumerate</span>(<span class="string">número_mayor</span>, <span class="string">número_menor</span>)) <span class="comment"># Realiza una lista que enumera desde el número_menor al número_mayor.</span><br>
+				<br>
+				<span class="comment"># Se puede usar enumerate(número_mayor) para enumerar desde el 0 al número_mayor.</span><br>
+				<span class="function">range</span>(<span class="string">número</span>) <span class="comment"># Realiza una lista desde el 0, de uno en uno hasta número.</span> 
+				<br><br>
+				<span class="comment"># No incluye a número en ella.</span><br>
+				<span class="function">range</span>(<span class="string">número_menor</span>, <span class="string">número_mayor</span>, <span class="string">incremento</span>) <span class="comment"># Cada elemento se encuentra separado por incremento unidades desde número_menor hasta lo más cercano a número_mayor.</span><br>
+				<br>
+				<span class="comment"># Al hacer</span><br>
+				<span class="keyword">for</span> <span class="string">x</span> <span class="keyword">in</span> <span class="function">range</span>(<span class="string">num_menor</span>, <span class="string">num_mayor</span>):
+				<br>
+				<span class="comment"># es lo mismo que</span><br>
+				<span class="keyword">while</span><span class="string"> x</span> < <span class="string">num_mayor</span>:<br><span class="comment ml-6"># Código</span><br>
+				<span class="string ml-6">x</span> += <span class="number">1</span><br>
+			</code>
+		</div>
 
-		<p class="mb-6 text-lg">
+		<p class="mb-6 text-lg text-red-600">
 			<strong>PRO TIP:</strong> Usar for i in range(len(conjunto)): para acceder a cada índice (con el nombre de variable ‘i’) de conjunto para cada iteración.
 		</p>
 
 		<p class="mb-6 text-lg">
-			<strong>Sublistas:</strong> conjunto[*índice_elemento_inferior*:*índice_elemento_superior*]. Crea otra lista, copia de conjunto, pero a partir de la posición *indice_elemento_inferior* hasta *índice_elemento_superior*-1. 
-			<br>
-			Para hacer una copia se puede hacer copia = conjunto[:]. 
-			<br>
-			Si se hace conjunto[:-1], copia conjunto desde el principio hasta el último elemento. Si se hace conjunto[-1:] copia desde el último elemento hasta el primero. 
-			<br>
-			Al hacer conjunto = [[],[]] se crea una lista de listas. Para acceder a un elemento se usa conjunto[*índice_primera_lista][índice_segunda_lista]. 
-			<br>
-			# ej. Sea lista[[‘a’,’b’,’c’],[‘d’,’e’,’f’]]. print(lista[0][2]). Imprime “c”.
-		</p>
+			<strong>Sublistas:</strong></p>
+			<div class="console flex flex-start mb-6 text-lg">
+				<code>
+					<span class="string">conjunto</span>[<span class="string">índice_elemento_inferior</span>:<span class="string">índice_elemento_superior</span>] <span class="comment"># Crea otra lista, copia de conjunto, pero a partir de la posición índice_elemento_inferior hasta índice_elemento_superior-1.</span><br>
+					<br>
+					<span class="comment"># Para hacer una copia se puede hacer</span><br><span class="string">copia</span> = <span class="string">conjunto</span>[:]<br>
+					<span class="string">conjunto</span>[:-<span class="number">1</span>], <span class="comment"># copia conjunto desde el principio hasta el último elemento.</span><br>
+					<span class="string">conjunto</span>[-<span class="number">1</span>:] <span class="comment"># copia desde el último elemento hasta el primero.</span><br>
+					<br>
+					<span class="string">conjunto</span> = [<span class="string">[]</span>, <span class="string">[]</span>] <span class="comment"># crea una lista de listas.</span><br>
+					<span class="comment"># Para acceder a un elemento se usa:</span><br><span class="string">conjunto</span>[<span class="string">índice_primera_lista</span>][<span class="string">índice_segunda_lista</span>]<br>
+					<br>
+					<span class="comment"># ej. Sea lista = [[‘a’,’b’,’c’],[‘d’,’e’,’f’]]</span><br>
+					<span class="comment"># print(lista[0][2]) ... Imprime “c”<br>
+				</code>
+			</div>
 		
 		<div class="flex justify-between items-center">
 			<div>

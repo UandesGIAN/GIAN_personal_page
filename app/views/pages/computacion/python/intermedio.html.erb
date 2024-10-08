@@ -9,7 +9,150 @@
 <div class="text-container max-w-7xl mx-auto mt-20 px-4 flex flex-col pb-8">
   <section class="p-6 bg-gray-100 text-gray-800">
     <h2 class="text-5xl mt-2 text-center font-bold mb-4 text-blue-700">3. Intermedio</h2>
-		
+	<p class="mb-6 text-lg">
+		<strong>Funciones:</strong>
+	</p>
+
+	<div class="console flex flex-start mb-6 text-lg">
+		<code>
+			<span class="comment"> # Recibe cero o más parámetros y siempre retorna un resultado.</span><br>
+			<span class="function">def</span> <span class="string">nombre_función</span>(<span class="function">parámetros</span>,<span class="function">…</span>): 
+			<br>
+			<span class="comment ml-6"># Código</span> 
+			<br>
+			<span class="keyword ml-6">return</span> <span class="comment "># algo</span>
+			<br><br>
+			<span class="comment"> # El return va al final de la función, es lo que retorna la función al ser llamada.
+			<br><br>
+			<span class="keyword">None</span> = <span class="comment">(nada) </span> 
+		</code>
+	</div>
+
+	<p class="mb-6 text-lg">
+		<strong>Diccionarios:</strong>
+	</p>
+	<div class="console flex flex-start mb-6 text-lg">
+		<code>
+			<span class="string">d</span> = {<i class="string">'clave'</i>: <span class="number">valor</span>}</span> <span class="comment"># La <i>'clave'</i> es como la palabra de un diccionario y el valor su definición.</span>
+			<br><br><span class="comment"># Para añadir una clave nueva:</span><br><span class="string">d</span>[<i class="string">'clave'</i>]</span> = <span class="number"><i>valor</i></span>
+			<br><span class="comment"># Para acceder a un valor:</span><br><span class="string">d</span>[<i class="string">'clave'</i>]
+			<br>
+			<span class="comment"># Para llamar a todos los items:</span><br><span class="string">d</span>.<span class="function">items</span>()
+			<br>
+			<span class="comment"># Para llamar a las claves:</span><br><span class="string">d</span>.<span class="function">keys</span>()
+			<br>
+			<span class="comment"># Para llamar a los valores:</span><br><span class="string">d</span>.<span class="function">values</span>()
+			<br>
+			<span class="comment"># Para convertir a una lista iterable:</span><br><span class="keyword">list</span>(<span class="string">d</span>.<span class="function">keys</span>())
+			<br>
+		</code>
+	</div>
+	<p class="mb-6 text-lg text-red-600">
+		<strong>PRO TIP</strong>: Si se hace x = list(d.keys())</span> se puede usar un for key in x: ; para acceder a cada valor con d[key].
+	</p>
+	<div class="console flex flex-start mb-6 text-lg">
+		<code>
+			<span class="string">d</span>.<span class="function">clear</span>() <span class="comment"># Borra todos los elementos.</span> 
+			<br>
+			<span class="string">d</span>.<span class="function">copy</span>() <span class="comment"># Copia d.</span>
+			<br><br>
+			<span class="string">d</span>.<span class="function">get</span>(<i class="string">'clave'</i>)</span> <span class="comment"># Retorna el valor asociado a 'clave'.</span>
+			<br>
+			<span class="string">d</span>.<span class="function">pop</span>()</span> <span class="comment"># Borra la última clave y su valor.</span>
+			<br><br>
+			<span class="keyword">dict</span>.<span class="function">fromkeys</span>((<i class="string">'clave1'</i>, <i class="string">'clave2'</i>), <i class="string">valor_para_todos</i>)<br><span class="comment"># Crea un diccionario con las claves originales, pero cuyo valor es valor_para_todos.</span>
+			<br><br>
+			<span class="string">d</span>.<span class="function">setdefault</span>(<i class="string">'clave'</i>, <i class="number">valor</i>)</span> <span class="comment"># Añade una clave con el valor indicado, retorna el valor. <br># Si ya existe, retorna su valor original.</span>
+			<br><br>
+			<span class="string">d</span>.<span class="function">update</span>(<i class="string">d2</i>)</span> <span class="comment"># Reemplaza d con d2, manteniendo los valores distintos entre sí.</span>
+		</code>
+	</div>
+
+	<p class="mb-6 text-lg">
+		<strong>Formato de cadenas:</strong>
+	</p>
+	<div class="console flex flex-start mb-6 text-lg w-3/4">
+		<code>
+			<span class="function">print</span>(<span class="string">"… '%d' …"</span>, <span class="number">5</span>) <span class="comment"># %d se reemplaza por el valor 5.</span>
+		</code>
+	</div>
+	<p class="mb-6 text-lg"><span class="text-red-900">%d</span>/<span class="text-red-900">%i</span> (int), <span class="text-red-900">%f</span> (float), <span class="text-red-900">%c</span> (char), <span class="text-red-900">%s</span> (string), <span class="text-red-900">%e</span> (notación científica), <span class="text-red-900">%x</span> (hexadecimal).</p>
+	<br>
+	<div class="console flex flex-start mb-6 text-lg">
+		<code>
+			<span class="comment"># Si se tiene un float num1 al hacer:</span><br><span class="function">format</span>(<span class="string">num1</span>, <span class="comment">'.1E'</span>)
+			<br><span class="comment"> # Se obtiene el decimal en notación científica.</span>
+			<br><br>
+			<span class="comment"># Si se tiene una variable var, al hacer:</span><br><span class="function">print</span>(<span class="keyword">f</span><span class="string">“...{var}...”</span>)<br><span class="comment"># Reemplaza cada {var} por el valor de la variable var.</span>
+			<br><br>
+			<span class="comment"># Para imprimir sin salto de línea:</span><br><span class="function">print</span>(<span class="string">"..."</span>, end=<span class="string">''</span>)<br><span class="comment">Se puede usar end="sample" para imprimir al final de texto "sample".</span>
+			<br><br>
+			<span class="comment"># Para añadir un carácter o salto de línea a un string:</span><br><span class="string">texto</span> += <span class="string">'\n'</span>
+		</code>
+	</div>
+
+	<p class="mb-6 text-lg">
+		<strong>Tuplas:</strong>
+		Funcionan como listas, pero no se modifican.</p>
+	<div class="console flex flex-start w-3/4 mb-6 text-lg">
+		<code>
+			<span class="string">tupla</span> = <span class="function">()</span> <span class="comment"># Para acceder al elemento en el índice i: tupla[i].
+		</code>
+	</div>
+	<p class="mb-6 text-lg">
+		Son útiles para asignar valores a más variables. La cantidad de variables y el largo de la tupla deben ser iguales.
+		<br><br>Ejemplo: </p>
+	
+	<div class="console flex flex-start mb-6 text-lg">
+		<code>
+			<span class="string">tupla</span> = <span class="function">(<span class="number">1</span>, <span class="number">2</span>)</span> <span class="comment"># Al hacer var1, var2 = tupla, se obtiene var1 = 1, var2 = 2.</span>
+			<br><br><span class="comment">Cuenta cuántas veces aparece elemento en la tupla.</span>
+			<br><span class="string">tupla</span>.<span class="function">count</span>(<i class="string">elemento</i>)
+			<br><span class="comment">Devuelve el primer índice donde encuentra el elemento.</span>
+			<br><span class="string">tupla</span>.<span class="function">index</span>(<i class="string">elemento</i>)
+			<br><br>
+			<span class="comment"># Para convertir una lista en tupla:</span><br><span class="keyword">tuple</span>(<span class="string">lista</span>).
+		</code>
+	</div>
+
+	<p class="mb-6 text-lg">
+		<strong>Archivos de texto:</strong>
+		<br>Un archivo de texto se puede tratar como una variable.
+	</p>
+
+	<div class="console flex flex-start mb-6 text-lg">
+		<code>
+			<span class="string">archivo</span> = <span class="function">open</span>(<i class="string">'nombre_archivo.txt'</i>) <span class="comment"># Si no se da un directorio, se asume que está en la misma carpeta del programa.</span>
+			<br>
+			<span class="comment"># Para acceder a una carpeta superior: "../nombre_archivo.txt"</span>.
+			<br><br>
+			<span class="comment"># Para escritura:</span><br><span class="function">open</span>(<i class="string">'nombre_archivo.txt'</i>, <i class="string">'w'</i>) <span class="comment"># Si no existe, se creará vacío.<br># Método .write() para escribir en el archivo.</span>
+			<br><br>
+			<span class="comment"># Para lectura:</span><br><span class="function">open</span>(<i class="string">'nombre_archivo.txt'</i>, <i class="string">'r'</i>)<br><span class="comment"># o</span><br><span class="function">open</span>(<i class="string">'nombre_archivo.txt'</i>)<br><span class="comment"># Método archivo.readline() para leer la siguiente línea.</span>
+			<br><br>
+			<span class="comment"># Para obtener una lista con cada línea del archivo:</span><br><span class="string">archivo</span>.<span class="function">readlines</span>() <span class="comment"># Incluye el salto de línea '\n'.</span>
+		</code>
+	</div>
+
+	<p class="mb-6 text-lg text-red-600">
+		<strong>PRO TIP</strong>: archivo.readline().strip('\n') para leer sin el salto de línea.
+	</p>
+	<div class="console flex flex-start mb-6 text-lg">
+		<code>
+			<span class="comment"># Para cerrar un archivo:</span><br><span class="string">archivo</span>.<span class="function">close</span>()
+			<br><br>
+			<span class="comment"># Para añadir una línea al final:</span><br><span class="function">open</span>(<i class="string">'nombre_archivo.txt'</i>, <i class="string">'a'</i>)
+			<br><br>
+			<span class="comment"># Para lectura y escritura:</span><br><span class="function">open</span>(<i class="string">'nombre_archivo.txt'</i>, <i class="string">'w+'</i>)<br><span class="comment"># o</span><br><span class="function">open</span>(<i class="string">'nombre_archivo.txt'</i>, <i class="string">'r+'</i>)
+		</code>
+	</div>
+	<p class="mb-6 text-lg"> Para leer archivos CSV:</p>
+	<div class="console flex flex-start mb-6 text-lg">
+		<code>
+			<span class="keyword">import</span> <span class="string">csv</span><br><br><span class="string">csv</span>.<span class="function">reader</span>(<span class="string">archivo</span>, <span class="function">delimiter=</span><i class="string">','</i>)</span>
+		</code>
+	</div>
+
     <div class="flex justify-between items-center">
 			<div>
 				<a href="<%= computacion_subsection_path(section: 'python', sub_section: 'basico') %>" class="bg-blue-700 text-white py-3 px-4 rounded-md hover:bg-blue-800 transition-all">
