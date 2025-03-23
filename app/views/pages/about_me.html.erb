@@ -1,4 +1,6 @@
-
+<!-------------------------------->
+<!--    SOBRE GIAN / SOBRE MI   -->
+<!-------------------------------->
 <div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
   <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-2 ml-12 text-white text-shadow-gian animate-slide-in-right">
     Sobre 
@@ -8,15 +10,23 @@
 
 <div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
   <section class="p-6 bg-gray-100 text-gray-800">
+
+    <% birth_date = Date.new(2002, 6, 7) %>
+    <% current_date = Date.today %>
+    <% age = current_date.year - birth_date.year - (current_date.month < birth_date.month || (current_date.month == birth_date.month && current_date.day < birth_date.day) ? 1 : 0) %>
+    <!-- RESUMEN BREVE -->
     <h2 class="text-3xl font-bold mt-4 mb-4 text-green-700">Resumen</h2>
     <p class="mb-6 text-lg">
         ¡Buenas gente! Soy Gian, el creador de este sitio web y casi todo lo que se comparte aquí.<br>
         Soy estudiante de ingeniería civil en computación<br>Mis estudios básicos y superiores
-        fueron realizados en una misma escuela durante el 2005 y 2020.<br><br>Actualmente tengo 22 años y mi objetivo es hacer del mundo
+        fueron realizados en una misma escuela durante el 2005 y 2020.<br><br>Actualmente tengo <%= age %> años y mi objetivo es hacer del mundo
         un lugar mejor. Me considero alguien bastante único, empático, respetuoso y amistoso. Espero que disfruten del contenido
         de mi sitio web ^.^
     </p>
 
+
+
+    <!-- INFORMACION GENERAL -->
     <h2 class="text-3xl mt-14 font-bold mb-4 text-green-700">Detalles</h2>
     <ul class="list-disc text-lg pl-5 mb-6">
         <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-green-700">•</span><b>Apodo:</b><p class="ml-2">Gian.</p></li>
@@ -29,14 +39,15 @@
         <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-green-700">•</span><b>Situación civil: </b><p class="ml-2">Soltero.</p></li>
     </ul>
 
-    <h2 class="text-3xl mt-14 font-bold mb-4 text-blue-900">Experiencia</h2>
 
-    <section class="p-6 bg-gray-100 text-gray-800 flex-grow ">
+    <!-- CARRERA -->
+    <h2 class="text-3xl mt-14 font-bold mb-4 text-blue-900">Trayectoria</h2>
+    <section class="p-6 bg-gray-100 text-gray-800 flex-grow">
       <div class="relative flex items-start">
         <div class="timeline-line"></div>
 
         <div class="flex flex-col mt-5">
-          <div class="flex flex-col mb-8">
+          <div class="flex flex-col mb-8 animate__animated animate__fadeIn animate__delay-1s">
             <div class="flex items-center relative mb-4 mt-4">
               <div class="timeline-node"></div>
               <h2 class="text-2xl font-bold text-blue-900 ml-10">Educación escolar</h2>
@@ -72,7 +83,8 @@
             </div>
           </div>
 
-          <div class="flex flex-col mb-8">
+          <!-- PROYECTOS -->
+          <div class="flex flex-col mb-8 animate__animated animate__fadeIn animate__delay-1s">
             <div class="relative flex items-center mb-4">
               <div class="timeline-node"></div>
               <h2 class="text-2xl font-bold text-blue-900 ml-10">Proyectos personales</h2>
@@ -123,10 +135,20 @@
                   <p>Hice <b>guías y resúmenes</b> sobre algunos lenguajes de programación.</p>
                 </div>
               </div>
+
+              <div class="flex flex-row">
+                <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
+                  <span class="text-blue-900 font-bold">Desde 2024</span>
+                </div>
+                <div class="flex-1">
+                  <p>Cree unos <b>fan-games</b> utilizando <b>Game Maker Studio</b>.</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="relative flex flex-col mb-2">
+          <!-- EXPERIENCIA PROFESIONAL -->
+          <div class="relative flex flex-col mb-2 animate__animated animate__fadeIn animate__delay-1s">
             <div class="flex items-center mb-4">
               <div class="timeline-node"></div>
               <h2 class="text-2xl font-bold text-blue-900 ml-10">Experiencia Profesional</h2>
@@ -147,7 +169,7 @@
                   <span class="text-blue-900 text-center font-bold">Ago/23-Dic/23</span>
                 </div>
                 <div class="flex-1">
-                  <p>Trabajé como <b>corrector en "Programación en Bajo Nivel"</b>.</p>
+                  <p>Trabajé como <b>ayudante corrector en "Programación en Bajo Nivel"</b>.</p>
                 </div>
               </div>
               
@@ -165,7 +187,7 @@
                   <span class="text-blue-900 text-center font-bold">Mar/24-Jul/23</span>
                 </div>
                 <div class="flex-1">
-                  <p>Trabajé como <b>corrector en "Programación en Bajo Nivel"</b>.</p>
+                  <p>Trabajé como <b>ayudante corrector en "Programación en Bajo Nivel"</b>.</p>
                 </div>
               </div>
               
@@ -174,7 +196,25 @@
                   <span class="text-blue-900 font-bold text-center">Ago/24-Dic/24</span>
                 </div>
                 <div class="flex-1">
-                  <p>Estoy trabajando como <b>corrector en "Sistemas Operativos y Redes"</b>.</p>
+                  <p>Trabajé como <b>ayudante corrector en "Sistemas Operativos y Redes"</b>.</p>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
+                  <span class="text-blue-900 font-bold text-center">Ago/24-Dic/24</span>
+                </div>
+                <div class="flex-1">
+                  <p>Trabajé como <b>desarrollador y QA</b> en el proyecto de innovación <b>Forti.Shop.</b>.</p>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
+                  <span class="text-blue-900 font-bold text-center">Mar/25-Jul/25</span>
+                </div>
+                <div class="flex-1">
+                  <p>Trabajé como <b>ayudante de proyecto en "Programación en Bajo Nivel".</p>
                 </div>
               </div>
             </div>
@@ -183,6 +223,7 @@
       </div>
     </section>
 
+    <!-- GUSTOS E INTERESES -->
     <h2 class="text-3xl mt-10 font-bold mb-4 text-green-700">Lo que me gusta</h2>
     <ul class="list-disc pl-5 text-lg mb-6">
       <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-green-700">•</span><b>Comida favorita:</b><p class="ml-2">Carne asada con papas al hilo.</p></li>
@@ -193,6 +234,7 @@
       <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-green-700">•</span><b>Cosa favorita:</b><p class="ml-2">Los videojuegos y artículos tecnológicos.</p></li>
     </ul>
 
+    <!-- OBJETIVOS -->
     <h2 class="text-3xl mt-14 font-bold mb-4 text-blue-900">Mis objetivos</h2>
     <ul class="list-disc pl-5 text-lg mb-6">
         <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-blue-900">★</span><b class="mt-1">Ayudar a las personas mientras tenga la oportunidad.</b><br><br></li>
@@ -201,6 +243,7 @@
         <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-blue-900">★</span><b class="mt-1">Darle un sentido y propósito a mi vida del cual no arrepentirme.</b><br><br></li>
     </ul>
 
+    <!-- PASATIEMPOS -->
     <h2 class="text-3xl mt-14 font-bold mb-4 text-red-800">Pasatiempos</h2>
     <ul class="list-disc text-lg pl-5 mb-6">
       <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-red-800">•</span><p><b>Ver videos</b> en Youtube.</p></li>
@@ -210,32 +253,27 @@
       <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-red-800">•</span><p><b>Dibujar</b>.</p></li>
     </ul>
 
+
+    <!-- PERSONALIDAD -->
     <h2 class="text-3xl mt-14 font-bold mb-4 text-green-700">Personalidad</h2>
     <p class="mb-20 text-lg">
       Soy un chico introvertido, tranquilo, amistoso, amable, empático y respetuoso. Con bastante tolerancia y ánimos.
       Optimista y analítico. Algo individualista y reservado, pero muy introspectivo consigo mismo y con el resto.
     </p>
-    <hr style="border: 0;
-    height: 1px;
-    background: #303030;
-    margin: 20px 0;">
-    <h2 class="text-3xl mt-20 text-gray-700 text-center font-bold mb-4 mr-2">Con esto ya puedes explorar lo que he hecho por mi cuenta...</h2>
-    <div class="flex flex-wrap justify-center gap-8 mt-10 mb-20 -mx-8 animated-element-fade-in">
-      <%= link_to "Mis PROYECTOS", proyectos_subsection_path, class: "text-2xl sm:text-3xl md:text-4xl font-semibold text-blue-800 underline animate-fade-in" %>
-      <%= link_to "COMPUTACIÓN", computacion_subsection_path, class: "text-2xl sm:text-3xl md:text-4xl font-semibold computacion-home animate-fade-in underline" %>
-      <%= link_to "FILOSOFÍA", filosofia_subsection_path, class: "text-2xl sm:text-3xl md:text-4xl font-semibold filosofia-home animate-fade-in underline" %>
-    </div>
 
-    <hr style="border: 0;
-    height: 1px;
-    background: #303030;
-    margin: 20px 0;">
-    
-
+    <hr style="border: 0; height: 1px; background: #303030; margin: 20px 0;">
+      <h2 class="text-3xl mt-20 text-gray-700 text-center font-bold mb-4 mr-2">Con esto ya puedes explorar lo que he hecho por mi cuenta...</h2>
+      <div class="flex flex-wrap justify-center gap-8 mt-10 mb-20 -mx-8 animated-element-fade-in">
+        <%= link_to "Mis PROYECTOS", proyectos_subsection_path, class: "text-2xl sm:text-3xl md:text-4xl font-semibold text-blue-800 underline animate-fade-in" %>
+        <%= link_to "COMPUTACIÓN", computacion_subsection_path, class: "text-2xl sm:text-3xl md:text-4xl font-semibold computacion-home animate-fade-in underline" %>
+        <%= link_to "FILOSOFÍA", filosofia_subsection_path, class: "text-2xl sm:text-3xl md:text-4xl font-semibold filosofia-home animate-fade-in underline" %>
+      </div>
+    <hr style="border: 0; height: 1px; background: #303030; margin: 20px 0;">
   </section>
 </div>
 
 
+<!-- JAVASCRIPT PARA ANIMACIONES -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const animatedElements = document.querySelectorAll('.animated-element-fade-in');
@@ -250,6 +288,35 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           if (entry.target.querySelector('.animate-fade-in')) {
+            entry.target.classList.add('animate-fade-in');
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+    animatedElements.forEach(element => {
+      observer.observe(element);
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const animatedElements = document.querySelectorAll('.animated-element-slide-r, .animated-element-fade-in');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const handleIntersection = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target.querySelector('.animate-slide-in-right')) {
+            entry.target.classList.add('animate-slide-in-right');
+          } else if (entry.target.querySelector('.animate-fade-in')) {
             entry.target.classList.add('animate-fade-in');
           }
           observer.unobserve(entry.target);

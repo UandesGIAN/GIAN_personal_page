@@ -1,0 +1,27 @@
+<div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
+  <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl text-center lg:text-7xl xl:text-8xl mb-2 text-shadow-proyectos text-blue-700 animate-slide-in-right">
+    Mis proyectos: <p class="text-red-700 mt-10" style="text-shadow: 0px 2px 20px rgba(200, 0, 0, 0.6);">Youtube</p>
+  </h1>
+</div>
+
+<%= @indice_content %>
+
+<div class="text-container max-w-7xl mx-auto mt-20 px-4 flex flex-col pb-8">
+  <section class="p-6 bg-gray-100 text-gray-800">
+    <h2 class="text-2xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4 text-red-700">5. Tier List</h2>
+
+	<h2 class="text-2xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4 text-red-700">5.1 Todos mis videos (históricos)</h2>
+    <p class="mb-6 text-lg">
+      <i>Work In Progress...</i>
+    </p>
+
+    <div class="flex justify-between items-center">
+		<div>
+			<a href="<%= proyectos_subsection_path(section: 'youtube', sub_section: 'gian_random') %>" class="bg-red-700 text-white py-3 px-4 rounded-md hover:bg-red-800 transition-all">
+				Anterior capítulo
+			</a>
+		</div>
+	</div>
+
+  </section>
+</div>

@@ -10,11 +10,11 @@ class PagesController < ApplicationController
     @sub_section = params[:sub_section]
 
     @subsections = {
-      "Youtube" => [ "Origen", "Contenidos", "Proyectos Principales", "Logros"],
-      "MikuMikuDance" => [ "Origen", "Proyectos Principales", "Logros" ],
-      "Por aburrimiento" => [ "Escritos", "Tier Lists", "Juegos" ],
-      "Favores" => [ "Videos", "Documentos" ],
-      "Experimentos" => [ "PC", "Electrónica" ],
+      "Youtube" => [ "Origen", "Contenidos", "Mejores Trabajos", "GIAN Random", "Tier List" ],
+      "MikuMikuDance" => [ "Origen", "WoomyGIAN", "EL TUTORIAL DEFINITIVO DE MMD SPLATOON" ],
+      "Videojuegos" => [ "Origen", "BrinCalamar", "SquidBeatz3" ],
+      "Por diversion" => [ "Tier Lists", "Dibujos", "Música" ],
+      "Experimentos" => [ "Electrónica", "Universidad", "PC", "Celular", "Consolas de videojuegos", "Scripts de python" ]
     }
 
     @indice_content = render_to_string(partial: "shared/indice", locals: {
@@ -45,7 +45,7 @@ class PagesController < ApplicationController
     @sub_section = params[:sub_section]
 
     @subsections = {
-      "Python" => [ "Historia y Origen", "Básico", "Intermedio", "Algebra Lineal", "Ecuaciones Diferenciales", "Estadística" ]
+      "Python" => [ "Introducción", "Listas, funciones y archivos", "Algebra Lineal", "Ecuaciones Diferenciales", "Estadística" ]
     }
 
     @indice_content = render_to_string(partial: "shared/indice", locals: {

@@ -18,6 +18,7 @@
     <a href="<%= computacion_subsection_path(section: 'python') %>" class="text-red-700 text-center">
     </a>
     <% if @subsections['Python'].present? %>
+    <div class="flex flex-col items-center"> 
       <ul class="list-inside ml-12 mt-2">
         <% @subsections['Python'].each_with_index do |sub_section, index| %>
           <li>
@@ -27,6 +28,7 @@
           </li>
         <% end %>
       </ul>
+    </div>
     <% end %>
 
   </section>

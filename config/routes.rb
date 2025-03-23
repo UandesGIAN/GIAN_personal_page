@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-  get "pages/home"
-  get "pages/historial"
-  get "pages/about_me"
-  get "pages/proyectos"
-  get "pages/filosofia"
-  get "pages/computacion"
-
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
@@ -14,10 +7,20 @@ Rails.application.routes.draw do
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
+
+  # SPANISH
   root "pages#home"
-  get "about_me", to: "pages#about_me"
-  get "historial", to: "pages#historial"
+  get "sobre-mi", to: "pages#about_me"
+  get "versiones", to: "pages#versiones"
   get "proyectos(/:section(/:sub_section))", to: "pages#proyectos", as: "proyectos_subsection"
   get "computacion(/:section(/:sub_section))", to: "pages#computacion", as: "computacion_subsection"
   get "filosofia(/:section(/:sub_section))", to: "pages#filosofia", as: "filosofia_subsection"
+  ""'
+  # ENGLISH
+  get "pages-en#home"
+  get "about-me", to: "pages#about_me"
+  get "versions", to: "pages-en#versiones"
+  get "projects(/:section(/:sub_section))", to: "pages-en#proyectos", as: "proyectos-subsection"
+  get "informatics(/:section(/:sub_section))", to: "pages-en#computacion", as: "computacion-subsection"
+  get "philosophy(/:section(/:sub_section))", to: "pages-en#filosofia", as: "filosofia-subsection"'""
 end

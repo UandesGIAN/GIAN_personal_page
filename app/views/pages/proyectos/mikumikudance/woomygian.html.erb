@@ -8,15 +8,24 @@
 
 <div class="text-container max-w-7xl mx-auto mt-20 px-4 flex flex-col pb-8">
   <section class="p-6 bg-gray-100 text-gray-800">
-    <h2 class="text-2xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4 text-mmd">1. Origen</h2>
+    <h2 class="text-2xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4 text-mmd">2. WoomyGIAN</h2>
 
     <p class="mb-6 text-lg">
       <i>Work In Progress...</i>
     </p>
 
-    <div class="flex justify-end">
+    <div class="flex justify-between items-center">
 		<div>
-			<a href="<%= proyectos_subsection_path(section: 'mikumikudance', sub_section: 'woomygian') %>" 
+			<a href="<%= proyectos_subsection_path(section: 'mikumikudance', sub_section: 'origen') %>" 
+                class="text-white py-3 px-4 rounded-md transition-all"
+                style="background-color: rgb(38, 186, 245);"
+                onmouseover="this.style.backgroundColor='rgb(0, 146, 215)'"
+                onmouseout="this.style.backgroundColor='rgb(38, 186, 245)'">
+                Anterior capítulo
+            </a>
+		</div>
+		<div>
+			<a href="<%= proyectos_subsection_path(section: 'mikumikudance', sub_section: 'el_tutorial_definitivo_de_mmd_splatoon') %>" 
                 class="text-white py-3 px-4 rounded-md transition-all"
                 style="background-color: rgb(38, 186, 245);"
                 onmouseover="this.style.backgroundColor='rgb(0, 146, 215)'"

@@ -1,24 +1,23 @@
-# README
+# GIAN WEBPAGE
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the repository for my personal website project. Development started in August 2024. It is a static website containing information about my projects, interests, and knowledge.
 
-Things you may want to cover:
+The **develop** branch contains the development version. If there are branches named `develop-0.1` or `develop-0.2`, they correspond to specific versions of the website for better organization. The main branch where official changes are stored is **deployment**.
 
-* Ruby version
+## How to Run the Application
 
-* System dependencies
+To run the website locally, use the following command:
 
-* Configuration
+```bash
+rails server
+```
 
-* Database creation
+You must have Ruby on Rails 3.2.0 installed. To install the dependencies, run:
 
-* Database initialization
+```bash
+bundle install
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Contact
+If you have any questions, suggestions, or issues, feel free to contact me via email:
+📧 gianproductions55@gmail.com

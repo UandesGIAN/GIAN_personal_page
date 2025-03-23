@@ -1,35 +1,42 @@
-<!-- Fondo de pantalla -->
+<!-------------------------------->
+<!-- PAGINA DE INICIO DEL SITIO -->
+<!-------------------------------->
+
+<!-- BANNER PRINCIPAL -->
 <div class="relative bg-center bg-cover flex flex-col items-center justify-start text-center min-h-screen pt-8" style="background-image: url('/assets/banner.png');">
-  <div class="flex flex-col items-center justify-start mt-48"></div>
-  <h1 class="font-bold text-6xl mb-2 text-white animate__animated animate__fadeInDown">BIENVENIDO A MI PÁGINA WEB PERSONAL</h1>
-  <p class="text-lg mb-2 text-gray-100 animate__animated animate__fadeIn animate__delay-1s">(Alpha v0.1)</p>
+  <h1 class="font-bold text-6xl mb-2 text-white animate__animated animate__fadeInDown mt-48">BIENVENIDO A LA PÁGINA WEB DE GIAN.</h1>
+  <p class="text-lg mb-2 text-gray-100 animate__animated animate__fadeIn animate__delay-1s">(Versión alpha 0.1)</p>
   <h4 class="text-3xl font-semibold text-white animate__animated animate__fadeInDown animate__delay-0s">
     <a href="#sobre-la-pagina" class="text-white underline">Explora los contenidos</a>
   </h4> 
 </div>
 
+
+
+<!-- PRESENTACION DEL PROYECTO -->
 <div id="sobre-la-pagina" class="banner-container mt-48 relative">
   <div class="relative flex items-center text-center justify-center h-full animated-element-slide-r">
-    <h1 class="font-bold text-6xl mb-2 text-white text-shadow-green animate-slide-in-right">
+    <h1 class="font-bold text-8xl mb-2 text-white text-shadow-green animate-slide-in-right">
       Sobre el proyecto
     </h1>
   </div>
 </div>
   
 <div class="text-container max-w-5xl mx-auto mt-12 px-4 flex flex-col pb-8">
-  <section class="mb-6">
-    <div class="mt-6 text-xl text-black text-center bg-gray-300 rounded-lg p-8 shadow-lg animated-element-fade-in">
-      <p class="animate-fade-in">
-        Esta página web es un espacio donde recopilar todos mis proyectos, investigaciones, estudios y aportes para el mundo. <br>
-        <br>Será un sitio que estará en constante expansión y desarrollo, todos los cambios pueden verse desde el github oficial (Disponible en el <a href="#footer" class="text-blue-800 underline">pie de página</a>).<br>
-      </p>
-    </div>
-  </section>
+  <div class="mt-6 mb-6 text-xl text-black text-center bg-gray-300 rounded-lg p-8 shadow-lg animated-element-fade-in">
+    <p class="animate-fade-in">
+      Esta página web es un espacio donde recopilar todos mis proyectos, investigaciones, estudios y aportes para el mundo. <br>
+      <br>Será un sitio que estará en constante expansión y desarrollo, todos los cambios pueden verse desde el github oficial (Disponible en el <a href="#footer" class="text-blue-800 underline">pie de página</a>).<br>
+    </p>
+  </div>
 </div>
 
+
+
+<!-- CONTENIDOS DE LA PÁGINA -->
 <div class="banner-container mt-12 relative">
   <div class="relative flex items-center justify-center h-full animated-element-fade-in animate__delay-1s">
-    <a href="#contenido"><h1 id="contenido" class="font-bold text-6xl mb-2 text-white text-shadow-orange animate-fade-in">
+    <a href="#contenido"><h1 id="contenido" class="font-bold text-8xl mb-2 text-white text-shadow-orange animate-fade-in">
       Contenidos
     </h1></a>
   </div>
@@ -37,10 +44,10 @@
 
 <div class="relative text-container pb-8">
   <section class="mb-6 text-center max-w-5xl mx-auto px-4 flex flex-col">
-    
+    <!-- SOBRE MI -->
     <div class="mb-4 mt-12">
       <div class="flex justify-center cursor-pointer" onclick="toggleCard('card1')">
-        <%= link_to "Sobre GIAN", about_me_path, class: "text-4xl font-semibold text-green-400 underline" %>
+        <p class="text-4xl font-semibold text-green-400 underline">Sobre GIAN</p>
         <i id="icon-card1" class="material-icons ml-4 rotate-icon" style="color: #4ade80 !important; margin-top: 4px; font-size: 32px;">keyboard_arrow_up</i>
       </div>
 
@@ -49,43 +56,48 @@
           Información acerca del creador de este sitio web y gran parte de su contenido.<br>
           Un resumen sobre mis estudios, conocimientos, intereses, objetivos, pasatiempos y personalidad.<br><br>
         </p>
-        <%= link_to "¡Ve a echárle un vistazo!", about_me_path, class: "text-lg font-semibold text-blue-800 underline" %>
+        <%= link_to "¡Ve a echárle un vistazo!", sobre_mi_path, class: "text-lg font-semibold text-green-600 underline" %>
       </div>
     </div>
 
+    <!-- MIS PROYECTOS -->
     <div class="mb-4 mt-24">
       <div class="flex justify-center cursor-pointer" onclick="toggleCard('card2')">
-        <%= link_to "Mis PROYECTOS", proyectos_subsection_path, class: "text-4xl font-semibold text-blue-800 underline" %>
+        <p class="text-4xl font-semibold text-blue-800 underline">Mis PROYECTOS</p>
         <i id="icon-card2" class="material-icons ml-4 text-blue-900 rotate-icon"  style="margin-top: 4px; font-size: 32px;">keyboard_arrow_up</i>
       </div>
 
       <div id="card2" class="mt-6 text-lg text-black hidden bg-gray-300 rounded-lg p-8 shadow-lg">
         <p>
-          Artículos y espacios donde compartir mis proyectos de internet, específicamente canales de Youtube, animaciones de Splatoon y páginas de Instagram u otras redes sociales.<br>
-        <br>También se comparten proyectos o notas personales hechas por diversión.<br><br>
+          Artículos y espacios donde compartir mis proyectos personales, tantos aquellos hechos para internet, por aburrimiento, por trabajo o estudio.<br>
+          <br>También se comparten proyectos con otras personas o notas personales hechas por diversión.<br><br>
         </p>
         <%= link_to "¡Ve a echárle un vistazo!", proyectos_subsection_path, class: "text-lg font-semibold text-blue-800 underline" %>
       </div>
     </div>
 
+    
     <div class="mb-4 mt-24">
       <div class="flex justify-center cursor-pointer" onclick="toggleCard('card3')">
-        <%= link_to "COMPUTACIÓN", computacion_subsection_path, class: "text-4xl font-semibold computacion-home underline" %>
+        <p class="text-4xl font-semibold computacion-home underline">COMPUTACIÓN</p>
         <i id="icon-card3" class="material-icons ml-4 rotate-icon" style="color: #008000; margin-top: 4px; font-size: 32px;">keyboard_arrow_up</i>
       </div>
 
       <div id="card3" class="mt-6 text-lg text-black hidden bg-gray-300 rounded-lg p-8 shadow-lg">
         <p>
-          Puede que sea el apartado más completo y extenso del sitio.<br>Corresponde a una compilación de proyectos, estudios, ejercicios y creaciones que poseen relación con la informática, computación, tecnología, electrónica e ingeniería.<br>
-        <br>Tendrá una estructura de guía para aprender al respecto de todo ello a través de resúmenes y ejercicios aplicados.<br><br>
+          Apartado dedicado a conocimiento técnico sobre cualquier concepto o uso de la computación que he dedicido compartir.<br>
+          Corresponde a una compilación de proyectos, estudios, ejercicios y creaciones que poseen relación con la informática, computación, tecnología, electrónica e ingeniería.<br>
+        <br>Su enfoque principal es resumir información clave en el uso práctico de aplicaciones o lenguajes de programación, no pretendiendo ser una guia
+        para aprender desde 0, sino aprender de mi experiencia para mejorar o encontrar algo interesante.<br><br>
         </p>
-        <%= link_to "¡Ve a echárle un vistazo!", computacion_subsection_path, class: "text-lg font-semibold text-blue-800 underline" %>
+        <%= link_to "¡Ve a echárle un vistazo!", computacion_subsection_path, class: "text-lg font-semibold computacion-home underline" %>
       </div>
     </div>
 
+    <!-- FILOSOFIA DE GIAN -->
     <div class="mb-4 mt-24">
       <div class="flex justify-center cursor-pointer" onclick="toggleCard('card4')">
-        <%= link_to "FILOSOFÍA", filosofia_subsection_path, class: "text-4xl font-semibold filosofia-home underline"%>
+        <p class="text-4xl font-semibold filosofia-home underline">FILOSOFÍA DE GIAN</p>
         <i id="icon-card4" class="material-icons ml-4 rotate-icon" style="color: #d85c14; margin-top: 4px; font-size: 32px;">keyboard_arrow_up</i>
       </div>
 
@@ -95,10 +107,11 @@
           Corresponde a una compilación de proyectos, estudios, ejercicios y creaciones que poseen relación con la reflexión y la vida real, es una faceta de mí más personal y oculta.<br>
         <br>Se centra en documentos e investigaciones de filosofía, psicología y autoayuda. Pretende ayudar a quienes requieran consejos o deseen enfrentar sus problemas personales.<br><br>
         </p>
-        <%= link_to "¡Ve a echárle un vistazo!", filosofia_subsection_path, class: "text-lg font-semibold text-blue-800 underline" %>
+        <%= link_to "¡Ve a echárle un vistazo!", filosofia_subsection_path, class: "text-lg font-semibold filosofia-home underline" %>
       </div>
     </div>
     
+    <!-- DETALLES -->
     <div class="mb-4 mt-24">
       <div class="flex justify-center cursor-pointer" onclick="toggleCard('card5')">
         <p class="text-4xl font-semibold text-gray-500">Detalles adicionales</p>
@@ -110,7 +123,7 @@
           Todo el contenido en esta página web fue realizado por <span class="text-green-700 font-bold">GIAN.</span>
           <br><br>
           Disponible totalmente gratuito y sin intenciones de promocionar ni promover algún contenido comercial para sacar provecho del mismo.<br><br>
-          Todos los derechos de autor que no me pertenecen están especificados dentro del GitHub del proyecto.<br>
+          Todos los derechos de autor que no me pertenecen están acréditados en cada una de sus menciones.<br>
         </p>
       </div>
     </div>
@@ -118,6 +131,9 @@
   </section>
 </div>
 
+
+
+<!-- JAVASCRIPT PARA ANIMACIONES -->
 <script>
   function toggleCard(cardId) {
     const card = document.getElementById(cardId);

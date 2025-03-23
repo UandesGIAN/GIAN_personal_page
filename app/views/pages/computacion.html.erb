@@ -4,8 +4,6 @@
   </h1>
 </div>
 
-<%= @indice_content %>
-
 <div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
   <section class="p-6 bg-gray-100 text-gray-800">
     <p class="mb-6 ml-6 mt-4 text-lg ">
@@ -22,7 +20,7 @@
       <ul class="list-inside ml-12 mt-2">
         <% @subsections['Python'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= computacion_subsection_path(section: 'python', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-blue-700 text-lg font-bold underline">
+            <a href="<%= computacion_subsection_path(section: 'python', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_').gsub(',', '') ) %>" class="text-blue-700 text-lg font-bold underline">
               <%= "1.#{index + 1} #{sub_section.capitalize}" %>
             </a>
           </li>
