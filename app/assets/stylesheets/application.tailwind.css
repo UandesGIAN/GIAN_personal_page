@@ -49,6 +49,13 @@
     color: rgb(38, 186, 245);
   }
 
+  .hover-darken {
+    transition: background-color 0.3s ease;
+  }
+  .hover-darken:hover {
+    background-color: rgba(31, 41, 55, 0.8); /* un gris más oscuro con opacidad */
+  }
+
   .banner-container {
     width: 100%;
     height: 200px;
@@ -69,7 +76,10 @@
   display: none;
 }
 
-/* Animaciones */
+:root {
+  --animation-speed: 10s; /* Valor por defecto */
+}
+
 @keyframes moveBackground {
   0% {
     background-position: 100% 0%;
@@ -79,9 +89,23 @@
   }
 }
 
+.animated-background {
+  animation: moveBackground var(--animation-speed) linear infinite;
+}
+
 @keyframes slide-in {
   from {
     transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
     opacity: 0;
   }
   to {
@@ -98,6 +122,15 @@
   opacity: 1;
   transform: translateX(0);
 }
+.animate-slide-in-left {
+  animation: slide-in-left 0.5s ease-out forwards;
+}
+
+.animated-element-slide-l {
+  opacity: 1;
+  transform: translateX(-100%);
+}
+
 
 @keyframes fade-in {
   from {

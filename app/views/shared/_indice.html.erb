@@ -89,7 +89,7 @@
       }
     }
 
-    // Eventos de mouse
+    // Eventos para dispositivos de escritorio
     button.onmousedown = function(event) {
       isDragging = true;
       offsetX = event.clientX - button.getBoundingClientRect().left;
@@ -110,6 +110,26 @@
     button.ondragstart = function() {
       return false;
     };
+
+    // Eventos para dispositivos móviles
+    button.addEventListener('touchstart', function(event) {
+      isDragging = true;
+      const touch = event.touches[0];
+      offsetX = touch.clientX - button.getBoundingClientRect().left;
+      offsetY = touch.clientY - button.getBoundingClientRect().top;
+
+      function onTouchMove(event) {
+        const touch = event.touches[0];
+        moveAt(touch.clientX, touch.clientY);
+      }
+
+      document.addEventListener('touchmove', onTouchMove);
+
+      button.addEventListener('touchend', function() {
+        isDragging = false;
+        document.removeEventListener('touchmove', onTouchMove);
+      });
+    });
 
     // Toggle del menú
     button.addEventListener('click', function() {

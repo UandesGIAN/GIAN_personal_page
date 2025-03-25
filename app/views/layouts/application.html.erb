@@ -16,11 +16,10 @@
 </head>
 
 <body>
-
   <!-- BARRA DE NAVEGACION -->
   <header>
     <nav id="navbar" class="bg-gray-800 p-4 h-24 fixed top-0 left-0 w-full z-50 flex items-center">
-      <div class="container mx-auto flex justify-between items-center flex-wrap">
+      <div class="container mx-auto flex justify-between items-center flex-wrap relative">
         <div class="flex items-center">
           <%= link_to root_path do %>
             <%= image_tag "GIANlogo.png", alt: "Mi Logo", class: "rounded-full h-16 w-16 mr-4" %>
@@ -28,26 +27,59 @@
           <%= link_to "GIAN", root_path, class: "text-white text-xl font-bold" %>
         </div>
 
+        <!-- Botón de menú (solo visible en móviles) -->
         <button id="boton" class="text-white bg-gray-800 p-2 rounded-lg block md:hidden">
           <span class="material-icons">menu</span>
         </button>
-        
+
+        <!-- Menú principal (solo visible en escritorio) -->
+        <ul class="hidden md:flex space-x-4 mt-4 md:mt-0 md:flex-row flex-col ml-auto">
+          <li><%= link_to "Inicio", root_path, class: "text-gray-300 hover:text-white" %></li>
+          <li><%= link_to "Sobre GIAN", sobre_mi_path, class: "text-gray-300 hover:text-white" %></li>
+          <li><%= link_to "PROYECTOS", proyectos_subsection_path, class: "text-gray-300 hover:text-white" %></li>
+          <li><%= link_to "COMPUTACIÓN", computacion_subsection_path, class: "text-gray-300 hover:text-white" %></li>
+          <li><%= link_to "FILOSOFÍA", filosofia_subsection_path, class: "text-gray-300 hover:text-white" %></li>
+          <!-- 
+          Menú de opciones de idioma (visible en escritorio)
+          <li>
+            <span id="language-button" class="flex text-gray-300 z-50 pl-4" style="cursor: pointer;">Idioma
+              <i id="icon-card1" class="material-icons ml-4 rotate-icon" 
+                style="color: #ffffff; margin-top: 4px; font-size: 12px; transition: color 0.3s ease;">keyboard_arrow_up
+              </i>
+            </span>
+            <div id="language-menu" class="hidden absolute bg-gray-900 rounded-lg text-white mt-2 w-25 z-50">
+              <ul class="text-sm">
+                <li><a href="#" class="block px-5 py-2 text-white font-bold hover:bg-gray-700">Español</a></li>
+                <li><a href="#" class="block px-7 py-2 text-white hover:bg-gray-700">Inglés</a></li>
+              </ul>
+            </div>
+          </li>
+          -->
+        </ul>
+
+        <!-- Menú desplegable de idioma (solo visible en móviles en el overlay) -->
         <div id="overlay" class="hidden fixed top-14 right-2 bg-gray-800 text-white p-2 rounded-lg shadow-lg z-50">
           <p><%= link_to "Inicio", root_path, class: "text-gray-300 hover:text-white" %></p>
           <p><%= link_to "Sobre GIAN", sobre_mi_path, class: "text-gray-300 hover:text-white" %></p>
           <p><%= link_to "PROYECTOS", proyectos_subsection_path, class: "text-gray-300 hover:text-white" %></p>
           <p><%= link_to "COMPUTACIÓN", computacion_subsection_path, class: "text-gray-300 hover:text-white" %></p>
           <p><%= link_to "FILOSOFÍA", filosofia_subsection_path, class: "text-gray-300 hover:text-white" %></p>
+          <!--
+          <p>
+            <span id="language-button-mobile" class="flex text-gray-300 z-50 pl-4 cursor-pointer">UNABLED
+              <i id="icon-card1-mobile" class="material-icons ml-4 rotate-icon" 
+                style="color: #ffffff; margin-top: 4px; font-size: 12px; transition: color 0.3s ease;">keyboard_arrow_up
+              </i>
+            </span>
+            <div id="language-menu-mobile" class="hidden absolute bg-gray-900 rounded-lg text-white mt-2 ml-8 w-20 z-50">
+              <ul class="text-sm">
+                <li><a href="<%= filosofia_subsection_path %>" class="block py-2 px-2 text-white font-bold hover:bg-gray-700">Español</a></li>
+                <li><a href="<%= filosofia_subsection_path %>" class="block py-2 px-4 text-white hover:bg-gray-700">Inglés</a></li>
+              </ul>
+            </div>
+          </p>
+          -->
         </div>
-
-        <ul class="hidden md:block space-x-4 mt-4 md:mt-0 md:flex-row flex-col">
-          <li><%= link_to "Inicio", root_path, class: "text-gray-300 hover:text-white" %></li>
-          <li><%= link_to "Sobre GIAN", sobre_mi_path, class: "text-gray-300 hover:text-white" %></li>
-          <li><%= link_to "PROYECTOS", proyectos_subsection_path, class: "text-gray-300 hover:text-white" %><li>
-          <li><%= link_to "COMPUTACIÓN", computacion_subsection_path, class: "text-gray-300 hover:text-white" %></li>
-          <li><%= link_to "FILOSOFÍA", filosofia_subsection_path, class: "text-gray-300 hover:text-white" %></li>
-        </ul>
-
       </div>
     </nav>
   </header>
@@ -107,7 +139,7 @@
           <span>GitHub personal</span>
         </a>
         <%= link_to versiones_path, class: "flex items-center space-x-2 hover:text-blue-800 text-white" do %>
-          <%= image_tag "log_icon.png", alt: "logs", class: "w-7 h-7" %>
+          <%= image_tag "log_icon.png", alt: "logs", class: "w-6 h-6" %>
           <span>Historial de versiones</span>
         <% end %>
       </div>
@@ -129,6 +161,83 @@
         console.error('Error al copiar el texto: ', err);
       });
     }
+    /*
+    // BOTON IDIOMA EN ESCRITORIO
+    document.getElementById('language-button').addEventListener('click', function() {
+      const menu = document.getElementById('language-menu');
+      const icon = document.getElementById('icon-card1');
+      
+      // Alternar la visibilidad del menú
+      menu.classList.toggle('hidden'); 
+
+      // Rotar la flecha
+      icon.classList.toggle('rotate');
+    });
+
+    // EFECTOS VISUALES
+    const languageOptions = document.querySelectorAll('#language-menu a');
+    languageOptions.forEach(option => {
+      option.addEventListener('mouseenter', function() {
+        this.classList.add('bg-gray-900'); // Oscurece ligeramente
+      });
+      option.addEventListener('mouseleave', function() {
+        this.classList.remove('bg-gray-700'); // Restaura el color original
+      });
+    });
+
+    const languageButton = document.getElementById('language-button');
+    const icon = document.getElementById('icon-card1');
+
+    languageButton.addEventListener('mouseover', () => {
+      languageButton.style.color = '#48bb78'; // Color verde para el texto
+      icon.style.color = '#48bb78'; // Color verde para el icono
+      languageButton.style.backgroundColor = '#1d2430'; // Color de fondo oscurecido
+    });
+    languageButton.addEventListener('mouseout', () => {
+      languageButton.style.color = '#D1D5DB'; // Color original del texto
+      icon.style.color = '#ffffff'; // Color original del icono
+      languageButton.style.backgroundColor = '#1f2937'; // Color de fondo original
+    });
+
+    // BOTON IDIOMA EN MOVIL
+    document.getElementById('language-button-mobile').addEventListener('click', function() {
+      const menu = document.getElementById('language-menu-mobile');
+      const icon = document.getElementById('icon-card1-mobile');
+      
+      // Alternar la visibilidad del menú
+      menu.classList.toggle('hidden'); 
+
+      // Rotar la flecha
+      icon.classList.toggle('rotate');
+    });
+
+    // Opciones de idioma - cambio de color al pasar el ratón
+    const languageOptionsMobile = document.querySelectorAll('#language-menu-mobile a');
+    languageOptionsMobile.forEach(option => {
+      option.addEventListener('mouseenter', function() {
+        this.classList.add('bg-gray-900'); // Oscurece ligeramente
+      });
+      option.addEventListener('mouseleave', function() {
+        this.classList.remove('bg-gray-700'); // Restaura el color original
+      });
+    });
+
+    // Cambiar color del texto e icono al hacer hover sobre el button de idioma
+    const languageButtonMobile = document.getElementById('language-button-mobile');
+    const iconMobile = document.getElementById('icon-card1-mobile');
+
+    languageButtonMobile.addEventListener('mouseover', () => {
+      languageButtonMobile.style.color = '#48bb78'; // Color verde para el texto
+      iconMobile.style.color = '#48bb78'; // Color verde para el icono
+      languageButtonMobile.style.backgroundColor = '#1d2430'; // Color de fondo oscurecido
+    });
+
+    languageButtonMobile.addEventListener('mouseout', () => {
+      languageButtonMobile.style.color = '#D1D5DB'; // Color original del texto
+      iconMobile.style.color = '#ffffff'; // Color original del icono
+      languageButtonMobile.style.backgroundColor = '#1f2937'; // Color de fondo original
+    });
+    */
 
     function showNotification() {
       const notification = document.getElementById('copyNotification');
@@ -182,7 +291,20 @@
         overlay.classList.add('hidden');
       }
     });
+    
+    function updateAnimationSpeed() {
+      const screenHeight = window.innerHeight; // Altura de la pantalla
+      const baseSpeed = 10; // Velocidad base en segundos
+
+      // Cuanto más alta sea la pantalla, más lento será el movimiento
+      const newSpeed = baseSpeed + (screenHeight / 200); 
+
+      document.documentElement.style.setProperty('--animation-speed', `${newSpeed}s`);
+    }
+
+    // Ejecutar la función al cargar y al cambiar el tamaño de la ventana
+    window.addEventListener("load", updateAnimationSpeed);
+    window.addEventListener("resize", updateAnimationSpeed);
   </script>
-  
 </body>
 </html>

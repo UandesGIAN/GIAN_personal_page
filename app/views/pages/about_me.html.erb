@@ -1,12 +1,13 @@
 <!-------------------------------->
 <!--    SOBRE GIAN / SOBRE MI   -->
 <!-------------------------------->
-<div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
-  <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-2 ml-12 text-white text-shadow-gian animate-slide-in-right">
-    Sobre 
+<div class="relative flex flex-col md:flex-row items-center justify-center text-center mt-20 mb-10 h-full max-w-5xl mx-auto gap-3">
+  <h1 class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-5xl text-white text-shadow-gian animate-slide-in-right ml-10">
+    Sobre
   </h1>
-  <img src="/assets/gian_text.png" alt="GIAN" class="mt-6 w-1/2 sm:w-1/3 md:w-1/4 h-auto animate-slide-in-right">
+  <img src="/assets/gian_text.png" alt="GIAN" class="w-2/3 sm:w-1/3 md:w-1/5 h-auto animate-slide-in-right flex-1">
 </div>
+
 
 <div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
   <section class="p-6 bg-gray-100 text-gray-800">
@@ -47,7 +48,7 @@
         <div class="timeline-line"></div>
 
         <div class="flex flex-col mt-5">
-          <div class="flex flex-col mb-8 animate__animated animate__fadeIn animate__delay-1s">
+          <div class="flex flex-col mb-8 animated-element-fade-in">
             <div class="flex items-center relative mb-4 mt-4">
               <div class="timeline-node"></div>
               <h2 class="text-2xl font-bold text-blue-900 ml-10">Educación escolar</h2>
@@ -84,7 +85,7 @@
           </div>
 
           <!-- PROYECTOS -->
-          <div class="flex flex-col mb-8 animate__animated animate__fadeIn animate__delay-1s">
+          <div class="flex flex-col mb-8 animated-element-fade-in">
             <div class="relative flex items-center mb-4">
               <div class="timeline-node"></div>
               <h2 class="text-2xl font-bold text-blue-900 ml-10">Proyectos personales</h2>
@@ -148,7 +149,7 @@
           </div>
 
           <!-- EXPERIENCIA PROFESIONAL -->
-          <div class="relative flex flex-col mb-2 animate__animated animate__fadeIn animate__delay-1s">
+          <div class="relative flex flex-col mb-2 animated-element-fade-in">
             <div class="flex items-center mb-4">
               <div class="timeline-node"></div>
               <h2 class="text-2xl font-bold text-blue-900 ml-10">Experiencia Profesional</h2>
@@ -230,7 +231,7 @@
       <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-green-700">•</span><b>Videojuego favorito:</b><p class="ml-2">The Legend of Zelda: Tears of the Kingdom.</p></li>
       <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-green-700">•</span><b>Película favorita:</b><p class="ml-2">The Matrix.</p></li>
       <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-green-700">•</span><b>Serie favorita:</b><p class="ml-2">Better Call Saul.</p></li>
-      <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-green-700">•</span><b>Actividad favorita:</b><p class="ml-2">Ver videos en YouTube.</p></li>
+      <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-green-700">•</span><b>Actividad favorita:</b><p class="ml-2">Ver videos en YouTube o programar.</p></li>
       <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-green-700">•</span><b>Cosa favorita:</b><p class="ml-2">Los videojuegos y artículos tecnológicos.</p></li>
     </ul>
 
@@ -240,7 +241,7 @@
         <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-blue-900">★</span><b class="mt-1">Ayudar a las personas mientras tenga la oportunidad.</b><br><br></li>
         <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-blue-900">★</span><b class="mt-1">Ser una buena persona y aporte positivo para los demás.</b><br><br></li>
         <li class="items-start flex"><span class="text-2xl ml-5 mr-8 mt-1 text-blue-900">★</span><b class="mt-1">Aprender de todo en relación a la computación e informática, lograr dominar muchas áreas al respecto.</b><br><br></li>
-        <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-blue-900">★</span><b class="mt-1">Darle un sentido y propósito a mi vida del cual no arrepentirme.</b><br><br></li>
+        <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-blue-900">★</span><b class="mt-1">Vivir siguiendo un propósito del cual no arrepentirme.</b><br><br></li>
     </ul>
 
     <!-- PASATIEMPOS -->
@@ -276,7 +277,9 @@
 <!-- JAVASCRIPT PARA ANIMACIONES -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    const animatedElements = document.querySelectorAll('.animated-element-fade-in');
+    const animatedElements = document.querySelectorAll(
+      '.animated-element-slide-r, .animated-element-slide-l, .animated-element-fade-in'
+    );
 
     const observerOptions = {
       root: null,
@@ -287,36 +290,11 @@
     const handleIntersection = (entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          if (entry.target.querySelector('.animate-fade-in')) {
-            entry.target.classList.add('animate-fade-in');
-          }
-          observer.unobserve(entry.target);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, observerOptions);
-
-    animatedElements.forEach(element => {
-      observer.observe(element);
-    });
-  });
-
-  document.addEventListener("DOMContentLoaded", function() {
-    const animatedElements = document.querySelectorAll('.animated-element-slide-r, .animated-element-fade-in');
-
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
-
-    const handleIntersection = (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          if (entry.target.querySelector('.animate-slide-in-right')) {
+          if (entry.target.classList.contains('animated-element-slide-r')) {
             entry.target.classList.add('animate-slide-in-right');
-          } else if (entry.target.querySelector('.animate-fade-in')) {
+          } else if (entry.target.classList.contains('animated-element-slide-l')) {
+            entry.target.classList.add('animate-slide-in-left');
+          } else if (entry.target.classList.contains('animated-element-fade-in')) {
             entry.target.classList.add('animate-fade-in');
           }
           observer.unobserve(entry.target);

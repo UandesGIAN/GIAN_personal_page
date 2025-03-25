@@ -3,9 +3,12 @@
 <!-------------------------------->
 
 <!-- BANNER PRINCIPAL -->
-<div class="relative bg-center bg-cover flex flex-col items-center justify-start text-center min-h-screen pt-8" style="background-image: url('/assets/banner.png');">
-  <h1 class="font-bold text-6xl mb-2 text-white animate__animated animate__fadeInDown mt-48">BIENVENIDO A LA PÁGINA WEB DE GIAN.</h1>
-  <p class="text-lg mb-2 text-gray-100 animate__animated animate__fadeIn animate__delay-1s">(Versión alpha 0.1)</p>
+<div class="relative w-full min-h-screen flex flex-col items-center justify-start text-center pt-8"
+     style="background: url('/assets/banner.png') center/cover no-repeat; margin: 0; padding: 0;">
+  <h1 class="font-bold text-6xl mb-2 text-white animate__animated animate__fadeInDown mt-48">
+    BIENVENIDO A LA PÁGINA WEB DE GIAN.
+  </h1>
+  <p class="text-lg mb-2 text-gray-100 animate__animated animate__fadeIn animate__delay-1s">(Versión alpha 0.2)</p>
   <h4 class="text-3xl font-semibold text-white animate__animated animate__fadeInDown animate__delay-0s">
     <a href="#sobre-la-pagina" class="text-white underline">Explora los contenidos</a>
   </h4> 
@@ -16,17 +19,18 @@
 <!-- PRESENTACION DEL PROYECTO -->
 <div id="sobre-la-pagina" class="banner-container mt-48 relative">
   <div class="relative flex items-center text-center justify-center h-full animated-element-slide-r">
-    <h1 class="font-bold text-8xl mb-2 text-white text-shadow-green animate-slide-in-right">
+    <h1 class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-4xl mb-2 text-white text-shadow-green animate-slide-in-right">
       Sobre el proyecto
     </h1>
   </div>
 </div>
+
   
 <div class="text-container max-w-5xl mx-auto mt-12 px-4 flex flex-col pb-8">
   <div class="mt-6 mb-6 text-xl text-black text-center bg-gray-300 rounded-lg p-8 shadow-lg animated-element-fade-in">
     <p class="animate-fade-in">
       Esta página web es un espacio donde recopilar todos mis proyectos, investigaciones, estudios y aportes para el mundo. <br>
-      <br>Será un sitio que estará en constante expansión y desarrollo, todos los cambios pueden verse desde el github oficial (Disponible en el <a href="#footer" class="text-blue-800 underline">pie de página</a>).<br>
+      <br>Será un sitio que estará en constante expansión y desarrollo, todos los cambios pueden verse desde el <a><%= link_to "historial de versiones", versiones_path, class: "text-lg font-semibold text-blue-800 underline" %></a>.<br>
     </p>
   </div>
 </div>
@@ -36,7 +40,7 @@
 <!-- CONTENIDOS DE LA PÁGINA -->
 <div class="banner-container mt-12 relative">
   <div class="relative flex items-center justify-center h-full animated-element-fade-in animate__delay-1s">
-    <a href="#contenido"><h1 id="contenido" class="font-bold text-8xl mb-2 text-white text-shadow-orange animate-fade-in">
+    <a href="#contenido"><h1 id="contenido" class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-4xl mb-2 text-white text-shadow-orange animate-fade-in">
       Contenidos
     </h1></a>
   </div>
@@ -124,6 +128,7 @@
           <br><br>
           Disponible totalmente gratuito y sin intenciones de promocionar ni promover algún contenido comercial para sacar provecho del mismo.<br><br>
           Todos los derechos de autor que no me pertenecen están acréditados en cada una de sus menciones.<br>
+          Cualquier comentario, sugerencia o crítica constructiva sobre el sitio, porfavor contactarme por alguno de los medios mencionados en el <a href="#footer" class="text-blue-800 underline">pie de página</a>.
         </p>
       </div>
     </div>
