@@ -14,7 +14,7 @@ class PagesController < ApplicationController
       "MikuMikuDance" => [ "Origen", "WoomyGIAN", "EL TUTORIAL DEFINITIVO DE MMD SPLATOON" ],
       "Videojuegos" => [ "Origen", "BrinCalamar", "SquidBeatz3" ],
       "Por diversion" => [ "Tier Lists", "Dibujos", "Música" ],
-      "Experimentos" => [ "Electrónica", "Universidad", "PC", "Celular", "Consolas de videojuegos", "Scripts de python" ]
+      "Experimentos" => [ "Electrónica", "Universidad", "PC", "Celular", "Consolas de Videojuegos", "Scripts de Python" ]
     }
 
     @indice_content = render_to_string(partial: "shared/indice", locals: {

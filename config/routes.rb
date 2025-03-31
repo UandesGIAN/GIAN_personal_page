@@ -12,15 +12,8 @@ Rails.application.routes.draw do
   root "pages#home"
   get "sobre-mi", to: "pages#about_me"
   get "versiones", to: "pages#versiones"
+  get "publicaciones", to: "pages#publicaciones"
   get "proyectos(/:section(/:sub_section))", to: "pages#proyectos", as: "proyectos_subsection"
   get "computacion(/:section(/:sub_section))", to: "pages#computacion", as: "computacion_subsection"
   get "filosofia(/:section(/:sub_section))", to: "pages#filosofia", as: "filosofia_subsection"
-  ""'
-  # ENGLISH
-  get "pages-en#home"
-  get "about-me", to: "pages#about_me"
-  get "versions", to: "pages-en#versiones"
-  get "projects(/:section(/:sub_section))", to: "pages-en#proyectos", as: "proyectos-subsection"
-  get "informatics(/:section(/:sub_section))", to: "pages-en#computacion", as: "computacion-subsection"
-  get "philosophy(/:section(/:sub_section))", to: "pages-en#filosofia", as: "filosofia-subsection"'""
 end
