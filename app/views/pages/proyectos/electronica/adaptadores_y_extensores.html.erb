@@ -1,0 +1,40 @@
+<div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
+  <h1 class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-4xl text-center mb-2 text-blue-700 animate-slide-in-right">
+    <span class="text-shadow-proyectos">Mis proyectos:</span> <p class="mt-10" style="color: #001ee3; text-shadow: 0px 2px 20px rgba(0, 30, 227, 0.6);">Electrónica</p>
+  </h1>
+</div>
+
+
+<%= @indice_content %>
+
+<div class="text-container max-w-7xl mx-auto mt-20 px-4 flex flex-col pb-8">
+  <section class="p-6 bg-gray-100 text-gray-800">
+    <h2 class="text-4xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #001ee3;">2. Adaptadores y Extensores</h2>
+
+    <p class="mb-6 text-lg">
+      <i>Work In Progress...</i>
+    </p>
+
+    <div class="flex justify-between items-center">
+        <div>
+            <a href="<%= proyectos_subsection_path(section: 'electronica', sub_section: 'reparar_enchufes_y_cables') %>" 
+                class="text-white py-3 px-4 rounded-md transition-all"
+                style="background-color: rgb(0, 30, 227);"
+                onmouseover="this.style.backgroundColor='rgb(0, 22, 170)'"
+                onmouseout="this.style.backgroundColor='rgb(0, 30, 227)'">
+                Anterior capítulo
+            </a>
+        </div>
+        <div>
+            <a href="<%= proyectos_subsection_path(section: 'electronica', sub_section: 'enchufe_220v_portatil') %>" 
+                class="text-white py-3 px-4 rounded-md transition-all"
+                style="background-color: rgb(0, 30, 227);"
+                onmouseover="this.style.backgroundColor='rgb(0, 22, 170)'"
+                onmouseout="this.style.backgroundColor='rgb(0, 30, 227)'">
+                Siguiente capítulo
+            </a>
+        </div>
+    </div>
+
+  </section>
+</div>

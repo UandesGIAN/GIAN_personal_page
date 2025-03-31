@@ -1,0 +1,34 @@
+<div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
+  <h1 class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-4xl text-center mb-2 text-blue-700 animate-slide-in-right">
+    <span class="text-shadow-proyectos">Mis proyectos:</span> <p class="mt-10" style="color: #8600c9; text-shadow: 0px 2px 20px rgba(134, 0, 201, 0.6);">Celulares</p>
+  </h1>
+</div>
+
+<%= @indice_content %>
+
+<div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
+  <section class="p-6 bg-gray-100 text-gray-800">
+    <p class="mb-6 text-lg ">
+        <i>Work in progress...</i>
+    </p>
+
+    <h2 class="text-5xl mt-14 text-center font-bold mb-4" style="color: #8600c9;">Secciones:</h2>
+
+    <a href="<%= proyectos_subsection_path(section: 'celulares') %>" style="color: #8600c9;">
+    </a>
+    <% if @subsections['Celulares'].present? %>
+      <div class="flex flex-col items-center"> 
+        <ul class="list-inside text-experimentos text-left mt-2">
+          <% @subsections['Celulares'].each_with_index do |sub_section, index| %>
+            <li>
+              <a href="<%= proyectos_subsection_path(section: 'celulares', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" 
+                class="text-2xl font-bold underline" style="color: #8600c9;">
+                <%= "#{index + 1} #{sub_section}" %>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </section>
+</div>

@@ -1,0 +1,31 @@
+<div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
+  <h1 class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-4xl text-center mb-2 text-blue-700 animate-slide-in-right">
+    <span class="text-shadow-proyectos">Mis proyectos:</span> <p class="mt-10" style="color: #436d94; text-shadow: 0px 2px 20px rgba(67, 109, 148, 0.6);">Scripts</p>
+  </h1>
+</div>
+
+
+<%= @indice_content %>
+
+<div class="text-container max-w-7xl mx-auto mt-20 px-4 flex flex-col pb-8">
+  <section class="p-6 bg-gray-100 text-gray-800">
+    <h2 class="text-4xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #436d94;">1. Aplicaciones concretas</h2>
+
+    <p class="mb-6 text-lg">
+      <i>Work In Progress...</i>
+    </p>
+
+    <div class="flex justify-end">
+        <div>
+            <a href="<%= proyectos_subsection_path(section: 'scripts', sub_section: 'aplicaciones_con_ia') %>" 
+                class="text-white py-3 px-4 rounded-md transition-all"
+                style="background-color: rgb(67, 109, 148);"
+                onmouseover="this.style.backgroundColor='rgb(50, 81, 111)'"
+                onmouseout="this.style.backgroundColor='rgb(67, 109, 148)'">
+                Siguiente capítulo
+            </a>
+        </div>
+    </div>
+
+  </section>
+</div>
