@@ -10,16 +10,8 @@
   </h1>
   <p class="text-lg mb-2 text-gray-100 animate__animated animate__fadeInDown">(Versión alpha 0.2)</p>
 
-  <!-- PRESENTACION DEL PROYECTO 
-  <div id="sobre-la-pagina" class="banner-container relative">
-    <div class="relative flex items-center text-center justify-center h-full animated-element-slide-r">
-      <h1 class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-4xl mb-2 text-white text-shadow-green animate-slide-in-right">
-        Sobre el proyecto
-      </h1>
-    </div>
-  </div>
-  -->
 
+<!-- PRESENTACION DEL PROYECTO -->
 <div id="sobre-la-pagina" class="relative w-full max-w-6xl mx-auto mt-4 px-4 flex flex-col pb-8 z-10">
     <div class="bg-black bg-opacity-40 text-white rounded-lg p-8 shadow-lg animate__animated animate__fadeIn animate__delay-1s">
       <h2 class="font-bold text-3xl mb-4 text-center text-green-400">Sobre el Proyecto</h2>
@@ -32,11 +24,11 @@
     </div>
   </div>
 
-
   <h4 class="text-3xl font-semibold text-white animate__animated animate__fadeIn animate__delay-1s mb-10">
     <a href="#contenido" class="text-white underline hover:text-green-400 hover:bg-black hover:bg-opacity-40">Explora los contenidos</a>
   </h4> 
 </div>
+
 
 <!-- CONTENIDOS DE LA PÁGINA -->
 <div id="contenido" class="banner-container mt-12 relative">
@@ -46,6 +38,7 @@
     </h1></a>
   </div>
 </div>
+
 
 <div class="relative text-container pb-8">
   <section class="mb-6 text-center max-w-5xl mx-auto px-4 flex flex-col">
@@ -65,6 +58,7 @@
       </div>
     </div>
 
+
     <!-- MIS PROYECTOS -->
     <div class="mb-4 mt-24">
       <div class="flex justify-center cursor-pointer" onclick="toggleCard('card2')">
@@ -81,7 +75,7 @@
       </div>
     </div>
 
-    
+    <!-- COMPUTACIÓN -->
     <div class="mb-4 mt-24">
       <div class="flex justify-center cursor-pointer" onclick="toggleCard('card3')">
         <p class="text-4xl font-semibold computacion-home underline">COMPUTACIÓN</p>
@@ -98,6 +92,7 @@
         <%= link_to "¡Ve a echárle un vistazo!", computacion_subsection_path, class: "text-lg font-semibold computacion-home underline" %>
       </div>
     </div>
+
 
     <!-- FILOSOFIA DE GIAN -->
     <div class="mb-4 mt-24">
@@ -116,6 +111,7 @@
       </div>
     </div>
     
+  
     <!-- DETALLES -->
     <div class="mb-4 mt-24">
       <div class="flex justify-center cursor-pointer" onclick="toggleCard('card5')">
