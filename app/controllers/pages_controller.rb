@@ -10,7 +10,7 @@ class PagesController < ApplicationController
     @sub_section = params[:sub_section]
 
     @subsections = {
-      "Youtube" => ["Origen", "Contenidos y Eras", "Mejores Trabajos", "GIAN Random", "Tier List de Mis Videos"],
+      "Youtube" => ["Origen", "Contenidos y Eras", "Mejores Trabajos", "GIAN Random", "Tier List"],
       "MikuMikuDance" => ["Origen", "WoomyGIAN", "EL TUTORIAL DE MMD SPLATOON DEFINITIVO"],
       "Videojuegos" => ["Origen", "BrinCalamar", "SquidBeatz3"],
       "Dibujos" => ["2015", "2016", "2017", "2018-19", "2023-24"],
@@ -85,7 +85,12 @@ class PagesController < ApplicationController
 
     @subsections = {
     "EL MÉTODO DE GIAN" => [ "Las Bases", "Los Principios", "Las Opciones", "Los Consejos" ],
-    "LAS MANERAS" => []
+    "LAS MANERAS" => ["Teoría", "Aplicaciones"],
+    "LOS ELEMENTOS DE VIDA" => ["Las definiciones", "Los Apartados Esenciales de Vida", "Las Sub-formas de vida", "Los Estados Compuestos", "El Ser Total", "Sobre la Amistad"],
+    "Ética" => ["Universidad", "Por Gian"],
+    "Teología" => ["Universidad I (Teologia I)", "Universidad II (Teologia II)", "Universidad III (Teologia III Desafios Sociales del Cristianismo)"],
+    "Arte" => ["Universidad (La belleza del Arte)"],
+    "Psicología" => ["Universidad I (Los afectos y su relación con la construcción de una personalidad madura y saludable)", "Universidad II (Sociedad y Personalidad)", "Universidad III (Psicología Positiva)"],
     }
 
     @indice_content = render_to_string(partial: "shared/indice", locals: {

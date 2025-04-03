@@ -63,18 +63,18 @@
 
     // Obtiene la ruta actual
     const path = window.location.pathname;
-    const sectionMatch = path.match(/\/proyectos\/([^\/]+)/); // Extrae la sección de la URL
-    const currentSection = sectionMatch ? sectionMatch[1] : null;
+    const sectionMatch = path.match(/\/(proyectos|filosofia|computacion)\/([^\/]+)/); // Extrae la sección de la URL
+    const currentSection = sectionMatch ? sectionMatch[2] : null;
 
     // Filtra el menú de índice según la sección actual
-    document.querySelectorAll("#dropdown-menu ul li a").forEach(link => {
-      if (link.textContent !== "INICIO") {
-        const sectionInLink = link.getAttribute("href").match(/\/proyectos\/([^\/]+)/);
-        const linkSection = sectionInLink ? sectionInLink[1] : null;
+    document.querySelectorAll("#dropdown-menu ul li").forEach(link => {
+      const sectionInLink = link.querySelector('a')?.getAttribute("href").match(/\/(proyectos|filosofia|computacion)\/([^\/]+)/);
+      const linkSection = sectionInLink ? sectionInLink[2] : null;
 
-        if (linkSection && linkSection !== currentSection) {
-          link.parentElement.style.display = "none";
-        }
+      if (linkSection && linkSection !== currentSection) {
+        link.style.display = "none";
+      } else {
+        link.style.display = "block"; // Mostrar solo los que coinciden
       }
     });
 

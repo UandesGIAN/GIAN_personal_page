@@ -1,0 +1,40 @@
+<!-------------------------------->
+<!--  3. LOS ELEMENTOS DE VIDA  -->
+<!-------------------------------->
+
+<div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
+  <h1 class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-4xl text-center mb-2 text-shadow-orange filosofia-home animate-slide-in-right">
+    Filosofía de GIAN<p class="mt-10" style="color: #9200cc; text-shadow: 0px 2px 20px rgba(146, 0, 204, 0.6);">LOS ELEMENTOS DE VIDA</p>
+  </h1>
+</div>
+
+<%= @indice_content %>
+
+<!-- ESTRUCTURA -->
+<div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
+  <section class="p-6 bg-gray-100 text-gray-800">
+    <!-- DESCRIPCION Y CONTENIDO -->
+    <p class="mb-6 text-lg ">
+        <i>Work In Progress...</i>
+    </p>
+
+    <!-- SECCIONES -->
+    <h2 class="text-5xl mt-14 text-center font-bold mb-4" style="color: #9200cc;">Secciones:</h2>
+    
+    <a href="<%= filosofia_subsection_path(section: 'los_elementos_de_vida') %>" style="color: #9200cc;" class="text-center">
+    </a>
+    <% if @subsections['LOS ELEMENTOS DE VIDA'].present? %>
+      <div class="flex flex-col items-center"> 
+        <ul class="list-inside ml-12 mt-2">
+          <% @subsections['LOS ELEMENTOS DE VIDA'].each_with_index do |sub_section, index| %>
+            <li>
+              <a href="<%= filosofia_subsection_path(section: 'los_elementos_de_vida', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" style="color: #9200cc;" class="text-2xl font-bold underline">
+                <%= "#{index + 1} #{sub_section}" %>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+</div>
