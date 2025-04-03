@@ -86,7 +86,7 @@ class PagesController < ApplicationController
     @subsections = {
     "EL MÉTODO DE GIAN" => [ "Las Bases", "Los Principios", "Las Opciones", "Los Consejos" ],
     "LAS MANERAS" => ["Teoría", "Aplicaciones"],
-    "LOS ELEMENTOS DE VIDA" => ["Las Definiciones", "Los Apartados Esenciales de Vida", "Las Sub-formas de vida", "Los Estados Compuestos", "El Ser Total", "Sobre la Amistad"],
+    "LOS ELEMENTOS DE VIDA" => ["Las definiciones", "Los Apartados Esenciales de Vida", "Las Sub-formas de vida", "Los Estados Compuestos", "El Ser Total", "Sobre la Amistad"],
     "Ética" => ["Universidad", "Por Gian"],
     "Teología" => ["Universidad I (Teologia I)", "Universidad II (Teologia II)", "Universidad III (Teologia III Desafios Sociales del Cristianismo)"],
     "Arte" => ["Universidad (La belleza del Arte)"],
