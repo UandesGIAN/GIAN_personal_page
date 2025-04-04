@@ -202,9 +202,12 @@
   background-color: #1e1e1e; /* Color de fondo de la consola */
   color: #dcdcdc; /* Color del texto */
   font-family: monospace; /* Fuente monoespaciada */
-  padding: 10px;
-  border-radius: 5px; /* Bordes redondeados */
-  overflow: auto; /* Permitir el desbordamiento */
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 10px; /* Bordes redondeados */
+  overflow:hidden; /* Permitir el desbordamiento */
+  line-height: 2;
+  word-wrap: break-word; /* Permite que las palabras largas se rompan y salten de línea */
 }
 .comment {
   color: #6a9955; /* Color para comentarios */

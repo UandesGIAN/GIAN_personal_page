@@ -15,17 +15,25 @@
   <section class="p-6 bg-gray-100 text-gray-800">
     <!-- TITULO -->
     <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-2 text-center font-bold mb-4 text-red-700">1. Origen</h2>
-    
-    <!-- INDICE -->
 
-
-    <!-- CONTENIDO -->
+    <!-- INTRODUCCION -->
     <p class="mb-6 text-lg ">
         Comencé este proyecto en 2012, al menos, esa fue la fecha más antigua en la que intenté empezar un proyecto en YouTube.
-        <br><br>Pero el origen se remonta incluso más atras.
+        <br>Pero el origen se remonta incluso más atras...
     </p>
 
-    <h2 class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4 text-red-700">1.1 Contexto</h2>
+    <!-- INDICE -->
+    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-2 text-center font-bold mb-4 text-red-700">Índice</h2>
+    <div class="flex justify-center mb-8">
+        <ul class="list-disc text-lg">
+            <li><a href="#11contexto" class="text-xl mt-2 text-center font-bold mb-4 text-red-700 underline">1.1 Contexto</a></li>
+            <li><a href="#12supergianpowertv" class="text-xl mt-2 text-center font-bold mb-4 text-red-700 underline">1.2 SuperGianPowerTV</a></li>
+            <li><a href="#13giangames55" class="text-xl mt-2 text-center font-bold mb-4 text-red-700 underline">1.3 GIANgames55</a></li>
+        </ul>
+    </div>
+
+    <!-- CONTENIDO -->
+    <h2 class="text-xl sm:text-3xl lg:text-5xl mt-4 text-center font-bold mb-4 text-red-700">1.1 Contexto</h2>
     <p class="mb-6 text-lg">
         Yo de pequeño (5-6 años) pasaba mi tiempo libre jugando con elementos de la vida real o juguetes, a lo mucho algún que otro videojuego o con mis hermanos mayores. Sin embargo en algunas pocas ocasiones, gracias a ellos, más o menos en <strong>2008</strong> descubrí <a href="https://www.youtube.com/" class="text-blue-700 underline">YouTube</a>, el mayor sitio web para subir, compartir y visualizar videos en la red. En aquel entonces no era más que una forma de ver contenido distinta a la televisión.
     </p>
@@ -99,7 +107,7 @@
 
     <!-- BOTONES -->
     <div class="flex justify-end">
-        <a href="<%= proyectos_subsection_path(section: 'youtube', sub_section: 'contenidos_y_eras') %>" class="bg-red-700 text-white py-2 px-4 rounded-md hover:bg-red-800 transition-all">
+        <a href="<%= proyectos_subsection_path(section: 'youtube', sub_section: 'contenidos_y_eras') %>" class="bg-red-700 text-white sm:py-3 py-2 px-3 rounded-md hover:bg-red-800 transition-all">
             Siguiente capítulo
         </a>
     </div>
