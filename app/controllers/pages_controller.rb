@@ -24,6 +24,12 @@ class PagesController < ApplicationController
       "Celulares" => ["Iphone 4s", "Iphone 5c", "Samsung J1 Ace", "Iphone SE", "Iphone 12 Mini"]
     }
     
+    # Lista de subsecciones nuevas
+    @new_subsections = {
+      "Youtube" => ["Mejores Trabajos", "GIAN Random"],  # Ejemplo de subsección nueva
+      "MikuMikuDance" => ["Origen", "WoomyGIAN", "EL TUTORIAL DE MMD SPLATOON DEFINITIVO"],  # Ejemplo de subsección nueva
+      "Música" => ["Remixes que he imaginado en mi cabeza", "Mashups realizados"]  # Ejemplo de subsección nueva
+    }
 
     @indice_content = render_to_string(partial: "shared/indice", locals: {
       type_url: "proyectos",

@@ -76,6 +76,25 @@
   }
 }
 
+/* Destacado en imagenes Musica */
+.border-musica {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 128 0 / var(--tw-border-opacity, 1));
+}
+.border-musica:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(255, 128, 0) !important; /* Color visible en hover */
+}
+
+.border-red-700 {
+  --tw-text-opacity: 1;
+  border-color: rgb(185 28 28 / var(--tw-text-opacity, 1)) /* #b91c1c */;
+}
+.hover\:border-red-700:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(185, 28, 28) !important; /* Color visible en hover */
+}
+
 
 /* Textos y efectos customs */
 .computacion-home {
@@ -241,4 +260,13 @@
 }
 .keyword {
   color: #c678dd; /* Color para palabras clave */
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }

@@ -32,9 +32,12 @@
         <ul class="list-inside text-left text-mmd mt-2">
           <% @subsections['MikuMikuDance'].each_with_index do |sub_section, index| %>
             <li>
-              <a href="<%= proyectos_subsection_path(section: 'mikumikudance', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" 
-                class="text-mmd text-2xl font-bold underline">
-                <%= "#{index + 1} #{sub_section}" %>
+              <a href="<%= proyectos_subsection_path(section: 'mikumikudance', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" style='color: #26BAF5;' class="text-2xl font-bold flex items-center">
+                <%= if @new_subsections['MikuMikuDance'] && @new_subsections['MikuMikuDance'].include?(sub_section)
+                      raw("<span class='underline'>2.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #26BAF5 !important;font-size: 22px;'>release_alert</span>")
+                    else
+                      raw("<span class='underline'>2.#{index + 1} #{sub_section}</span>")
+                    end %>
               </a>
             </li>
           <% end %>
