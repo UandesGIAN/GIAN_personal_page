@@ -2,31 +2,36 @@
 <!-- PAGINA DE INICIO DEL SITIO -->
 <!-------------------------------->
 
-<!-- BANNER PRINCIPAL -->
-<div class="relative w-full min-h-screen flex flex-col items-center justify-start text-center pt-8"
-     style="background: url('/assets/banner.png') center/cover no-repeat; margin: 0; padding: 0;">
-  <h1 class="font-bold text-6xl mb-2 text-white animate__animated animate__fadeInDown mt-48">
-    BIENVENIDO A LA PÁGINA WEB DE GIAN.
-  </h1>
-  <p class="text-lg mb-2 text-gray-100 animate__animated animate__fadeInDown">(Versión alpha 0.2)</p>
+<div id="scroll-lock" class="h-screen overflow-y-auto overscroll-contain touch-auto">
+  <!-- BANNER PRINCIPAL -->
+  <div class="relative w-full min-h-screen flex flex-col items-center justify-start text-center pt-8"
+      style="background: url('/assets/banner.png') center/cover no-repeat; margin: 0; padding: 0;">
+    <h1 class="font-bold text-5xl sm:text-6xl mb-2 text-white animate__animated animate__fadeInDown mt-48">
+      BIENVENIDO A LA PÁGINA WEB DE GIAN.
+    </h1>
+    <p class="text-lg mb-2 text-gray-100 animate__animated animate__fadeInDown">(Versión alpha 0.3)</p>
 
-
-<!-- PRESENTACION DEL PROYECTO -->
-<div id="sobre-la-pagina" class="relative w-full max-w-6xl mx-auto mt-4 px-4 flex flex-col pb-8 z-10">
-    <div class="bg-black bg-opacity-40 text-white rounded-lg p-8 shadow-lg animate__animated animate__fadeIn animate__delay-1s">
-      <h2 class="font-bold text-3xl mb-4 text-center text-green-400">Sobre el Proyecto</h2>
-      <p class="text-lg text-center">
-        Este sitio web es una plataforma donde compartiré mis proyectos, investigaciones y estudios.<br>Mi objetivo es crear un espacio que siga creciendo y evolucionando con el tiempo.
-        <br><br>
-        Puedes ver los cambios históricos en el <a href="<%= versiones_path %>" class="font-semibold text-green-400 underline">historial de versiones</a>.<br>
-        Y estar al tanto de las novedades entrando a <a href="<%= publicaciones_path %>" class="font-semibold text-green-400 underline">publicaciones de GIAN</a>.
-      </p>
+    <!-- PRESENTACION DEL PROYECTO -->
+    <div id="sobre-la-pagina" class="relative w-full max-w-6xl mx-auto mt-4 px-4 flex flex-col pb-8 z-10">
+      <div class="bg-black bg-opacity-40 text-white rounded-lg p-8 shadow-lg animate__animated animate__fadeIn animate__delay-1s">
+        <h2 class="font-bold text-3xl mb-4 text-center text-green-400">Sobre el Proyecto</h2>
+        <p class="text-lg text-center">
+          Este sitio web es una plataforma donde compartiré mis proyectos, investigaciones y estudios.<br>
+          Puedes ver los cambios históricos en el 
+          <a href="<%= versiones_path %>" class="font-semibold text-green-400 underline">historial de versiones</a>.<br>
+          Y estar al tanto de las novedades entrando a 
+          <a href="<%= publicaciones_path %>" class="font-semibold text-green-400 underline">publicaciones de GIAN</a>.
+        </p>
+      </div>
     </div>
-  </div>
 
-  <h4 class="text-3xl font-semibold text-white animate__animated animate__fadeIn animate__delay-1s mb-40">
-    <a href="#contenido" class="text-white underline hover:text-green-400 hover:bg-black hover:bg-opacity-40">Explora los contenidos</a>
-  </h4> 
+    <!-- BOTÓN PARA DESBLOQUEAR SCROLL -->
+    <h4 class="text-3xl font-semibold text-white animate__animated animate__fadeIn animate__delay-1s mb-40">
+      <a href="#contenido" id="explorar-contenidos" class="text-white underline hover:text-green-400 hover:bg-black hover:bg-opacity-40">
+        Explora los contenidos
+      </a>
+    </h4> 
+  </div>
 </div>
 
 
@@ -177,5 +182,44 @@
     animatedElements.forEach(element => {
       observer.observe(element);
     });
+
+    document.body.style.overflow = "hidden";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const botonExplorar = document.getElementById("explorar-contenidos");
+
+      botonExplorar.addEventListener("click", (e) => {
+        e.preventDefault(); // evita el comportamiento por defecto del anchor
+
+        // Habilita el scroll
+        document.body.style.overflow = "auto";
+
+        // Scroll suave hacia el contenido
+        const contenido = document.getElementById("contenido");
+        contenido.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Bloquea el scroll al principio
+    document.body.style.overflow = "hidden";
+
+    const btnExplorar = document.getElementById("explorar-contenidos");
+    const seccionContenido = document.getElementById("contenido");
+
+    if (btnExplorar && seccionContenido) {
+      btnExplorar.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // Habilita scroll
+        document.body.style.overflow = "auto";
+
+        // Hace scroll al contenido
+        seccionContenido.scrollIntoView({ behavior: "smooth" });
+      });
+    } else {
+      console.warn("No se encontró el botón o la sección de contenido.");
+    }
   });
 </script>

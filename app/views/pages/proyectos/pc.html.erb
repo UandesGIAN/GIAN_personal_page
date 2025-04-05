@@ -15,6 +15,8 @@
   <section class="p-6 bg-gray-100 text-gray-800">
     <!-- DESCRIPCION -->
     <p class="mb-6 text-lg ">
+        Sección dedicada a los experimentos que he realizado en relación a computadoras y mi computador personal principal. Al igual que los otros apartados, principalmente enfocado en la experiencia y aprendizajes, sin la intención de ser una guía o tutorial.
+        <br><br>
         <i>Work in progress...</i>
     </p>
 
@@ -29,9 +31,12 @@
         <ul class="list-inside text-experimentos text-left mt-2">
           <% @subsections['PC'].each_with_index do |sub_section, index| %>
             <li>
-              <a href="<%= proyectos_subsection_path(section: 'pc', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" 
-                class="text-2xl font-bold underline" style="color: #1E90FF;">
-                <%= "#{index + 1} #{sub_section}" %>
+              <a href="<%= proyectos_subsection_path(section: 'pc', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" style="color: #1E90FF;" class="text-2xl font-bold flex items-center">
+                <%= if @new_subsections['PC'] && @new_subsections['PC'].include?(sub_section)
+                      raw("<span class='underline'>7.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #1E90FF !important;font-size: 22px;'>release_alert</span>")
+                    else
+                      raw("<span class='underline'>7.#{index + 1} #{sub_section}</span>")
+                    end %>
               </a>
             </li>
           <% end %>

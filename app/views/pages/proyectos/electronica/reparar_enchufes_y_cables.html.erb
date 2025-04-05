@@ -1,3 +1,7 @@
+<!----------------------------------->
+<!-- 8.1 REPARAR ENCHUFES Y CABLES -->
+<!----------------------------------->
+
 <div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
   <h1 class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-4xl text-center mb-2 text-blue-700 animate-slide-in-right">
     <span class="text-shadow-proyectos">Mis proyectos:</span> <p class="mt-10" style="color: #001ee3; text-shadow: 0px 2px 20px rgba(0, 30, 227, 0.6);">Electrónica</p>
@@ -7,18 +11,90 @@
 
 <%= @indice_content %>
 
+<!-- ESTRUCTURA -->
 <div class="text-container max-w-7xl mx-auto mt-20 px-4 flex flex-col pb-8">
   <section class="p-6 bg-gray-100 text-gray-800">
+    <!-- TITULO -->
     <h2 class="text-4xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #001ee3;">1. Reparar enchufes y cables</h2>
 
+    <!-- INTRODUCCION -->
     <p class="mb-6 text-lg">
-      <i>Work In Progress...</i>
+      Esto es bastante simple, una de las primeras cosas que experimenté en relación con la electricidad. Aquí solo describiré algunos ejemplos, aprendizajes y una simple guía. No pretendo enseñar a hacer nada de lo dicho aquí, sino compartir mis experiencias y lo que sé al momento de escribir esto. No significa que sea un experto o quiera que se me replique.
+    </p>
+    <p class="mb-6 text-lg">
+      Desde muy pequeño me interesó la tecnología, los electrónicos y, por ende, cosas relacionadas con la electricidad.
     </p>
 
+    <!-- INDICE -->
+    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #001ee3">Índice</h2>
+    <div class="flex justify-center mb-8" style="color: #001ee3">
+      <ul class="list-disc text-lg">
+        <li><a href="#11-conceptos-iniciales" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #001ee3">1.1 Reparar cables</a></li>
+        <li><a href="#12-reparar-cables" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #001ee3">1.2 Reparar cables</a></li>
+        <li><a href="#13-reparar-enchufes" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #001ee3">1.3 Reparar enchufes</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTENIDO -->
+    <h2 id="11-conceptos-iniciales" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #001ee3">
+      1.1 Conceptos iniciales
+    </h2>
+    <p class="mb-6 text-lg">
+      Lo más básico a aprender era el uso de electrodomésticos, pero con el tiempo aprendí conceptos básicos como corriente, voltaje, positivo, tierra y negativo.
+    </p>
+    <p class="mb-6 text-lg">
+      En general, <strong>cada puerto y cable requiere alimentación de corriente</strong>. Dependiendo del dispositivo, puede requerir más <strong>corriente o voltaje</strong>, así como disponer de señales de <strong>datos</strong>, que no son más que intervalos de <strong>corriente (transmitidos en ciertos patrones reconocibles)</strong>, los cuales luego son identificados como distintos datos.
+    </p>
+    <h2 id="12-reparar-cables" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #001ee3">
+      1.2 Reparar cables
+    </h2>
+    <p class="mb-6 text-lg">
+      Para reparar cables, lo esencial es saber que un enchufe tiene 2 o 3 terminales: positivo (generalmente rojo o café), negativo (generalmente negro, blanco o azul) y tierra (generalmente café o amarillo con verde).
+    </p>
+    <div class="flex flex-col items-center mb-6">
+      <img src="/assets/./experimentos_images/cables.jpg" alt="Componentes de un cable eléctrico (LUZENLED)" class="w-1/2">
+      <p class="mt-2 text-lg text-center">Componentes de un cable eléctrico (LUZENLED)</p>
+    </div>
+    <p class="mb-6 text-lg">
+      La reparación consiste en tomar el cable (no el enchufe o puerto), cortarlo, intentar separar los distintos terminales (cables internos), quitarles el plástico sin cortar el cobre o metal, y dejar al descubierto el material para ser unido con otro cable cualquiera, de manera que se mantenga la conducción de corriente (como un extensor).
+    </p>
+    <div class="flex flex-col items-center mb-6">
+      <img src="/assets/./experimentos_images/cables_unir.jpg" alt="Formas de unir cables eléctricos (Alejandro Ale)" class="w-1/2">
+      <p class="mt-2 text-lg text-center">Formas de unir cables eléctricos (Alejandro Ale)</p>
+    </div>
+    <p class="mb-6 text-lg">
+      La forma de unir los cables puede ser enrollando las puntas de cobre, enrollando las puntas al plástico o soldando los metales. Pero lo fundamental es que, una vez unidos, se debe aislar correctamente la conexión con cinta aislante o algún material <strong>NO CONDUCTIVO</strong> y resistente a temperaturas medias-altas.
+    </p>
+    <div class="flex flex-col items-center mb-6">
+      <img src="/assets/./experimentos_images/cable_sellar.jpg" alt="Sellado del cable reparado (Coelectrix)" class="w-1/2">
+      <p class="mt-2 text-lg text-center">Sellado del cable reparado (Coelectrix)</p>
+    </div>
+    <p class="mb-6 text-lg">
+      Existen puertos más difíciles de reparar, como <i>USB tipo A</i>, <i>jack 3.5mm</i>, <i>pines</i> de componentes electrónicos o <i>placas</i> de circuitos.
+    </p>
+    <p class="mb-6 text-lg">
+      Pero, sin duda, los más difíciles (dentro de lo razonable) son los cables de video, pues en estos, cada "mini-cable" transmite datos, transmite una señal, y basta con que uno pierda conexión para que toda la señal se distorsione. El más "sencillo" de reparar es el cable <i>VGA</i>, pero eso no significa que sea fácil.
+    </p>
+    <div class="flex flex-col items-center mb-6">
+      <img src="/assets/./experimentos_images/vga_repair.webp" alt="Esquema de reparación de un cable VGA (Scribd)" class="w-1/2">
+      <p class="mt-2 text-lg text-center">Esquema de reparación de un cable VGA (Scribd)</p>
+    </div>
+    <h2 id="13-reparar-enchufes" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #001ee3">
+      1.3 Reparar enchufes
+    </h2>
+    <p class="mb-6 text-lg">
+      La mejor forma de reparar enchufes es comprar adaptadores de enchufe macho y conectar las puntas de cobre de los cables ya pelados a donde corresponda. Si tiene 3 patas, la central es la que debe tener el cable de tierra, y eso es <strong>MUY IMPORTANTE</strong>, de lo contrario, puede provocar un cortocircuito.
+    </p>
+    <div class="flex flex-col items-center mb-6">
+      <img src="/assets/./experimentos_images/enchufe_repair.jpg" alt="Reparar enchufe con una rema (Arqhys)" class="w-1/2">
+      <p class="mt-2 text-lg text-center">Reparar enchufe con una rema (Arqhys)</p>
+    </div>
+
+    <!-- BOTONES -->
     <div class="flex justify-end">
         <div>
             <a href="<%= proyectos_subsection_path(section: 'electronica', sub_section: 'adaptadores_y_extensores') %>" 
-                class="text-white py-3 px-4 rounded-md transition-all"
+                class="text-white sm:py-3 py-2 px-3 rounded-md transition-all"
                 style="background-color: rgb(0, 30, 227);"
                 onmouseover="this.style.backgroundColor='rgb(0, 22, 170)'"
                 onmouseout="this.style.backgroundColor='rgb(0, 30, 227)'">

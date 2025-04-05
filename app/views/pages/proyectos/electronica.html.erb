@@ -15,7 +15,8 @@
   <section class="p-6 bg-gray-100 text-gray-800">
     <!-- DESCRIPCION -->
     <p class="mb-6 text-lg ">
-        <i>Work in progress...</i>
+        En este apartado se explorarán experimentos y técnicas específicas enfocadas en electricidad, reparaciones prácticas y técnicas útiles en relación con la electrónica y electricidad general.<br>
+        <br><strong>Ninguna de las secciones aquí pretende ser una guía o tutorial profesional para replicar lo descrito.</strong>
     </p>
 
 
@@ -29,12 +30,15 @@
         <ul class="list-inside text-experimentos text-left mt-2">
           <% @subsections['Electrónica'].each_with_index do |sub_section, index| %>
             <li>
-              <a href="<%= proyectos_subsection_path(section: 'electronica', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" 
-                class="text-2xl font-bold underline" style="color: #001ee3;">
-                <%= "#{index + 1} #{sub_section}" %>
+              <a href="<%= proyectos_subsection_path(section: 'electronica', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-2xl font-bold flex items-center" style="color: #001ee3;">
+                <%= if @new_subsections['Electrónica'] && @new_subsections['Electrónica'].include?(sub_section)
+                      raw("<span class='underline'>8.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #001ee3 !important;font-size: 22px;'>release_alert</span>")
+                    else
+                      raw("<span class='underline'>8.#{index + 1} #{sub_section}</span>")
+                    end %>
               </a>
             </li>
-          <% end %>
+        <% end %>
         </ul>
       </div>
     <% end %>
