@@ -60,7 +60,22 @@
   }
 }
 
-/* Destacado en imagenes MMD */
+/* Destacado en imagenes */
+.border-red-700 {
+  --tw-text-opacity: 1;
+  border-color: rgb(185 28 28 / var(--tw-text-opacity, 1)) /* #b91c1c */;
+}
+.hover\:border-red-700:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(185, 28, 28) !important; /* Color visible en hover */
+}
+
+@media (min-width: 640px) {
+  .sm\:border-transparent {
+    border-color: transparent !important;
+  }
+}
+
 .border-mmd {
   --tw-border-opacity: 1;
   border-color: rgb(38 186 245 / var(--tw-border-opacity, 1));
@@ -69,14 +84,6 @@
   --tw-border-opacity: 1;
   border-color: rgb(38, 186, 245) !important; /* Color visible en hover */
 }
-/* Borde transparente por defecto en pantallas grandes */
-@media (min-width: 640px) {
-  .sm\:border-transparent {
-    border-color: transparent !important;
-  }
-}
-
-/* Destacado en imagenes Musica */
 .border-musica {
   --tw-border-opacity: 1;
   border-color: rgb(255 128 0 / var(--tw-border-opacity, 1));
@@ -86,14 +93,16 @@
   border-color: rgb(255, 128, 0) !important; /* Color visible en hover */
 }
 
-.border-red-700 {
-  --tw-text-opacity: 1;
-  border-color: rgb(185 28 28 / var(--tw-text-opacity, 1)) /* #b91c1c */;
-}
-.hover\:border-red-700:hover {
+.border-pc {
   --tw-border-opacity: 1;
-  border-color: rgb(185, 28, 28) !important; /* Color visible en hover */
+  border-color: rgb(30 144 255 / var(--tw-border-opacity, 1));
 }
+.border-pc:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(30, 144, 255) !important; /* Color visible en hover */
+}
+
+
 
 
 /* Textos y efectos customs */

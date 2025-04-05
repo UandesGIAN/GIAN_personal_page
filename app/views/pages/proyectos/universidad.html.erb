@@ -29,9 +29,12 @@
         <ul class="list-inside text-experimentos text-left mt-2">
           <% @subsections['Universidad'].each_with_index do |sub_section, index| %>
             <li>
-              <a href="<%= proyectos_subsection_path(section: 'universidad', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" 
-                class="text-2xl font-bold underline" style="color: #db0080;">
-                <%= "#{index + 1} #{sub_section}" %>
+              <a href="<%= proyectos_subsection_path(section: 'universidad', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center" style="color: #db0080;">
+                <%= if @new_subsections['Universidad'] && @new_subsections['Universidad'].include?(sub_section)
+                      raw("<span class='underline'>5.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #db0080 !important;font-size: 22px;'>release_alert</span>")
+                    else
+                      raw("<span class='underline'>5.#{index + 1} #{sub_section}</span>")
+                    end %>
               </a>
             </li>
           <% end %>

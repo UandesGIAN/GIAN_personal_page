@@ -26,9 +26,13 @@ class PagesController < ApplicationController
     
     # Lista de subsecciones nuevas
     @new_subsections = {
-      "Youtube" => ["Mejores Trabajos", "GIAN Random"],  # Ejemplo de subsección nueva
-      "MikuMikuDance" => ["Origen", "WoomyGIAN", "EL TUTORIAL DE MMD SPLATOON DEFINITIVO"],  # Ejemplo de subsección nueva
-      "Música" => ["Remixes que he imaginado en mi cabeza", "Mashups realizados"]  # Ejemplo de subsección nueva
+      "Youtube" => ["Mejores Trabajos", "GIAN Random"],
+      "MikuMikuDance" => ["Origen", "WoomyGIAN", "EL TUTORIAL DE MMD SPLATOON DEFINITIVO"],
+      "Música" => ["Remixes que he imaginado en mi cabeza", "Mashups realizados"],
+      "Rankings" => ["Los MEJORES capítulos de algunas series que he visto", "TOP 3 Canciones X Tipo", "Todos los Videojuegos que he PROBADO y COMPLETADO", "Mis Canales de Youtube Preferidos"],
+      "PC" => ["Mi setup (historia)"],
+      "Electrónica" => ["Reparar enchufes y cables", "Adaptadores y Extensores", "Enchufe 220V portátil", "Luces LED"],
+      "Universidad" => ["Sistemas Embebidos", "Reconocimiento de gestos para apertura de casilleros"],
     }
 
     @indice_content = render_to_string(partial: "shared/indice", locals: {
