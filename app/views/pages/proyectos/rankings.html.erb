@@ -33,11 +33,11 @@
         <ul class="list-inside text-experimentos text-left mt-2">
           <% @subsections['Rankings'].each_with_index do |sub_section, index| %>
             <li>
-              <a href="<%= proyectos_subsection_path(section: 'rankings', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center" style="color: #4e009c;">
+              <a href="<%= proyectos_subsection_path(section: 'rankings', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-2xl font-bold flex items-center" style="color: #4e009c;">
                 <%= if @new_subsections['Rankings'] && @new_subsections['Rankings'].include?(sub_section)
-                      raw("<span class='underline'>5.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #4e009c !important;font-size: 22px;'>release_alert</span>")
+                      raw("<span class='underline'>6.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #4e009c !important;font-size: 22px;'>release_alert</span>")
                     else
-                      raw("<span class='underline'>5.#{index + 1} #{sub_section}</span>")
+                      raw("<span class='underline'>6.#{index + 1} #{sub_section}</span>")
                     end %>
               </a>
             </li>
