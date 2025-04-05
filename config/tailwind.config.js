@@ -13,7 +13,11 @@ module.exports = {
       colors: {
         orange: colors.orange,
         lime: colors.lime,
-      }
+        mmd: '#26BAF5',
+      },
+      borderColor: {
+        mmd: '#26BAF5',
+      },
     },
   },
   plugins: [

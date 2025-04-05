@@ -45,6 +45,7 @@
   .bg-mmd {
     color: rgb(38, 186, 245);
   }
+  
 
   .hover-darken {
     transition: background-color 0.3s ease;
@@ -58,6 +59,23 @@
     height: 200px;
   }
 }
+
+/* Destacado en imagenes MMD */
+.border-mmd {
+  --tw-border-opacity: 1;
+  border-color: rgb(38 186 245 / var(--tw-border-opacity, 1));
+}
+.border-mmd:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(38, 186, 245) !important; /* Color visible en hover */
+}
+/* Borde transparente por defecto en pantallas grandes */
+@media (min-width: 640px) {
+  .sm\:border-transparent {
+    border-color: transparent !important;
+  }
+}
+
 
 /* Textos y efectos customs */
 .computacion-home {
