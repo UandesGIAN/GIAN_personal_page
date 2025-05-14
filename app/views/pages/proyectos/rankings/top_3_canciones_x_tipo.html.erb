@@ -4,7 +4,8 @@
 
 <div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
   <h1 class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-4xl text-center mb-2 text-blue-700 animate-slide-in-right">
-    <span class="text-shadow-proyectos">Mis proyectos:</span> <p class="mt-10" style="color: #4e009c; text-shadow: 0px 2px 20px rgba(78, 0, 156, 0.6);">Rankings</p>
+    <span class="text-shadow-proyectos">Mis proyectos:</span> <p class="mt-10" style="<%='color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%> text-shadow: 0px 2px 20px rgba(78, 0, 156, 0.6);">Rankings</p>
   </h1>
 </div>
 
@@ -12,9 +13,13 @@
 
 <!-- ESTRUCTURA -->
 <div class="text-container max-w-7xl mx-auto mt-20 px-4 flex flex-col pb-8">
-  <section class="p-6 bg-gray-300 text-gray-800 rounded-2xl shadow-md flex-grow">
+  <section id="bg-articulos" class="p-6 
+    <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
+    rounded-2xl shadow-md flex-grow">
     <!-- TITULO -->
-    <h2 class="text-4xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #4e009c">2. TOP 3 Canciones X Tipo</h2>
+    <h2 class="text-4xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="<%='color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">2. TOP 3 Canciones X Tipo</h2>
 
     <!-- INTRODUCCION -->
     <p class="mb-12 text-lg leading-9">
@@ -28,18 +33,25 @@
     </p>
 
     <!-- INDICE -->
-    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-40 text-center font-bold mb-4" style="color: #4e009c">Índice</h2>
-    <div class="flex justify-center mb-40" style="color: #4e009c">
+    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-40 text-center font-bold mb-4" style="<%='color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">Índice</h2>
+    <div class="flex justify-center mb-40" style="<%='color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">
       <ul class="list-disc text-lg">
-        <li><a href="#21-música-de-internet" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #4e009c">2.1 MÚSICA DE INTERNET</a></li>
-        <li><a href="#22-música-de-series" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #4e009c">2.2 MÚSICA DE SERIES</a></li>
-        <li><a href="#23-generos-de-música" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #4e009c">2.3 GENEROS DE MÚSICA</a></li>
-        <li><a href="#24-música-de-videojuegos" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #4e009c">2.4 MÚSICA DE VIDEOJUEGOS</a></li>
+        <li><a href="#21-música-de-internet" class="text-xl mt-2 text-center font-bold mb-4 underline" style="<%='color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">2.1 MÚSICA DE INTERNET</a></li>
+        <li><a href="#22-música-de-series" class="text-xl mt-2 text-center font-bold mb-4 underline" style="<%='color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">2.2 MÚSICA DE SERIES</a></li>
+        <li><a href="#23-generos-de-música" class="text-xl mt-2 text-center font-bold mb-4 underline" style="<%='color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">2.3 GENEROS DE MÚSICA</a></li>
+        <li><a href="#24-música-de-videojuegos" class="text-xl mt-2 text-center font-bold mb-4 underline" style="<%='color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">2.4 MÚSICA DE VIDEOJUEGOS</a></li>
       </ul>
     </div>
 
     <!-- CONTENIDO -->
-    <h2 id="21-música-de-internet" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #4e009c">
+    <h2 id="21-música-de-internet" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="<%='color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">
       2.1 MÚSICA DE INTERNET
     </h2>
 
@@ -404,7 +416,8 @@
 
 
 
-    <h2 id="22-música-de-series" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #4e009c">
+    <h2 id="22-música-de-series" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="<%='color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">
       2.2 MÚSICA DE SERIES
     </h2>
 
@@ -612,7 +625,8 @@
 
 
 
-    <h2 id="23-generos-de-música" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #4e009c">
+    <h2 id="23-generos-de-música" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="<%='color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">
       2.3 GENEROS DE MÚSICA
     </h2>
 
@@ -875,7 +889,8 @@
       </div>
     </div>
 
-    <h2 id="24-música-de-videojuegos" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #4e009c">
+    <h2 id="24-música-de-videojuegos" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="<%='color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">
       2.4 MÚSICA DE VIDEOJUEGOS
     </h2>
 

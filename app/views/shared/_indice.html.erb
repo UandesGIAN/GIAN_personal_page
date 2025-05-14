@@ -1,8 +1,10 @@
-<div id="movable-button" class="fixed left-5 p-3 bg-gray-500 opacity-55 text-white rounded-full cursor-pointer">
+<div id="movable-button" class="fixed left-5 p-3 <%= 'bg-gray-500' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-700' if @modo_luz == 'oscuro' %> opacity-55 text-white rounded-full cursor-pointer">
   Índice
 </div>
 
-<div id="dropdown-menu" class="hidden fixed w-60 bg-gray-300 border mt-10 border-gray-400 rounded-lg shadow-lg p-4 text-gray-800">
+<div id="dropdown-menu" class="hidden fixed w-60 <%= 'bg-gray-200 sm:bg-gray-300 border-gray-400 text-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-900 text-gray-300 border-black' if @modo_luz == 'oscuro' %> border mt-10  rounded-lg shadow-lg p-4">
   <ul class="list-inside ml-4 mt-2">
     <li>
       <a href="<%= send("#{type_url}_subsection_path") %>" 
@@ -43,7 +45,8 @@
         <ul class="list-inside ml-4 mt-2">
           <% subsections[subsections_key].each_with_index do |sub_section, sub_index| %>
             <li>
-              <a href="<%= send("#{type_url}_subsection_path", section: section_fix, sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_').gsub(',', '') ) %>" class="text-gray-800 text-lg font-bold underline">
+              <a href="<%= send("#{type_url}_subsection_path", section: section_fix, sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_').gsub(',', '') ) %>" class="<%= 'text-gray-800' if @modo_luz == 'claro' %> 
+              <%= 'text-gray-400' if @modo_luz == 'oscuro' %> text-lg font-bold underline">
                 <%= "#{index + 1}.#{sub_index + 1} #{sub_section}" %>
               </a>
             </li>

@@ -33,7 +33,8 @@
 <body>
   <!-- BARRA DE NAVEGACION -->
   <header>
-    <nav id="navbar" class="bg-gray-800 p-4 h-24 fixed top-0 left-0 w-full z-50 flex items-center">
+    <nav id="navbar" class="<%= 'bg-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-900' if @modo_luz == 'oscuro' %>  p-4 h-24 fixed top-0 left-0 w-full z-50 flex items-center">
       <div class="container mx-auto flex justify-between items-center flex-wrap relative">
         <div class="flex items-center">
           <%= link_to root_path do %>
@@ -54,46 +55,45 @@
           <li><%= link_to "PROYECTOS", proyectos_subsection_path, class: "text-gray-300 hover:text-white" %></li>
           <li><%= link_to "COMPUTACIÓN", computacion_subsection_path, class: "text-gray-300 hover:text-white" %></li>
           <li><%= link_to "FILOSOFÍA", filosofia_subsection_path, class: "text-gray-300 hover:text-white" %></li>
-          <!-- 
-          Menú de opciones de idioma (visible en escritorio)
+          <!-- Menú de opciones de modo de luz (visible en escritorio) -->
           <li>
-            <span id="language-button" class="flex text-gray-300 z-50 pl-4" style="cursor: pointer;">Idioma
+            <span id="light-button" class="flex text-gray-300 z-50 pl-4" style="cursor: pointer;">Modo de luz
               <i id="icon-card1" class="material-icons ml-4 rotate-icon" 
                 style="color: #ffffff; margin-top: 4px; font-size: 12px; transition: color 0.3s ease;">keyboard_arrow_up
               </i>
             </span>
-            <div id="language-menu" class="hidden absolute bg-gray-900 rounded-lg text-white mt-2 w-25 z-50">
+            <div id="light-menu" class="hidden absolute <%= 'bg-gray-800 border-gray-700' if @modo_luz == 'claro' %> 
+              <%= 'bg-gray-900 border-gray-800' if @modo_luz == 'oscuro' %> rounded-lg text-white mt-4 w-28 z-50">
               <ul class="text-sm">
-                <li><a href="#" class="block px-5 py-2 text-white font-bold hover:bg-gray-700">Español</a></li>
-                <li><a href="#" class="block px-7 py-2 text-white hover:bg-gray-700">Inglés</a></li>
+                <li><a href="#" id="option-claro" class="block w-full px-4 py-2 text-white font-bold hover:bg-gray-700">Claro</a></li>
+                <li><a href="#" id="option-oscuro" class="block w-full px-4 py-2 text-white font-bold hover:bg-gray-700">Oscuro</a></li>
               </ul>
             </div>
           </li>
-          -->
         </ul>
 
-        <!-- Menú desplegable de idioma (solo visible en móviles en el overlay) -->
+        <!-- Menú desplegable de modo de luz (solo visible en móviles en el overlay) -->
         <div id="overlay" class="hidden fixed top-14 right-2 bg-gray-800 text-white p-2 rounded-lg shadow-lg z-50">
           <p><%= link_to "Inicio", root_path, class: "text-gray-300 hover:text-white" %></p>
           <p><%= link_to "Sobre GIAN", sobre_mi_path, class: "text-gray-300 hover:text-white" %></p>
           <p><%= link_to "PROYECTOS", proyectos_subsection_path, class: "text-gray-300 hover:text-white" %></p>
           <p><%= link_to "COMPUTACIÓN", computacion_subsection_path, class: "text-gray-300 hover:text-white" %></p>
           <p><%= link_to "FILOSOFÍA", filosofia_subsection_path, class: "text-gray-300 hover:text-white" %></p>
-          <!--
+          <!-- Menú de opciones de modo de luz (visible en móviles) -->
           <p>
-            <span id="language-button-mobile" class="flex text-gray-300 z-50 pl-4 cursor-pointer">UNABLED
+            <span id="light-button-mobile" class="flex text-gray-300 z-50 cursor-pointer">Modo de luz
               <i id="icon-card1-mobile" class="material-icons ml-4 rotate-icon" 
                 style="color: #ffffff; margin-top: 4px; font-size: 12px; transition: color 0.3s ease;">keyboard_arrow_up
               </i>
             </span>
-            <div id="language-menu-mobile" class="hidden absolute bg-gray-900 rounded-lg text-white mt-2 ml-8 w-20 z-50">
+            <div id="light-menu-mobile" class="hidden absolute <%= 'bg-gray-800 border-gray-700' if @modo_luz == 'claro' %> 
+              <%= 'bg-gray-900 border-gray-800' if @modo_luz == 'oscuro' %> rounded-lg text-white mt-4 w-28 z-50">
               <ul class="text-sm">
-                <li><a href="<%= filosofia_subsection_path %>" class="block py-2 px-2 text-white font-bold hover:bg-gray-700">Español</a></li>
-                <li><a href="<%= filosofia_subsection_path %>" class="block py-2 px-4 text-white hover:bg-gray-700">Inglés</a></li>
+                <li><a href="#" id="option-claro-mobile" class="block py-2 px-4 text-white font-bold hover:bg-gray-700">Claro</a></li>
+                <li><a href="#" id="option-oscuro-mobile" class="block py-2 px-4 text-white font-bold hover:bg-gray-700">Oscuro</a></li>
               </ul>
             </div>
           </p>
-          -->
         </div>
       </div>
     </nav>
@@ -151,11 +151,11 @@
       <!-- LINKS SOBRE EL PROYECTO -->
       <div class="flex flex-col space-y-6 w-full md:w-1/3">
         <h4 class="text-2xl font-bold mb-4 text-center md:text-left">Links sobre el proyecto</h4>
-        <div class="flex flex-col space-y-4 items-center md:items-start">
+        <!--<div class="flex flex-col space-y-4 items-center md:items-start">
           <a href="https://github.com/UandesGIAN" target="_blank" class="flex items-center space-x-3 hover:text-blue-500 transition-colors duration-300">
             <img src="/assets/github_icon.png" alt="GitHub" class="w-8 h-8">
             <span class=" text-md">GitHub personal</span>
-          </a>
+          </a>-->
 
           <%= link_to versiones_path, class: "flex items-center space-x-2 hover:text-blue-500 transition-colors duration-300" do %>
             <%= image_tag "log_icon.png", alt: "logs", class: "w-9 h-8" %>
@@ -187,10 +187,10 @@
         console.error('Error al copiar el texto: ', err);
       });
     }
-    /*
-    // BOTON IDIOMA EN ESCRITORIO
-    document.getElementById('language-button').addEventListener('click', function() {
-      const menu = document.getElementById('language-menu');
+    
+    // BOTON Modo de luz EN ESCRITORIO
+    document.getElementById('light-button').addEventListener('click', function() {
+      const menu = document.getElementById('light-menu');
       const icon = document.getElementById('icon-card1');
       
       // Alternar la visibilidad del menú
@@ -201,8 +201,8 @@
     });
 
     // EFECTOS VISUALES
-    const languageOptions = document.querySelectorAll('#language-menu a');
-    languageOptions.forEach(option => {
+    const lightOptions = document.querySelectorAll('#light-menu a');
+    lightOptions.forEach(option => {
       option.addEventListener('mouseenter', function() {
         this.classList.add('bg-gray-900'); // Oscurece ligeramente
       });
@@ -211,23 +211,19 @@
       });
     });
 
-    const languageButton = document.getElementById('language-button');
+    const lightButton = document.getElementById('light-button');
     const icon = document.getElementById('icon-card1');
 
-    languageButton.addEventListener('mouseover', () => {
-      languageButton.style.color = '#48bb78'; // Color verde para el texto
-      icon.style.color = '#48bb78'; // Color verde para el icono
-      languageButton.style.backgroundColor = '#1d2430'; // Color de fondo oscurecido
+    lightButton.addEventListener('mouseover', () => {
+      lightButton.style.backgroundColor = '#1d2430'; // Color de fondo oscurecido
     });
-    languageButton.addEventListener('mouseout', () => {
-      languageButton.style.color = '#D1D5DB'; // Color original del texto
-      icon.style.color = '#ffffff'; // Color original del icono
-      languageButton.style.backgroundColor = '#1f2937'; // Color de fondo original
+    lightButton.addEventListener('mouseout', () => {
+      lightButton.style.backgroundColor = '#1f2937'; // Color de fondo original
     });
 
-    // BOTON IDIOMA EN MOVIL
-    document.getElementById('language-button-mobile').addEventListener('click', function() {
-      const menu = document.getElementById('language-menu-mobile');
+    // BOTON Modo de luz EN MOVIL
+    document.getElementById('light-button-mobile').addEventListener('click', function() {
+      const menu = document.getElementById('light-menu-mobile');
       const icon = document.getElementById('icon-card1-mobile');
       
       // Alternar la visibilidad del menú
@@ -237,9 +233,9 @@
       icon.classList.toggle('rotate');
     });
 
-    // Opciones de idioma - cambio de color al pasar el ratón
-    const languageOptionsMobile = document.querySelectorAll('#language-menu-mobile a');
-    languageOptionsMobile.forEach(option => {
+    // Opciones de Modo de luz - cambio de color al pasar el ratón
+    const lightOptionsMobile = document.querySelectorAll('#light-menu-mobile a');
+    lightOptionsMobile.forEach(option => {
       option.addEventListener('mouseenter', function() {
         this.classList.add('bg-gray-900'); // Oscurece ligeramente
       });
@@ -248,22 +244,17 @@
       });
     });
 
-    // Cambiar color del texto e icono al hacer hover sobre el button de idioma
-    const languageButtonMobile = document.getElementById('language-button-mobile');
+    // Cambiar color del texto e icono al hacer hover sobre el button de Modo de luz
+    const lightButtonMobile = document.getElementById('light-button-mobile');
     const iconMobile = document.getElementById('icon-card1-mobile');
 
-    languageButtonMobile.addEventListener('mouseover', () => {
-      languageButtonMobile.style.color = '#48bb78'; // Color verde para el texto
-      iconMobile.style.color = '#48bb78'; // Color verde para el icono
-      languageButtonMobile.style.backgroundColor = '#1d2430'; // Color de fondo oscurecido
+    lightButtonMobile.addEventListener('mouseover', () => {
+      lightButtonMobile.style.backgroundColor = '#1d2430'; // Color de fondo oscurecido
     });
 
-    languageButtonMobile.addEventListener('mouseout', () => {
-      languageButtonMobile.style.color = '#D1D5DB'; // Color original del texto
-      iconMobile.style.color = '#ffffff'; // Color original del icono
-      languageButtonMobile.style.backgroundColor = '#1f2937'; // Color de fondo original
+    lightButtonMobile.addEventListener('mouseout', () => {
+      lightButtonMobile.style.backgroundColor = '#1f2937'; // Color de fondo original
     });
-    */
 
     function showNotification() {
       const notification = document.getElementById('copyNotification');
@@ -273,6 +264,108 @@
         notification.classList.add('hidden');
       }, 3000);
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const optionClaro = document.getElementById("option-claro");
+      const optionOscuro = document.getElementById("option-oscuro");
+      const optionClaroMobile = document.getElementById("option-claro-mobile");
+      const optionOscuroMobile = document.getElementById("option-oscuro-mobile");
+
+      const ACTIVE_COLOR = "#48BB79"; // verde
+      const INACTIVE_COLOR = "#D1D5D8"; // gris claro
+
+      function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return decodeURIComponent(parts.pop().split(';').shift());
+      }
+
+      function setCookie(name, value) {
+        document.cookie = `${name}=${encodeURIComponent(value)}; path=/; max-age=31536000`; // 1 año
+      }
+
+      function updateSelectedOption(selected) {
+        const optionClaro = document.getElementById("option-claro");
+        const optionOscuro = document.getElementById("option-oscuro");
+        const optionClaroMobile = document.getElementById("option-claro-mobile");
+        const optionOscuroMobile = document.getElementById("option-oscuro-mobile");
+
+        if (selected === "claro") {
+          optionClaro.style.color = ACTIVE_COLOR;
+          optionOscuro.style.color = INACTIVE_COLOR;
+          if (optionClaroMobile && optionOscuroMobile) {
+            optionClaroMobile.style.color = ACTIVE_COLOR;
+            optionOscuroMobile.style.color = INACTIVE_COLOR;
+          }
+        } else if (selected === "oscuro") {
+          optionClaro.style.color = INACTIVE_COLOR;
+          optionOscuro.style.color = ACTIVE_COLOR;
+          if (optionClaroMobile && optionOscuroMobile) {
+            optionClaroMobile.style.color = INACTIVE_COLOR;
+            optionOscuroMobile.style.color = ACTIVE_COLOR;
+          }
+        }
+      }
+
+      // Obtener el valor actual de la cookie o establecer "claro" por defecto
+      let savedMode = getCookie("modo_luz");
+
+      if (!savedMode) {
+        savedMode = "claro";
+        setCookie("modo_luz", savedMode);
+      }
+
+      updateSelectedOption(savedMode);
+
+      // Eventos al hacer clic
+      optionClaro.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.cookie = "modo_luz=claro; path=/";
+        updateSelectedOption("claro");
+        location.reload()
+      });
+
+      optionOscuro.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.cookie = "modo_luz=oscuro; path=/";
+        updateSelectedOption("oscuro");
+        location.reload()
+      });
+
+      if (optionClaroMobile) {
+        optionClaroMobile.addEventListener("click", function (e) {
+          e.preventDefault();
+          setCookie("modo_luz", "claro");
+          updateSelectedOption("claro");
+          location.reload()
+        });
+      }
+
+      if (optionOscuroMobile) {
+        optionOscuroMobile.addEventListener("click", function (e) {
+          e.preventDefault();
+          setCookie("modo_luz", "oscuro");
+          updateSelectedOption("oscuro");
+          location.reload()
+        });
+      }
+    });
+
+    document.addEventListener("click", function(event) {
+      const menu = document.getElementById("light-menu");
+      const button = document.getElementById("light-button");
+      const menuMobile = document.getElementById("light-menu-mobile");
+      const buttonMobile = document.getElementById("light-button-mobile");
+
+      if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.classList.add("hidden");
+        icon.classList.remove("rotate");
+      }
+      if (!menuMobile.contains(event.target) && !buttonMobile.contains(event.target)) {
+        menuMobile.classList.add("hidden");
+        icon.classList.remove("rotate");
+      }
+    });
 
     document.getElementById('toggle-navbar').addEventListener('click', function() {
       const navbar = document.getElementById('navbar');

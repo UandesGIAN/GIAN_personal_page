@@ -8,7 +8,10 @@
 </div>
 
 <div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
-  <section class="p-6 bg-gray-300 text-gray-800 rounded-2xl shadow-md flex-grow">
+  <section id="bg-articulos" class="p-6 
+    <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
+    rounded-2xl shadow-md flex-grow">
 
     <!-- PRESENTACION -->
     <p class="ml-3 mt-4 mb-12 text-lg leading-9">
@@ -20,7 +23,7 @@
       <br><br>
       <strong>Espero que encuentres todo esto interesante.</strong> Si tienes alguna duda o comentario, no dudes en contactarme. Estaré encantado de hablar más sobre estos proyectos o recibir <strong>sugerencias y críticas constructivas</strong>.  
       <br><br>
-      Para facilitar la navegación, se incluye un <strong>botón índice</strong> en todas las secciones y sub-secciones de <span class="text-blue-700">Mis PROYECTOS</span>.<br><span class="items-center flex"><span class='mr-1 material-symbols-outlined' style='color: #1d4ed8 !important;font-size: 22px;'>release_alert</span> = CONTENIDO NUEVO.</span>.
+      Para facilitar la navegación, se incluye un <strong>botón índice</strong> en todas las secciones y sub-secciones de <span class="text-blue-700">Mis PROYECTOS</span>.<br><span class="items-center flex"><span class='mr-1 material-symbols-outlined' style='color: #1d4ed8 !important;font-size: 22px;'>release_alert</span> = CONTENIDO NUEVO.</span>
     </p>
 
 
@@ -128,11 +131,13 @@
     <% end %>
 
     <!-- 6 RANKINGS -->
-    <a href="<%= proyectos_subsection_path(section: 'rankings') %>" style="color: #4e009c;">
+    <a href="<%= proyectos_subsection_path(section: 'rankings') %>" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+    <%= 'color: #7500EB;' if @modo_luz == 'oscuro' %>">
       <h2 class="text-3xl mt-6 ml-6 font-bold underline">6. Rankings</h2>
     </a>
     <% if @subsections['Rankings'].present? %>
-      <ul class="list-inside ml-12 mt-2 mb-12" style="color: #4e009c;">
+      <ul class="list-inside ml-12 mt-2 mb-12" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">
         <% @subsections['Rankings'].each_with_index do |sub_section, index| %>
           <li>
             <a href="<%= proyectos_subsection_path(section: 'rankings', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="mt-2 text-lg font-bold flex items-center">
@@ -168,11 +173,13 @@
     <% end %>
 
     <!-- 8 ELECTRÓNICA -->
-    <a href="<%= proyectos_subsection_path(section: 'electronica') %>" style="color: #001ee3;">
+    <a href="<%= proyectos_subsection_path(section: 'electronica') %>" style="<%= 'color: #001ee3;' if @modo_luz == 'claro' %> 
+    <%= 'color: #0A2BFF;' if @modo_luz == 'oscuro' %>">
       <h2 class="text-3xl mt-6 ml-6 font-bold underline">8. Electrónica</h2>
     </a>
     <% if @subsections['Electrónica'].present? %>
-      <ul class="list-inside ml-12 mt-2 mb-12" style="color: #001ee3;">
+      <ul class="list-inside ml-12 mt-2 mb-12" style="<%= 'color: #001ee3;' if @modo_luz == 'claro' %> 
+        <%= 'color: #0A2BFF;' if @modo_luz == 'oscuro' %>">
         <% @subsections['Electrónica'].each_with_index do |sub_section, index| %>
           <li>
             <a href="<%= proyectos_subsection_path(section: 'electronica', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="mt-2 text-lg font-bold flex items-center">
@@ -266,7 +273,5 @@
         <% end %>
       </ul>
     <% end %>
-
-    
   </section>
 </div>

@@ -10,7 +10,10 @@
 
 
 <div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
-  <section class="p-6 bg-gray-300 text-gray-800 rounded-2xl shadow-md flex-grow">
+  <section id="bg-articulos" class="p-6 
+    <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
+    rounded-2xl shadow-md flex-grow">
 
     <% birth_date = Date.new(2002, 6, 7) %>
     <% current_date = Date.today %>
@@ -42,8 +45,10 @@
 
 
     <!-- CARRERA -->
-    <h2 class="text-3xl mt-14 font-bold mb-4 text-blue-900">Trayectoria</h2>
-    <section class="p-6 text-gray-800 flex-grow">
+    <h2 class="text-3xl mt-14 font-bold mb-4 <%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %>">Trayectoria</h2>
+    <section class="p-6 <%= 'text-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'text-gray-300' if @modo_luz == 'oscuro' %>  flex-grow">
       <div class="relative flex items-start">
         <div class="timeline-line"></div>
 
@@ -51,13 +56,15 @@
           <div class="flex flex-col mb-8 animated-element-fade-in">
             <div class="flex items-center relative mb-4 mt-4">
               <div class="timeline-node"></div>
-              <h2 class="text-2xl font-bold text-blue-900 ml-10">Educación escolar</h2>
+              <h2 class="text-2xl font-bold <%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> ml-10">Educación escolar</h2>
             </div>
 
             <div class="space-y-4 text-lg mr-2">
               <div class="flex flex-row">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 font-bold">2005-2020</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> font-bold">2005-2020</span>
                 </div>
                 <div class="flex-1">
                   <p>Estudié en el <b>colegio</b>.</p>
@@ -66,7 +73,8 @@
               
               <div class="flex flex-row items-center">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 font-bold">2018</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> font-bold">2018</span>
                 </div>
                 <div class="flex-1">
                   <p>Realicé cursos online de <b>HTML</b> y <b>JavaScript</b> básico.</p>
@@ -75,7 +83,8 @@
               
               <div class="flex flex-row items-center">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 font-bold">2010-2019</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> font-bold">2010-2019</span>
                 </div>
                 <div class="flex-1">
                   <p>Realicé talleres de <b>Atletismo, Natación y Robótica</b> en mi escuela.</p>
@@ -88,13 +97,15 @@
           <div class="flex flex-col mb-8 animated-element-fade-in">
             <div class="relative flex items-center mb-4">
               <div class="timeline-node"></div>
-              <h2 class="text-2xl font-bold text-blue-900 ml-10">Proyectos personales</h2>
+              <h2 class="text-2xl font-bold <%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> ml-10">Proyectos personales</h2>
             </div>
             
             <div class="space-y-4 text-lg">
               <div class="flex flex-row">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 font-bold">Desde 2012</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> font-bold">Desde 2012</span>
                 </div>
                 <div class="flex-1">
                   <p>Comencé a hacer <b>proyectos en internet y personales</b>.</p>
@@ -103,7 +114,8 @@
               
               <div class="flex flex-row">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 font-bold">2013</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> font-bold">2013</span>
                 </div>
                 <div class="flex-1">
                   <p>Cree un <b>canal de Youtube</b> donde subo lo que me gusta. <br>Tiene <b>3500 subscriptores</b>.</p>
@@ -112,7 +124,8 @@
               
               <div class="flex flex-row">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 font-bold">2019-2024</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> font-bold">2019-2024</span>
                 </div>
                 <div class="flex-1">
                   <p>Hice <b>animaciones de MMD Splatoon</b> por diversión.</p>
@@ -121,7 +134,8 @@
               
               <div class="flex flex-row">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 font-bold">Desde 2019</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> font-bold">Desde 2019</span>
                 </div>
                 <div class="flex-1">
                   <p>Empecé a hacer <b>documentos e investigaciones personales</b> sobre filosofía.</p>
@@ -130,7 +144,8 @@
               
               <div class="flex flex-row">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 font-bold">2021-2024</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> font-bold">2021-2024</span>
                 </div>
                 <div class="flex-1">
                   <p>Hice <b>guías y resúmenes</b> sobre algunos lenguajes de programación.</p>
@@ -139,7 +154,8 @@
 
               <div class="flex flex-row">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 font-bold">Desde 2024</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> font-bold">Desde 2024</span>
                 </div>
                 <div class="flex-1">
                   <p>Cree unos <b>fan-games</b> utilizando <b>Game Maker Studio</b>.</p>
@@ -152,13 +168,15 @@
           <div class="relative flex flex-col mb-2 animated-element-fade-in">
             <div class="flex items-center mb-4">
               <div class="timeline-node"></div>
-              <h2 class="text-2xl font-bold text-blue-900 ml-10">Experiencia Profesional</h2>
+              <h2 class="text-2xl font-bold <%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> ml-10">Experiencia Profesional</h2>
             </div>
             
             <div class="space-y-4 text-lg gap-2">
               <div class="flex flex-row">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 font-bold">Desde 2021</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> font-bold">Desde 2021</span>
                 </div>
                 <div class="flex-1">
                   <p>He estado estudiando <b>Ingeniería Civil en Computación.</b></p>
@@ -167,7 +185,8 @@
               
               <div class="flex items-center">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 text-center font-bold">Ago/23-Dic/23</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> text-center font-bold">Ago/23-Dic/23</span>
                 </div>
                 <div class="flex-1">
                   <p>Trabajé como <b>ayudante de proyecto en una asignatura sobre programación en C y C++.</b>.</p>
@@ -176,7 +195,8 @@
               
               <div class="flex items-center">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 text-center font-bold">Dic/23-Feb/24</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> text-center font-bold">Dic/23-Feb/24</span>
                 </div>
                 <div class="flex-1">
                   <p>Realicé mi <b>pre-práctica profesional</b> en una empresa bancaria.</p>
@@ -185,7 +205,8 @@
               
               <div class="flex items-center">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 text-center font-bold">Mar/24-Jul/23</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> text-center font-bold">Mar/24-Jul/23</span>
                 </div>
                 <div class="flex-1">
                   <p>Trabajé como <b>ayudante corrector en en una asignatura sobre programación en C y C++.</b>.</p>
@@ -194,7 +215,8 @@
               
               <div class="flex items-center">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 font-bold text-center">Ago/24-Dic/24</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> font-bold text-center">Ago/24-Dic/24</span>
                 </div>
                 <div class="flex-1">
                   <p>Trabajé como <b>ayudante corrector en una asignatura sobre sistemas operativos.</b>.</p>
@@ -203,7 +225,8 @@
 
               <div class="flex items-center">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 font-bold text-center">Ago/24-Dic/24</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> font-bold text-center">Ago/24-Dic/24</span>
                 </div>
                 <div class="flex-1">
                   <p>Trabajé como <b>desarrollador y QA</b> en un proyecto universitario de innovación.</p>
@@ -212,7 +235,8 @@
 
               <div class="flex items-center">
                 <div class="flex-shrink-0 w-1/4 flex items-center justify-center ml-10">
-                  <span class="text-blue-900 font-bold text-center">Mar/25-Jul/25</span>
+                  <span class="<%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %> font-bold text-center">Mar/25-Jul/25</span>
                 </div>
                 <div class="flex-1">
                   <p>Trabajé como <b>ayudante de proyecto en una asignatura sobre programación en C y C++.</p>
@@ -236,12 +260,17 @@
     </ul>
 
     <!-- OBJETIVOS -->
-    <h2 class="text-3xl mt-14 font-bold mb-4 text-blue-900">Mis objetivos</h2>
+    <h2 class="text-3xl mt-14 font-bold mb-4 <%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %>">Mis objetivos</h2>
     <ul class="list-disc pl-5 text-lg mb-6 leading-9">
-        <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-blue-900">★</span><b class="mt-1">Ayudar a las personas mientras tenga la oportunidad.</b><br><br></li>
-        <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-blue-900">★</span><b class="mt-1">Ser una buena persona y aporte positivo para los demás.</b><br><br></li>
-        <li class="items-start flex"><span class="text-2xl ml-5 mr-8 mt-1 text-blue-900">★</span><b class="mt-1">Aprender de todo en relación a la computación e informática, lograr dominar muchas áreas al respecto.</b><br><br></li>
-        <li class="items-center flex"><span class="text-2xl ml-5 mr-8 text-blue-900">★</span><b class="mt-1">Vivir siguiendo un propósito del cual no arrepentirme.</b><br><br></li>
+        <li class="items-center flex"><span class="text-2xl ml-5 mr-8 <%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %>">★</span><b class="mt-1">Ayudar a las personas mientras tenga la oportunidad.</b><br><br></li>
+        <li class="items-center flex"><span class="text-2xl ml-5 mr-8 <%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %>">★</span><b class="mt-1">Ser una buena persona y aporte positivo para los demás.</b><br><br></li>
+        <li class="items-start flex"><span class="text-2xl ml-5 mr-8 mt-1 <%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %>">★</span><b class="mt-1">Aprender de todo en relación a la computación e informática, lograr dominar muchas áreas al respecto.</b><br><br></li>
+        <li class="items-center flex"><span class="text-2xl ml-5 mr-8 <%= 'text-blue-900' if @modo_luz == 'claro' %> 
+    <%= 'text-blue-700' if @modo_luz == 'oscuro' %>">★</span><b class="mt-1">Vivir siguiendo un propósito del cual no arrepentirme.</b><br><br></li>
     </ul>
 
     <!-- PASATIEMPOS -->
