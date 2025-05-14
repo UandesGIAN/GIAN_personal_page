@@ -14,7 +14,9 @@
     <div class="space-y-8">
         
         <!-- PUBLICACIONES -->
-        <div class="flex items-start space-x-6 bg-gray-300 p-6 rounded-2xl shadow-lg">
+        <div class="flex items-start space-x-6 <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %>
+            <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
+            p-6 rounded-2xl shadow-lg">
             <div class="flex-shrink-0">
                 <%= image_tag "GIANlogo.png", alt: "Mi Logo", class: "rounded-full h-16 w-16" %>
             </div>
@@ -25,7 +27,7 @@
                     <span class="text-sm text-gray-500">Miércoles 14, Mayo, 2025</span>
                 </div>
 
-                <div class="prose text-base">
+                <div class="prose text-lg leading-9">
                     <p>Ha sido un largo tiempo... He estado ocupado con intenciones de volver a hacer alguna que otra cosa en mi proyecto de 
                         <a href="/proyectos/mikumikudance" class="font-bold underline text-mmd" style="color:#26BAF5;">MikuMikuDance Splatoon</a>, pero ahora tengo ganas 
                         añadir alguna que otra cosa a la página y sobretodo, actualizar el apartado de <a href="/versiones" class="font-bold filosofia-home underline">Filosofia de GIAN.</a><br>
@@ -42,7 +44,9 @@
             </div>
         </div>
 
-        <div class="flex items-start space-x-6 bg-gray-300 p-6 rounded-2xl shadow-lg">
+        <div class="flex items-start space-x-6 <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %>
+            <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
+            p-6 rounded-2xl shadow-lg">
             <div class="flex-shrink-0">
                 <%= image_tag "GIANlogo.png", alt: "Mi Logo", class: "rounded-full h-16 w-16" %>
             </div>
@@ -53,7 +57,7 @@
                     <span class="text-sm text-gray-500">Sábado 05, Abril, 2025</span>
                 </div>
 
-                <div class="prose text-base">
+                <div class="prose  text-lg leading-9">
                     <p>Finalmente! Acabo de terminar de implementar los cambios y adaptar los árticulos que dije que escribiría en el sitio en el apartado Mis Proyectos.<br>
                     Ha sido bastante agotador, pero ya quedó :)<br><a href="/versiones" class="text-blue-700 underline">Aquí pueden ver todos los cambios de la versión alpha 0.3.</a><br><br>
                     Espero lean y revisen los árticulos que he escrito, ya que son bastante extensos y variados. En particular me gustó mucho como quedo el árticulo sobre
@@ -69,7 +73,9 @@
         </div>
 
 
-        <div class="flex items-start space-x-6 bg-gray-300 p-6 rounded-2xl shadow-lg">
+        <div class="flex items-start space-x-6 <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %>
+            <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
+            p-6 rounded-2xl shadow-lg">
             <div class="flex-shrink-0">
                 <%= image_tag "GIANlogo.png", alt: "Mi Logo", class: "rounded-full h-16 w-16" %>
             </div>
@@ -80,7 +86,7 @@
                     <span class="text-sm text-gray-500">Jueves 03, Abril, 2025</span>
                 </div>
 
-                <div class="prose text-base">
+                <div class="prose  text-lg leading-9">
                     <p>BUENAS! Desde la última publicación he logrado realizar las versiones alpha 0.22, 0.23 y 0.3 del sitio web.<br>
                     Eso significa que ya estoy preparado para rellenar de contenido las secciones que mencioné en la publicación anterior sobre el apartado
                     de Mis Proyectos, y eso me alegra bastante :)<br>Aún así, paso a comentar algo muy interesante, dado que en Mis Proyectos no tengo una sección dedicada a mi proyecto de la
@@ -95,43 +101,43 @@
                     </ul>
                     Como se puede apreciar, la magia está en el script de python que convierte todo a html, es decir, la estructura que procesan los sitios web para mostrar los elementos en pantalla.<br>
                     Este script lo explicaré en el futuro, en el apartado 9 de Mis Proyectos.<br><br>Pero aquí un vistazo a los formatos que uso en el Markdown y su conversión, para el caso de los árticulos de Youtube:<br>
-                    <p class="mb-6 text-base">
+                    <p class="mb-6  text-lg leading-9">
                     1. Texto simple: <br> 
                     ej: "texto" -> <br> 
                     &lt;p class="mb-6 text-lg"&gt; texto &lt;/p&gt;
                     </p>
 
-                    <p class="mb-6 text-base">
+                    <p class="mb-6  text-lg leading-9">
                     2. Saltos de línea: <br>
                     ej: "texto <br> texto" -> <br> 
                     &lt;p class="mb-6 text-lg"&gt; texto&lt;br&gt;texto &lt;/p&gt;
                     </p>
 
-                    <p class="mb-6 text-base">
+                    <p class="mb-6  text-lg leading-9">
                     3. Negritas: <br>
                     ej: "texto **texto**" -> <br> 
                     &lt;p class="mb-6 text-lg"&gt;texto &lt;strong&gt;texto&lt;/strong&gt; &lt;/p&gt;
                     </p>
 
-                    <p class="mb-6 text-base">
+                    <p class="mb-6  text-lg leading-9">
                     4. Cursiva: <br>
                     ej: "*texto* texto" -> <br> 
                     &lt;p class="mb-6 text-lg"&gt;&lt;i&gt;texto&lt;/i&gt;texto &lt;/p&gt;
                     </p>
 
-                    <p class="mb-6 text-base">
+                    <p class="mb-6  text-lg leading-9">
                     5. Título: <br>
                     ej: "##texto" -> <br> 
                     &lt;h2 class="text-4xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4 text-red-700"&gt; texto &lt;/h2&gt;
                     </p>
 
-                    <p class="mb-6 text-base">
+                    <p class="mb-6  text-lg leading-9">
                     6. Subtítulo: <br>
                     ej: "####texto" -> <br> 
                     &lt;h2 class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4 text-red-700"&gt; texto &lt;/h2&gt;
                     </p>
 
-                    <p class="mb-6 text-base">
+                    <p class="mb-6  text-lg leading-9">
                     7. Listados: <br>
                     ej: "- texto" -> <br> 
                     &lt;ul class="mb-6 text-lg"&gt; <br>
@@ -142,19 +148,19 @@
                     &lt;/ul&gt;
                     </p>
 
-                    <p class="mb-6 text-base">
+                    <p class="mb-6  text-lg leading-9">
                     8. Links dentro de la página: <br>
                     ej: "[TEXTO](#INDICE)" -> <br> 
                     &lt;u&gt;&lt;%= link_to 'TEXTO', proyectos_subsection_path(section: 'youtube', sub_section: 'origen') + '#INDICE' %&gt;&lt;/u&gt;
                     </p>
 
-                    <p class="mb-6 text-base">
+                    <p class="mb-6  text-lg leading-9">
                     9. Links: <br>
                     ej: "[TEXTO](URL)" -> <br> 
                     &lt;a href="URL" class="text-blue-700 underline"&gt;TEXTO&lt;/a&gt;
                     </p>
 
-                    <p class="mb-6 text-base">
+                    <p class="mb-6  text-lg leading-9">
                     10. Imagen simple: <br>
                     ej: "![TEXTO](./RUTA)" -> <br> 
                     &lt;div class="flex flex-col items-center mb-6"&gt; <br>
@@ -163,7 +169,7 @@
                     &lt;/div&gt;
                     </p>
 
-                    <p class="mb-6 text-base">
+                    <p class="mb-6  text-lg leading-9">
                     11. Imagen con link: <br>
                     ej: "[![TEXTO](./RUTA)](URL)" -> <br> 
                     &lt;div class="flex flex-col items-center mb-6"&gt; <br>
@@ -185,7 +191,9 @@
 
 
 
-        <div class="flex items-start space-x-6 bg-gray-300 p-6 rounded-2xl shadow-lg">
+        <div class="flex items-start space-x-6 <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %>
+            <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
+            p-6 rounded-2xl shadow-lg">
             <div class="flex-shrink-0">
                 <%= image_tag "GIANlogo.png", alt: "Mi Logo", class: "rounded-full h-16 w-16" %>
             </div>
@@ -196,7 +204,7 @@
                     <span class="text-sm text-gray-500">Domingo 30, Marzo, 2025</span>
                 </div>
 
-                <div class="prose text-base">
+                <div class="prose  text-lg leading-9">
                     <p>BUENAS GENTE!<br>Bien, esta es mi <strong>primera publicación</strong> en el sitio web. Hice este apartado para
                     dejar constancia de mis planes próximos en el sitio. He estado trabajando arduamente para actualizar el sitio y aquí vengo a comentar los cambios
                     que planeo implementar <strong>durante esta semana</strong>.<br><br>Los cambios de la version Alpha 0.3 son los siguientes:
@@ -260,7 +268,9 @@
 
         <!-- TEMPLATE TARJETAS
 
-        <div class="flex items-start space-x-6 bg-gray-300 p-6 rounded-2xl shadow-lg">
+        <div class="flex items-start space-x-6 <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %>
+            <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
+            p-6 rounded-2xl shadow-lg">
             <div class="flex-shrink-0">
                 <%= image_tag "GIANlogo.png", alt: "Mi Logo", class: "rounded-full h-16 w-16" %>
             </div>
@@ -271,7 +281,7 @@
                     <span class="text-sm text-gray-500">Domingo 30, Marzo, 2025</span>
                 </div>
 
-                <div class="prose text-base">
+                <div class="prose  text-lg leading-9">
                     <p><strong>Este es un texto de ejemplo para una publicación.</strong> Puedes usar negritas con <strong>**negritas**</strong>, <em>cursivas con _guiones bajos_</em> o agregar <a href="https://www.ejemplo.com" class="text-blue-500 hover:underline">enlaces</a>.</p>
                     <p>Escribe cualquier contenido aquí como un post, y Tailwind y la clase 'prose' se encargarán de formatearlo.</p>
                 </div>

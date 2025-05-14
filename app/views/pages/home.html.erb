@@ -5,17 +5,22 @@
 <div id="scroll-lock" class="h-screen overflow-y-auto overscroll-contain touch-auto">
   <!-- BANNER PRINCIPAL -->
   <div class="relative w-full min-h-screen flex flex-col items-center justify-start text-center pt-8"
-      style="background: url('/assets/banner.png') center/cover no-repeat; margin: 0; padding: 0;">
-    <h1 class="font-bold text-5xl sm:text-6xl mb-2 text-white animate__animated animate__fadeInDown mt-48">
+      style="background: <%= @modo_luz == 'oscuro' ? 
+      "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/assets/banner.png')" : 
+      "url('/assets/banner.png')" %>; center/cover no-repeat; margin: 0; padding: 0;">
+    <h1 class="font-bold text-5xl sm:text-6xl mb-2 <%= 'text-gray-100' if @modo_luz == 'claro' %>
+            <%= 'text-gray-300 bg-black bg-opacity-40' if @modo_luz == 'oscuro' %>  animate__animated animate__fadeInDown mt-48">
       BIENVENIDO A LA PÁGINA WEB DE GIAN.
     </h1>
-    <p class="text-lg mb-2 text-gray-100 animate__animated animate__fadeInDown">(Versión alpha 0.3)</p>
+    <p class="text-lg mb-2 <%= 'text-gray-100' if @modo_luz == 'claro' %>
+            <%= 'text-gray-300 bg-black bg-opacity-40' if @modo_luz == 'oscuro' %>  animate__animated animate__fadeInDown">(Versión alpha 0.3)</p>
 
     <!-- PRESENTACION DEL PROYECTO -->
     <div id="sobre-la-pagina" class="relative w-full max-w-6xl mx-auto mt-4 px-4 flex flex-col pb-8 z-10">
-      <div class="bg-black bg-opacity-40 text-white rounded-lg p-8 shadow-lg animate__animated animate__fadeIn animate__delay-1s">
+      <div class="bg-black bg-opacity-40 <%= 'text-gray-100' if @modo_luz == 'claro' %>
+            <%= 'text-gray-300' if @modo_luz == 'oscuro' %> rounded-lg p-8 shadow-lg leading-9 animate__animated animate__fadeIn animate__delay-1s">
         <h2 class="font-bold text-3xl mb-4 text-center text-green-400">Sobre el Proyecto</h2>
-        <p class="text-lg text-center">
+        <p class="text-lg text-center leading-9">
           Este sitio web es una plataforma donde compartiré mis proyectos, investigaciones y estudios.<br>
           Puedes ver los cambios históricos en el 
           <a href="<%= versiones_path %>" class="font-semibold text-green-400 underline">historial de versiones</a>.<br>
@@ -26,11 +31,12 @@
     </div>
 
     <!-- BOTÓN PARA DESBLOQUEAR SCROLL -->
-    <h4 class="text-3xl font-semibold text-white animate__animated animate__fadeIn animate__delay-1s mb-40">
-      <a href="#contenido" id="explorar-contenidos" class="text-white underline hover:text-green-400 hover:bg-black hover:bg-opacity-40">
+    <h4 class="text-3xl font-semibold <%= 'text-gray-100' if @modo_luz == 'claro' %> animate__animated animate__fadeIn animate__delay-1s mb-40">
+      <a href="#contenido" id="explorar-contenidos" class="<%= 'text-gray-300 bg-black bg-opacity-40' if @modo_luz == 'oscuro' %>  underline hover:text-green-400 hover:bg-black hover:bg-opacity-40">
         Explora los contenidos
       </a>
-    </h4> 
+    </h4>
+     
   </div>
 </div>
 
@@ -38,7 +44,8 @@
 <!-- CONTENIDOS DE LA PÁGINA -->
 <div id="contenido" class="banner-container mt-12 relative">
   <div class="relative flex items-center justify-center h-full animated-element-fade-in animate__delay-1s">
-    <a href="#contenido"><h1 class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-4xl mb-2 text-gray-200 text-shadow-orange animate-fade-in">
+    <a href="#contenido"><h1 class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-4xl mb-2 <%= 'text-gray-100' if @modo_luz == 'claro' %>
+            <%= 'text-gray-300' if @modo_luz == 'oscuro' %>  text-shadow-orange animate-fade-in">
       Contenidos
     </h1></a>
   </div>
@@ -54,7 +61,8 @@
         <i id="icon-card1" class="material-icons ml-4 rotate-icon" style="color: #4ade80 !important; margin-top: 4px; font-size: 32px;">keyboard_arrow_up</i>
       </div>
 
-      <div id="card1" class="mt-6 text-lg text-black hidden bg-gray-300 rounded-lg p-8 shadow-lg">
+      <div id="card1" class="mt-6 text-lg hidden <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-900 text-gray-200' if @modo_luz == 'oscuro' %> rounded-lg p-8 shadow-lg leading-9">
         <p>
           Información acerca del creador de este sitio web y gran parte de su contenido.<br>
           Un resumen sobre mis estudios, conocimientos, intereses, objetivos, pasatiempos y personalidad.<br><br>
@@ -71,7 +79,8 @@
         <i id="icon-card2" class="material-icons ml-4 text-blue-900 rotate-icon"  style="margin-top: 4px; font-size: 32px;">keyboard_arrow_up</i>
       </div>
 
-      <div id="card2" class="mt-6 text-lg text-black hidden bg-gray-300 rounded-lg p-8 shadow-lg">
+      <div id="card2" class="mt-6 text-lg hidden <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-900 text-gray-200' if @modo_luz == 'oscuro' %> rounded-lg p-8 shadow-lg leading-9">
         <p>
           Artículos y espacios donde compartir mis proyectos personales, tantos aquellos hechos para internet, por aburrimiento, por trabajo o estudio.<br>
           <br>También se comparten proyectos con otras personas o notas personales hechas por diversión.<br><br>
@@ -87,7 +96,8 @@
         <i id="icon-card3" class="material-icons ml-4 rotate-icon" style="color: #008000; margin-top: 4px; font-size: 32px;">keyboard_arrow_up</i>
       </div>
 
-      <div id="card3" class="mt-6 text-lg text-black hidden bg-gray-300 rounded-lg p-8 shadow-lg">
+      <div id="card3" class="mt-6 text-lg hidden <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-900 text-gray-200' if @modo_luz == 'oscuro' %> rounded-lg p-8 shadow-lg leading-9">
         <p>
           Apartado dedicado a conocimiento técnico sobre cualquier concepto o uso de la computación que he decidio compartir.<br>
           Corresponde a una compilación de proyectos, estudios, ejercicios y creaciones que poseen relación con la informática, computación, tecnología, electrónica e ingeniería.<br>
@@ -106,7 +116,8 @@
         <i id="icon-card4" class="material-icons ml-4 rotate-icon" style="color: #d85c14; margin-top: 4px; font-size: 32px;">keyboard_arrow_up</i>
       </div>
 
-      <div id="card4" class="mt-6 text-lg text-black hidden bg-gray-300 rounded-lg p-8 shadow-lg">
+      <div id="card4" class="mt-6 text-lg hidden <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-900 text-gray-200' if @modo_luz == 'oscuro' %> rounded-lg p-8 shadow-lg leading-9">
         <p>
           Con una estructura similar a la sección de <span style="color: #008000">COMPUTACIÓN.</span><br>
           Corresponde a una compilación de proyectos, estudios, ejercicios y creaciones que poseen relación con la reflexión y la vida real, es una faceta de mí más personal y oculta.<br>
@@ -124,7 +135,8 @@
         <i id="icon-card5" class="material-icons ml-4 text-gray-500 rotate-icon" style="margin-top: 4px; font-size: 32px;">keyboard_arrow_up</i>
       </div>
 
-      <div id="card5" class="mt-6 text-lg text-black hidden bg-gray-300 rounded-lg p-8 shadow-lg">
+      <div id="card5" class="mt-6 text-lg hidden <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-900 text-gray-200' if @modo_luz == 'oscuro' %> rounded-lg p-8 shadow-lg leading-9">
         <p>
           Todo el contenido en esta página web fue realizado por <span class="text-green-700 font-bold">GIAN.</span>
           <br><br>
@@ -204,6 +216,17 @@
   document.addEventListener("DOMContentLoaded", function () {
     // Bloquea el scroll al principio
     document.body.style.overflow = "hidden";
+
+    if (window.location.hash === "#contenido") {
+      document.body.style.overflow = "auto";
+
+      // Opcional: hace scroll suave al contenido
+      const seccionContenido = document.getElementById("contenido");
+      if (seccionContenido) {
+        seccionContenido.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
 
     const btnExplorar = document.getElementById("explorar-contenidos");
     const seccionContenido = document.getElementById("contenido");

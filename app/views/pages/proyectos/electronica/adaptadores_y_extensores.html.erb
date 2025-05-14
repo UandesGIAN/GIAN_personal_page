@@ -5,7 +5,8 @@
 
 <div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
   <h1 class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-4xl text-center mb-2 text-blue-700 animate-slide-in-right">
-    <span class="text-shadow-proyectos">Mis proyectos:</span> <p class="mt-10" style="color: #001ee3; text-shadow: 0px 2px 20px rgba(0, 30, 227, 0.6);">Electrónica</p>
+    <span class="text-shadow-proyectos">Mis proyectos:</span> <p class="mt-10" style="<%= 'color: #001ee3;' if @modo_luz == 'claro' %> 
+        <%= 'color: #0A2BFF;' if @modo_luz == 'oscuro' %> text-shadow: 0px 2px 20px rgba(0, 30, 227, 0.6);">Electrónica</p>
   </h1>
 </div>
 
@@ -14,9 +15,13 @@
 
 <!-- ESTRUCTURA -->
 <div class="text-container max-w-7xl mx-auto mt-20 px-4 flex flex-col pb-8">
-  <section class="p-6 bg-gray-300 text-gray-800 rounded-2xl shadow-md flex-grow">
+  <section id="bg-articulos" class="p-6 
+    <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
+    rounded-2xl shadow-md flex-grow">
     <!-- TITULO -->
-    <h2 class="text-4xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #001ee3;">2. Adaptadores y Extensores</h2>
+    <h2 class="text-4xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="<%= 'color: #001ee3;' if @modo_luz == 'claro' %> 
+        <%= 'color: #0A2BFF;' if @modo_luz == 'oscuro' %>">2. Adaptadores y Extensores</h2>
 
     <!-- INTRODUCCION -->
     <p class="mb-12 text-lg leading-9">
@@ -28,15 +33,19 @@
 
 
     <!-- INDICE -->
-    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-40 text-center font-bold mb-4" style="color: #001ee3">Índice</h2>
-    <div class="flex justify-center mb-40" style="color: #001ee3">
+    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-40 text-center font-bold mb-4" style="<%= 'color: #001ee3;' if @modo_luz == 'claro' %> 
+        <%= 'color: #0A2BFF;' if @modo_luz == 'oscuro' %>">Índice</h2>
+    <div class="flex justify-center mb-40" style="<%= 'color: #001ee3;' if @modo_luz == 'claro' %> 
+        <%= 'color: #0A2BFF;' if @modo_luz == 'oscuro' %>">
       <ul class="list-disc text-lg">
-        <li><a href="#21-listado-de-productos" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #001ee3">2.1 Listado de productos</a></li>
+        <li><a href="#21-listado-de-productos" class="text-xl mt-2 text-center font-bold mb-4 underline" style="<%= 'color: #001ee3;' if @modo_luz == 'claro' %> 
+        <%= 'color: #0A2BFF;' if @modo_luz == 'oscuro' %>">2.1 Listado de productos</a></li>
       </ul>
     </div>
 
     <!-- CONTENIDO -->
-    <h2 id="21-listado-de-productos" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #001ee3">
+    <h2 id="21-listado-de-productos" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="<%= 'color: #001ee3;' if @modo_luz == 'claro' %> 
+        <%= 'color: #0A2BFF;' if @modo_luz == 'oscuro' %>">
       2.1 Listado de productos
     </h2>
     <ul class="mb-12 text-lg leading-9">

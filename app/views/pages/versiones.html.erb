@@ -11,11 +11,37 @@
 
 <!-- ESTRUCTURA -->
 <div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
-  <section class="p-6 bg-gray-300 text-gray-800 rounded-2xl shadow-md flex-grow">
+  <section id="bg-articulos" class="p-6 
+    <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
+    rounded-2xl shadow-md flex-grow">
 
     <!-- VERSIONES -->
     <!-- 0.1 = Negro. 0.2 = Azul oscuro. 0.3 = Rojo oscuro. -->
-    <h2 class="text-5xl mt-14 text-center font-bold mb-8 underline text-red-900">Versión Alpha 0.34</h2>
+    <h2 class="text-5xl mt-12 text-center font-bold mb-8 underline text-red-900">Versión Alpha 0.35</h2>
+
+    <ul class="list-inside ml-12 mt-2 leading-9">
+        <li class="items-center flex mt-4">
+            <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+            <p class="text-lg mt-1">
+                Se implementó la opción de Modo de luz.
+            </p>
+        </li>
+        <li class="items-center flex mt-4">
+            <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+            <p class="text-lg mt-1">
+                Se agregó el modo oscuro a todas las vistas de la página.
+            </p>
+        </li>
+        <li class="items-center flex mt-4">
+            <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+            <p class="text-lg mt-1">
+                Se adaptó el color de algunos apartados para el modo oscuro.
+            </p>
+        </li>
+    </ul>
+
+    <h2 class="text-5xl mt-12 text-center font-bold mb-8 underline text-red-900">Versión Alpha 0.34</h2>
 
     <ul class="list-inside ml-12 mt-2 leading-9">
         <li class="items-center flex mt-4">
@@ -44,25 +70,29 @@
         <li class="items-center flex mt-4">
             <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
             <p class="text-lg mt-1">
-                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/electronica/reparar_enchufes_y_cables" class="underline font-bold" style="color:#001ee3">8. Electrónica: 1. Reparar enchufes y cables</a>.
+                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/electronica/reparar_enchufes_y_cables" class="underline font-bold" style="<%= 'color: #001ee3;' if @modo_luz == 'claro' %> 
+        <%= 'color: #0A2BFF;' if @modo_luz == 'oscuro' %>">8. Electrónica: 1. Reparar enchufes y cables</a>.
             </p>
         </li>
         <li class="items-center flex mt-4">
             <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
             <p class="text-lg mt-1">
-                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/electronica/adaptadores_y_extensores" class="underline font-bold" style="color:#001ee3">8. Electrónica: 2. Adaptadores y Extensores</a>.
+                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/electronica/adaptadores_y_extensores" class="underline font-bold" style="<%= 'color: #001ee3;' if @modo_luz == 'claro' %> 
+        <%= 'color: #0A2BFF;' if @modo_luz == 'oscuro' %>">8. Electrónica: 2. Adaptadores y Extensores</a>.
             </p>
         </li>
         <li class="items-center flex mt-4">
             <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
             <p class="text-lg mt-1">
-                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/electronica/enchufe_220v_portatil" class="underline font-bold" style="color:#001ee3">8. Electrónica: 3. Enchufe 220V portátil</a>.
+                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/electronica/enchufe_220v_portatil" class="underline font-bold" style="<%= 'color: #001ee3;' if @modo_luz == 'claro' %> 
+        <%= 'color: #0A2BFF;' if @modo_luz == 'oscuro' %>">8. Electrónica: 3. Enchufe 220V portátil</a>.
             </p>
         </li>
         <li class="items-center flex mt-4">
             <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
             <p class="text-lg mt-1">
-                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/electronica/luces_led" class="underline font-bold" style="color:#001ee3">8. Electrónica: 4. Luces LED</a>.
+                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/electronica/luces_led" class="underline font-bold" style="<%= 'color: #001ee3;' if @modo_luz == 'claro' %> 
+        <%= 'color: #0A2BFF;' if @modo_luz == 'oscuro' %>">8. Electrónica: 4. Luces LED</a>.
             </p>
         </li>
         <li class="items-center flex mt-4">
@@ -85,25 +115,29 @@
         <li class="items-center flex mt-4">
             <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
             <p class="text-lg mt-1">
-                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/rankings/los_mejores_capitulos_de_algunas_series_que_he_visto" class="underline font-bold" style="color:#4e009c">6. Rankings: 1. Los MEJORES capítulos de algunas series que he visto</a>.
+                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/rankings/los_mejores_capitulos_de_algunas_series_que_he_visto" class="underline font-bold" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">6. Rankings: 1. Los MEJORES capítulos de algunas series que he visto</a>.
             </p>
         </li>
         <li class="items-center flex mt-4">
             <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
             <p class="text-lg mt-1">
-                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/rankings/top_3_canciones_x_tipo" class="underline font-bold" style="color:#4e009c">6. Rankings: 2. TOP 3 Canciones X Tipo</a>.
+                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/rankings/top_3_canciones_x_tipo" class="underline font-bold" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">6. Rankings: 2. TOP 3 Canciones X Tipo</a>.
             </p>
         </li>
         <li class="items-center flex mt-4">
             <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
             <p class="text-lg mt-1">
-                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/rankings/todos_los_videojuegos_que_he_probado_y_completado" class="underline font-bold" style="color:#4e009c">6. Rankings: 3. Todos los Videojuegos que he PROBADO y COMPLETADO</a>.
+                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/rankings/todos_los_videojuegos_que_he_probado_y_completado" class="underline font-bold" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">6. Rankings: 3. Todos los Videojuegos que he PROBADO y COMPLETADO</a>.
             </p>
         </li>
         <li class="items-center flex mt-4">
             <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
             <p class="text-lg mt-1">
-                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/rankings/mis_canales_de_youtube_preferidos" class="underline font-bold" style="color:#4e009c">6. Rankings: 4. Mis Canales de Youtube Preferidos</a>.
+                Se agregó el contenido en <a href="/proyectos" class="underline font-bold text-blue-700">Mis Proyectos</a>: <a href="/proyectos/rankings/mis_canales_de_youtube_preferidos" class="underline font-bold" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">6. Rankings: 4. Mis Canales de Youtube Preferidos</a>.
             </p>
         </li>
         <li class="items-center flex mt-4">
@@ -309,13 +343,14 @@
         </li>
     </ul>
 
-    <h2 class="text-5xl mt-14 text-center font-bold mb-8 underline text-black">Versión Alpha 0.13</h2>
+    <h2 class="text-5xl mt-14 text-center font-bold mb-8 underline <%= 'text-black' if @modo_luz == 'claro' %> 
+        <%= 'text-gray-200' if @modo_luz == 'oscuro' %>">Versión Alpha 0.13</h2>
 
     <ul class="list-inside ml-12 mt-2 leading-9">
         <li class="items-center flex mt-4">
             <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
             <p class="text-lg mt-1">
-                Se agregó el contenido en <a href="/filosofia" class="underline font-bold filosofia-home">Filosofía de GIAN</a>: <a href="/filosofia/las_maneras/teoria" class="underline font-bold text-yellow-400">2. LAS MANERAS</a>.
+                Se agregó el contenido en <a href="/filosofia" class="underline font-bold filosofia-home">Filosofía de GIAN</a>: <a href="/filosofia/las_maneras/teoria" class="underline font-bold text-yellow-500">2. LAS MANERAS</a>.
             </p>
         </li>
         <li class="items-center flex mt-4">
@@ -326,7 +361,8 @@
         </li>
     </ul>
 
-    <h2 class="text-5xl mt-14 text-center font-bold mb-8 underline text-black">Versión Alpha 0.14</h2>
+    <h2 class="text-5xl mt-14 text-center font-bold mb-8 underline <%= 'text-black' if @modo_luz == 'claro' %> 
+        <%= 'text-gray-200' if @modo_luz == 'oscuro' %>">Versión Alpha 0.14</h2>
 
     <ul class="list-inside ml-12 mt-2 leading-9">
         <li class="items-center flex mt-4">
@@ -355,7 +391,8 @@
         </li>
     </ul>
 
-    <h2 class="text-5xl mt-14 text-center font-bold mb-8 underline text-black">Versión Alpha 0.13</h2>
+    <h2 class="text-5xl mt-14 text-center font-bold mb-8 underline <%= 'text-black' if @modo_luz == 'claro' %> 
+        <%= 'text-gray-200' if @modo_luz == 'oscuro' %>">Versión Alpha 0.13</h2>
 
     <ul class="list-inside ml-12 mt-2 leading-9">
         <li class="items-center flex mt-4">
@@ -378,7 +415,8 @@
         </li>
     </ul>
     
-    <h2 class="text-5xl mt-14 text-center font-bold mb-8 underline text-black">Versión Alpha 0.12</h2>
+    <h2 class="text-5xl mt-14 text-center font-bold mb-8 underline <%= 'text-black' if @modo_luz == 'claro' %> 
+        <%= 'text-gray-200' if @modo_luz == 'oscuro' %>">Versión Alpha 0.12</h2>
 
     <ul class="list-inside ml-12 mt-2 leading-9">
         <li class="items-center flex mt-4">
@@ -408,7 +446,8 @@
     </ul>
 
 
-    <h2 class="text-5xl mt-14 text-center font-bold mb-8 underline text-black">Versión Alpha 0.11</h2>
+    <h2 class="text-5xl mt-14 text-center font-bold mb-8 underline <%= 'text-black' if @modo_luz == 'claro' %> 
+        <%= 'text-gray-200' if @modo_luz == 'oscuro' %>">Versión Alpha 0.11</h2>
 
     <ul class="list-inside ml-12 mt-2 leading-9">
         <li class="items-center flex mt-4">
@@ -437,7 +476,8 @@
         </li>
     </ul>
 
-    <h2 class="text-5xl mt-14 text-center font-bold mb-8 underline text-black">Versión Alpha 0.1</h2>
+    <h2 class="text-5xl mt-14 text-center font-bold mb-8 underline <%= 'text-black' if @modo_luz == 'claro' %> 
+        <%= 'text-gray-200' if @modo_luz == 'oscuro' %>">Versión Alpha 0.1</h2>
 
     <ul class="list-inside ml-12 mt-2 mb-12 leading-9">
         <li class="items-center flex mt-4">

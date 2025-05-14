@@ -4,7 +4,8 @@
 
 <div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
   <h1 class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-4xl text-center mb-2 text-blue-700 animate-slide-in-right">
-    <span class="text-shadow-proyectos">Mis proyectos:</span> <p class="mt-10" style="color: #4e009c; text-shadow: 0px 2px 20px rgba(78, 0, 156, 0.6);">Rankings</p>
+    <span class="text-shadow-proyectos">Mis proyectos:</span> <p class="mt-10" style="<%='color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%> text-shadow: 0px 2px 20px rgba(78, 0, 156, 0.6);">Rankings</p>
   </h1>
 </div>
 
@@ -12,9 +13,13 @@
 
 <!-- ESTRUCTURA -->
 <div class="text-container max-w-7xl mx-auto mt-20 px-4 flex flex-col pb-8">
-  <section class="p-6 bg-gray-300 text-gray-800 rounded-2xl shadow-md flex-grow">
+  <section id="bg-articulos" class="p-6 
+    <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
+    rounded-2xl shadow-md flex-grow">
     <!-- TITULO -->
-    <h2 class="text-4xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #4e009c">1. Los MEJORES capítulos de algunas series que he visto</h2>
+    <h2 class="text-4xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">1. Los MEJORES capítulos de algunas series que he visto</h2>
 
     <!-- INTRODUCCION -->
     <p class="mb-12 text-lg leading-9">
@@ -22,20 +27,28 @@
     </p>
 
     <!-- INDICE -->
-    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-40 text-center font-bold mb-4" style="color: #4e009c">Índice</h2>
-    <div class="flex justify-center mb-40" style="color: #4e009c">
+    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-40 text-center font-bold mb-4" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">Índice</h2>
+    <div class="flex justify-center mb-40" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">
       <ul class="list-disc text-lg">
-        <li><a href="#11-ninjago" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #4e009c">1.1 NINJAGO</a></li>
-        <li><a href="#12-my-little-pony-la-mágia-de-la-amistad" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #4e009c">1.2 MY LITTLE PONY: LA MÁGIA DE LA AMISTAD</a></li>
-        <li><a href="#13-breaking-bad" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #4e009c">1.3 BREAKING BAD</a></li>
-        <li><a href="#14-better-call-saul" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #4e009c">1.4 BETTER CALL SAUL</a></li>
-        <li><a href="#15-cobra-kai" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #4e009c">1.5 COBRA KAI</a></li>
+        <li><a href="#11-ninjago" class="text-xl mt-2 text-center font-bold mb-4 underline" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">1.1 NINJAGO</a></li>
+        <li><a href="#12-my-little-pony-la-mágia-de-la-amistad" class="text-xl mt-2 text-center font-bold mb-4 underline" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">1.2 MY LITTLE PONY: LA MÁGIA DE LA AMISTAD</a></li>
+        <li><a href="#13-breaking-bad" class="text-xl mt-2 text-center font-bold mb-4 underline" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">1.3 BREAKING BAD</a></li>
+        <li><a href="#14-better-call-saul" class="text-xl mt-2 text-center font-bold mb-4 underline" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">1.4 BETTER CALL SAUL</a></li>
+        <li><a href="#15-cobra-kai" class="text-xl mt-2 text-center font-bold mb-4 underline" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">1.5 COBRA KAI</a></li>
       </ul>
     </div>
 
 
     <!-- CONTENIDO -->
-    <h2 id="11-ninjago" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #4e009c">
+    <h2 id="11-ninjago" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">
       1.1 NINJAGO
     </h2>
     <div class="flex flex-col items-center mb-6">
@@ -110,7 +123,8 @@
         <p class="mt-1">T14: 7/10.</p>
       </li>
     </ul>
-    <h2 id="12-my-little-pony-la-mágia-de-la-amistad" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #4e009c">
+    <h2 id="12-my-little-pony-la-mágia-de-la-amistad" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">
       1.2 MY LITTLE PONY: LA MÁGIA DE LA AMISTAD
     </h2>
     <div class="flex flex-col items-center mb-6">
@@ -123,7 +137,8 @@
     <p class="mb-12 text-lg leading-9">
       Sobre Equestria Girls, me encantó la tercera película, sobre todo con el tema <a href="https://youtu.be/TXQdvM8N22U?si=hY-EAIAyP7GhP3VQ" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">"Suelta la Magia"</a>.
     </p>
-    <h2 id="13-breaking-bad" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #4e009c">
+    <h2 id="13-breaking-bad" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">
       1.3 BREAKING BAD
     </h2>
     <div class="flex flex-col items-center mb-6">
@@ -133,7 +148,8 @@
     <p class="mb-12 text-lg leading-9">
       T1:E6 <i>(TIER A+)</i> | T2:E2 <i>(TIER A+)</i> | T2:E8 | T12:E12 | T2:E13 | T3:E2 | T3:E7 <i>(TIER A+)</i> | T3:E12 <i>(TIER A+)</i> | T3:E3 <i>(TIER A+)</i> | T4:E2 | T4:E5 | T4:E7 | T4:E8 | T4:E9 <i>(TIER S)</i> | T4:E10 <i>(TIER S)</i> | T4:E11 <i>(TIER A+)</i> | T4:E12 <i>(TIER A+)</i> | T4:E13 <i>(TIER S)</i> | T5:E1 <i>(TIER A+)</i> | T5:E5 | T5:E7 <i>(TIER A+)</i> | T5:E9 | T5:E13 <i>(TIER A+)</i> | T5:E14 <i>(TIER S)</i> | T5:E15 <i>(TIER S)</i> | T5:E16 <i>(TIER S)</i> |
     </p>
-    <h2 id="14-better-call-saul" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #4e009c">
+    <h2 id="14-better-call-saul" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">
       1.4 BETTER CALL SAUL
     </h2>
     <div class="flex flex-col items-center mb-6">
@@ -146,7 +162,8 @@
     <p class="mb-12 text-lg leading-9">
       Si sumamos Breaking Bad y Better Call Saul, en ese orden, en una serie, realmente se tiene la mejor serie de todos los tiempos en mi opinión. Sobretodo disfruté más Better Call Saul al ya haber visto Breaking Bad, pues todo cobra más sentido y el detalle técnico y artístico que posee es sublime. Aún recuerdo esa escena de <a href="https://youtu.be/E-bX79m5jHI?si=SnMxNGL1HYzEf2Bi" class="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Mike desmantelando el auto en búsqueda del GPS</a>, sobre todo por la impresionante banda sonora.
     </p>
-    <h2 id="15-cobra-kai" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #4e009c">
+    <h2 id="15-cobra-kai" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="<%= 'color: #4e009c;' if @modo_luz == 'claro' %> 
+        <%= 'color: #7500EB;' if @modo_luz == 'oscuro'%>">
       1.5 COBRA KAI
     </h2>
     <div class="flex flex-col items-center mb-6">
