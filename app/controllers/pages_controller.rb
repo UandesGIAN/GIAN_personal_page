@@ -94,7 +94,7 @@ class PagesController < ApplicationController
     @sub_section = params[:sub_section]
 
     @subsections = {
-    "EL MÉTODO DE GIAN" => [ "Las Bases", "Los Principios", "Las Opciones", "Los Consejos" ],
+    "EL MÉTODO DE GIAN" => [ "Las Bases", "Los Principios", "Las Opciones", "Los Consejos", "Aplicaciones"],
     "LAS MANERAS" => ["Teoría", "Aplicaciones"],
     "LOS ELEMENTOS DE VIDA" => ["Las definiciones", "Los Apartados Esenciales de Vida", "Las Sub-formas de vida", "Los Estados Compuestos", "El Ser Total", "Sobre la Amistad"],
     "Ética" => ["Universidad", "Por Gian"],

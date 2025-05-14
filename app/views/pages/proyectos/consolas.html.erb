@@ -4,7 +4,7 @@
 
 <div class="relative flex items-center mt-20 mb-10 justify-center h-full animated-element-slide-r">
   <h1 class="font-bold text-6xl md:text-8xl sm:text-8xl xs:text-4xl text-center mb-2 text-blue-700 animate-slide-in-right">
-    <span class="text-shadow-proyectos">Mis proyectos:</span> <p class="mt-10" style="color: #5bc900; text-shadow: 0px 2px 20px rgba(91, 201, 0, 0.6);">Consolas</p>
+    <span class="text-shadow-proyectos">Mis proyectos:</span> <p class="mt-10" style="color: #50B300; text-shadow: 0px 2px 20px rgba(91, 201, 0, 0.6);">Consolas</p>
   </h1>
 </div>
 
@@ -12,26 +12,26 @@
 
 <!-- ESTRUCTURA -->
 <div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
-  <section class="p-6 bg-gray-100 text-gray-800">
+  <section class="p-6 bg-gray-300 text-gray-800 rounded-2xl shadow-md flex-grow">
     <!-- DESCRIPCION -->
-    <p class="mb-6 text-lg ">
+    <p class="mb-12 text-lg leading-9">
         <i>Work in progress...</i>
     </p>
 
 
     <!-- SECCIONES -->
-    <h2 class="text-5xl mt-14 text-center font-bold mb-4" style="color: #5bc900;">Secciones:</h2>
+    <h2 class="text-5xl mt-14 text-center font-bold mb-4" style="color: #50B300;">Secciones:</h2>
 
-    <a href="<%= proyectos_subsection_path(section: 'consolas') %>" style="color: #5bc900;">
+    <a href="<%= proyectos_subsection_path(section: 'consolas') %>" style="color: #50B300;">
     </a>
     <% if @subsections['Consolas'].present? %>
       <div class="flex flex-col items-center"> 
         <ul class="list-inside text-experimentos text-left mt-2">
           <% @subsections['Consolas'].each_with_index do |sub_section, index| %>
             <li>
-              <a href="<%= proyectos_subsection_path(section: 'consolas', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-2xl font-bold flex items-center" style="color: #5bc900;">
+              <a href="<%= proyectos_subsection_path(section: 'consolas', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-2xl font-bold flex items-center" style="color: #50B300;">
                 <%= if @new_subsections['Consolas'] && @new_subsections['Consolas'].include?(sub_section)
-                      raw("<span class='underline'>11.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #5bc900 !important;font-size: 22px;'>release_alert</span>")
+                      raw("<span class='underline'>11.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #50B300 !important;font-size: 22px;'>release_alert</span>")
                     else
                       raw("<span class='underline'>11.#{index + 1} #{sub_section}</span>")
                     end %>

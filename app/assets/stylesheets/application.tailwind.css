@@ -40,10 +40,10 @@
     text-shadow: 0px 2px 20px rgba(14, 80, 167, 0.6);
   }
   .text-mmd {
-    color: rgb(38, 186, 245);
+    color: rgb(32, 164, 216);
   }
   .bg-mmd {
-    color: rgb(38, 186, 245);
+    color: rgb(32, 164, 216);
   }
   
 
@@ -78,11 +78,11 @@
 
 .border-mmd {
   --tw-border-opacity: 1;
-  border-color: rgb(38 186 245 / var(--tw-border-opacity, 1));
+  border-color: rgb(32 164 216 / var(--tw-border-opacity, 1));
 }
 .border-mmd:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(38, 186, 245) !important; /* Color visible en hover */
+  border-color: rgb(32, 164, 216) !important; /* Color visible en hover */
 }
 .border-musica {
   --tw-border-opacity: 1;

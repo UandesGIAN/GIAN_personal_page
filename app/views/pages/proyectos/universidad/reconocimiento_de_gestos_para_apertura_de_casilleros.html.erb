@@ -13,24 +13,24 @@
 
 <!-- ESTRUCTURA -->
 <div class="text-container max-w-7xl mx-auto mt-20 px-4 flex flex-col pb-8">
-  <section class="p-6 bg-gray-100 text-gray-800">
+  <section class="p-6 bg-gray-300 text-gray-800 rounded-2xl shadow-md flex-grow">
     <!-- TITULO -->
     <h2 class="text-4xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #db0080;">2. Reconocimiento de gestos para apertura de casilleros</h2>
 
     <!-- INTRODUCCION -->
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       En la segunda mitad de 2024 tuve una de las asignaturas más importantes de mi carrera, <strong>Proyecto de Desarrollo de Software</strong>.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       En esta tuvimos <strong>3 proyectos</strong>, uno individual enfocado a lógica y programación tradicional, otro enfocado en aplicaciones web, y el último de sistemas embebidos y web.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Este último fue, por lejos, el más difícil, complejo y largo de los 3. Para ello, tuve que hacer grupo con <strong>2 compañeros desconocidos</strong>, pero trabajaban realmente bien, en particular uno que manejaba muy bien todo lo relacionado con web y conexión con Django, cosa que yo y mi otro compañero no dominábamos.
     </p>
 
     <!-- INDICE -->
-    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #db0080">Índice</h2>
-    <div class="flex justify-center mb-8" style="color: #db0080">
+    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-40 text-center font-bold mb-4" style="color: #db0080">Índice</h2>
+    <div class="flex justify-center mb-40" style="color: #db0080">
       <ul class="list-disc text-lg">
         <li><a href="#21-sobre-el-proyecto-enunciado" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #db0080">2.1 Sobre el proyecto (enunciado)</a></li>
         <li><a href="#22-sobre-el-proyecto-el-que-nosotros-desarrollamos" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #db0080">2.2 Sobre el proyecto (el que nosotros desarrollamos)</a></li>
@@ -44,10 +44,10 @@
     <h2 id="21-sobre-el-proyecto-enunciado" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #db0080">
       2.1 Sobre el proyecto (enunciado)
     </h2>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       El propósito del proyecto era evaluar el nivel de cumplimiento de múltiples requisitos de software y hardware. El proyecto consistía en realizar un sistema en línea de usuarios con casilleros asignados en la universidad.
     </p>
-    <ul class="mb-6 text-lg">
+    <ul class="mb-12 text-lg leading-9">
       <li class="items-center flex">
         <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
         <p class="mt-1">Cada usuario tendría una clave para su casillero.</p>
@@ -65,42 +65,42 @@
         <p class="mt-1">La clave podía tener hasta 4 dígitos.</p>
       </li>
     </ul>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Sin embargo, el desafío estaba en que la lectura, inscripción y detección de los dígitos de cada casillero se realizaría sin conexión a un PC, y usando señales de manos.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Así es, utilizando inteligencia artificial u otras estrategias para leer los símbolos hechos con las manos frente a una cámara, con el fin de identificar qué dígito se ingresa y si es correcto o no.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       El otro desafío era que si se cambiaba la clave de un casillero, ya fuera por el usuario o el administrador, la nueva clave debía verse reflejada en vivo y en directo, con un máximo de 5 minutos de delay (aunque en la presentación final no hubo delay, porque cada grupo tenía 5 minutos para montar y 5 para presentar). Además, se podría cambiar los gestos a usar a partir de modelos de IA proporcionados por el administrador de la página, de tal manera que <strong>TODOS</strong> los casilleros tendrían ese conjunto de dígitos especificado en el modelo de IA cargado (uno por defecto, otro para prueba).
     </p>
     <h2 id="22-sobre-el-proyecto-el-que-nosotros-desarrollamos" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #db0080">
       2.2 Sobre el proyecto (el que nosotros desarrollamos)
     </h2>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Lo primero del proyecto fue definir cómo realizaríamos todo. Con mi grupo, definimos un prototipo básico, con <strong>LEDs</strong> indicadores del número de casillero y la clave a ingresar, además de varios botones para un manejo simple.
     </p>
     <div class="flex flex-col items-center mb-6">
       <img src="/assets/./experimentos_images/pds3_esquema.jpg" alt="Esquema conceptual sobre el proyecto" class="w-1/2">
       <p class="mt-2 text-lg text-center">Esquema conceptual sobre el proyecto</p>
     </div>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       La idea era tener un botón de inicio, con el cual se pregunta cuál de los 4 casilleros elegir. Luego, se debía presionar el botón correspondiente del 1 al 4 para indicar cuál se elegiría.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Una vez elegido, sonaría un <strong>BEEP</strong> de un altavoz y empezaría la lectura de la cámara. Cada vez que se leyera un dígito, se prendería un LED a la altura de los ojos, indicando en cuál dígito de los 4 de la clave se está leyendo.
     </p>
     <div class="flex flex-col items-center mb-6">
       <img src="/assets/./experimentos_images/pds3_signos.png" alt="Gestos con las manos para el proyecto (Version 1)" class="w-1/2">
       <p class="mt-2 text-lg text-center">Gestos con las manos para el proyecto (Version 1)</p>
     </div>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Una vez leídos todos, si la clave es correcta, una luz en el dispositivo que abre los casilleros (un servo motor) se encendería.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Si es incorrecto, sonaría un <strong>BEEP</strong> y no abriría los casilleros. Una vez abierto, se debe presionar el botón de inicio para cerrar el casillero.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Para la apertura y cierre de casilleros, es sólo en la cerradura, la cual tiene un ángulo de <strong>90 grados</strong>. Para unir el motor a la cerradura, se usó cinta de doble contacto y silicona líquida.
     </p>
     <div class="flex flex-col items-center mb-6">
@@ -110,39 +110,39 @@
     <h2 id="23-desarrollo-inicial" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #db0080">
       2.3 Desarrollo inicial
     </h2>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Lo segundo del proyecto fue realizar el prototipo inicial, básicamente una caja con los componentes descritos, haciendo uso de un <strong>ESP32 Controller</strong> y <strong>ESP32 Cam</strong>, y unir todo para tener una lectura de imagen transmitida por USB a un computador en el monitor del ESP32.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       El prototipo debía tener 2 motores instalados y el modelo de IA para leer los dígitos. De momento no era necesario que la clave fuese modificable, ni que la instalación de los motores fuese capaz de abrir los casilleros, pero el modelo debía tener la precisión para poder hacer girar los motores al menos una vez y con todo lo especificado de las luces, botones, <strong>speaker</strong>, etc.
     </p>
     <div class="flex flex-col items-center mb-6">
       <img src="/assets/./experimentos_images/pds3_1.png" alt="Prototipo inicial" class="w-1/2">
       <p class="mt-2 text-lg text-center">Prototipo inicial</p>
     </div>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Lo tercero, siendo la parte más exigente e importante, fue tener el prototipo inicial anterior, pero conectado con la web, hacer la aplicación, todo el sistema de usuarios, la conexión con el ESP32 y mantener el funcionamiento anterior.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Esta vez sí debían poderse cambiar las claves y los motores debían ser capaces de abrir el casillero.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Prácticamente pedían tenerlo todo listo, lo que faltaba era poder manejar los 4 casilleros, no depender de conexión a un PC (sólo a internet) y el cambio de modelo aplicable a todos los casilleros (es decir, a todos los <strong>ESP32</strong>, porque para tener 4 casilleros al mismo tiempo, se necesitaban 2 <strong>ESP32 Controller</strong> y <strong>Cam</strong>, ambos sincronizados con la página web).
     </p>
     <div class="flex flex-col items-center mb-6">
       <img src="/assets/./experimentos_images/pds3_web.png" alt="Página web del proyecto (en celular)" class="w-1/2">
       <p class="mt-2 text-lg text-center">Página web del proyecto (en celular)</p>
     </div>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Esto fue principalmente hecho por mi compañero que conocía de <strong>Django</strong>, pues se usó eso, un broker que transmitía la información desde el <strong>ESP32</strong> a un servidor con mensajes <strong>UART</strong> y a través de un sistema de <strong>sockets</strong>, lo enviado por el broker era recibido por el <strong>ESP32 Controller</strong> y enviado al <strong>ESP32 Cam</strong>. O bueno, esa era la idea.
     </p>
     <h2 id="24-desarrollo-avanzado" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #db0080">
       2.4 Desarrollo avanzado
     </h2>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Fue muy difícil hacer todo, pero al final se cumplió, aunque para la última entrega (que era la que tenía más peso, aproximadamente un <strong>50%</strong>), no teníamos idea de cómo lograríamos lo del cambio del modelo, pues nuestro método consistía en que el <strong>ESP32 Cam</strong> se quedaba esperando a la señal del controller para tomar fotos.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Las fotos las enviaba al <strong>controller</strong> para que allí procesara la lógica de apertura de casilleros y con ello, las claves actualizadas. Pero el modelo de IA estaba en el <strong>ESP32 Cam</strong>, es decir, la que siempre estaba en ejecución, la única forma de cambiar el modelo sería enviando el modelo por bloques de mensajes <strong>UART</strong>, pero eso haría muy ineficiente la captura de fotos y el proceso, principalmente porque, aunque lo intentamos, al parecer el <strong>ESP32 Cam</strong> sólo reconocía el modelo ingresado como un archivo interno en su memoria, y no el que se ingresaba de forma dinámica.
     </p>
     <div class="flex flex-col items-center mb-6">
@@ -153,14 +153,14 @@
       <img src="/assets/./experimentos_images/pds3_model1.jpg" alt="Desempeño temprano del modelo de inteligencia artificial" class="w-1/2">
       <p class="mt-2 text-lg text-center">Desempeño temprano del modelo de inteligencia artificial</p>
     </div>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Pero bueno, eso es más que nada para la última entrega. Para la tercera sí cumplimos con casi todo, la apertura de casillero funcionó, el modelo estaba en su versión definitiva, pues decidimos estandarizar el ambiente desde el cual se toman las fotos, ya que en vez de ser sobre un fondo y distancia o luz variables, se hizo una estructura alrededor de la mano donde se usa el <strong>Flash</strong> del <strong>ESP32</strong> y se mejora la nitidez y contraste de la imagen.
     </p>
     <div class="flex flex-col items-center mb-6">
       <img src="/assets/./experimentos_images/pds3_caja1.jpg" alt="Prototipo final para el proyecto" class="w-1/2">
       <p class="mt-2 text-lg text-center">Prototipo final para el proyecto</p>
     </div>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Aún así, para mejorar la lectura, se tomaban 5 fotos para cada dígito, cosa que hacía que para abrir el casillero hubiese que estar como <strong>1 minuto</strong> con la mano en alto, pero funcionaba.
     </p>
     <div class="flex flex-col items-center mb-6">
@@ -170,26 +170,26 @@
     <h2 id="24-entrega" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #db0080">
       2.4 Entrega
     </h2>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Finalmente, la entrega final fue un estrés horrible, principalmente porque en el intento de poner los 2 <strong>controller</strong> y hacer el cambio de modelo dinámico, el resultado final fue que, por algún motivo, la página web dejó de funcionar correctamente. Y cómo ahora todo debía depender de la web a distancia y no conectado al PC, la verdad es que no logramos hacer que las cosas funcionaran en lo más mínimo.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Sin embargo, teníamos todo lo que se pedía, sólo faltaba el funcionamiento en sí: La apertura de casilleros, lectura de dígitos, precisión del modelo, página web, cambio de claves, cambio de modelo, etc.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Estaba en esencia, pero cuando intentabas probarlo, nos falló la conexión con la página y el <strong>ESP32</strong>. Principalmente por los mensajes que se enviaban.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Nos faltó tiempo para corregirlo, y era muy frustrante, porque en la entrega anterior sí funcionaba, incluso cuando revertimos los cambios, seguía sin funcionar. Pero había muchos otros aspectos que sí funcionaban, y gracias a que se acordaron de mi grupo y que anteriormente todo funcionó bien, se nos perdonó mucho y nos fue muy bien al final, digo, para lo estresados que estábamos.
     </p>
     <div class="flex flex-col items-center mb-6">
       <img src="/assets/./experimentos_images/pds3_final.jpg" alt="Día final (con 3 horas de sueño encima xD)" class="w-1/2">
       <p class="mt-2 text-lg text-center">Día final (con 3 horas de sueño encima xD)</p>
     </div>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       No sé si decir que es un orgullo, pero al final fuimos de los mejores y realmente hicimos un buen trabajo, es sólo que al final las cosas se complicaron, principalmente por dedicar mucho tiempo a hacer otro prototipo funcional, ya que debíamos tener 2 instalaciones de <strong>ESP Controller</strong> y <strong>Cam</strong>. Pero nada, esa fue la experiencia...
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Un proyecto difícil en toda regla, donde usamos conocimientos de <strong>electrónica</strong>, <strong>IA</strong>, <strong>programación de lógica</strong>, de <strong>sistemas embebidos</strong>, de <strong>aplicaciones web</strong>, conexiones entre servidores y, obviamente, <strong>ingeniería</strong> para adaptarnos a las condiciones y requisitos.
     </p>
 

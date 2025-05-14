@@ -10,10 +10,10 @@
 
 <!-- ESTRUCTURA  -->
 <div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
-  <section class="p-6 bg-gray-100 text-gray-800">
+  <section class="p-6 bg-gray-300 text-gray-800 rounded-2xl shadow-md flex-grow">
 
     <!-- DESCRIPCION -->
-    <p class="mb-6 ml-6 mt-4 text-lg ">
+    <p class="ml-3 mt-4 mb-12 text-lg leading-9">
         Corresponde a una compilación de proyectos, estudios, ejercicios y creaciones que poseen relación con la informática, computación, tecnología, electrónica e ingeniería.<br>
         <br>Tendrá una estructura de guía para aprender al respecto de todo ello a través de resúmenes y ejercicios aplicados.<br><br>
         <i>Work In Progress...</i>
@@ -26,9 +26,9 @@
       <h2 class="text-3xl mt-14 ml-6 font-bold mb-2 underline">1. Python</h2>
     </a>
     <% if @subsections['Python'].present? %>
-      <ul class="list-inside ml-12 mt-2">
+      <ul class="list-inside ml-12 mt-2 mb-12">
         <% @subsections['Python'].each_with_index do |sub_section, index| %>
-          <li>
+          <li class="mt-2">
             <a href="<%= computacion_subsection_path(section: 'python', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_').gsub(',', '') ) %>" class="text-blue-700 text-lg font-bold underline">
               <%= "1.#{index + 1} #{sub_section.capitalize}" %>
             </a>

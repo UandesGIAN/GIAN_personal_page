@@ -10,9 +10,9 @@
 
 <!-- ESTRUCTURA  -->
 <div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
-  <section class="p-6 bg-gray-100 text-gray-800">
+  <section class="p-6 bg-gray-300 text-gray-800 rounded-2xl shadow-md flex-grow">
     <!-- DESCRIPCION -->
-    <p class="mb-6 ml-6 mt-4 text-lg ">
+    <p class="ml-3 mt-4 mb-12 text-lg leading-9">
         Apartado personal y reflexivo entorno a la vida real y los distintos puntos de vista sobre la realidad.<br>
         <br>Será una compilación de estudios personales y herramientas o conocimientos que se brindan con el fin de ayudar y orientar al lector.
         <br><br>
@@ -27,10 +27,10 @@
       <h2 class="text-3xl mt-14 ml-6 font-bold mb-2 underline">1. EL MÉTODO DE GIAN</h2>
     </a>
     <% if @subsections['EL MÉTODO DE GIAN'].present? %>
-      <ul class="list-inside ml-12 mt-2">
+      <ul class="list-inside ml-12 mt-2 mb-12">
         <% @subsections['EL MÉTODO DE GIAN'].each_with_index do |sub_section, index| %>
-          <li>
-            <a href="<%= filosofia_subsection_path(section: 'el_metodo_de_gian', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-green-600 text-lg font-bold underline">
+          <li class="mt-2">
+            <a href="<%= filosofia_subsection_path(section: 'el_metodo_de_gian', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-green-600 mt-2 text-lg font-bold underline">
               <%= "1.#{index + 1} #{sub_section.capitalize}" %>
             </a>
           </li>
@@ -41,14 +41,14 @@
 
     <!-- LAS MANERAS -->
     <a href="<%= filosofia_subsection_path(section: 'las_maneras') %>" class="text-blue-400">
-      <h2 class="text-3xl mt-6 ml-6 font-bold mb-2 underline text-yellow-400">2. LAS MANERAS</h2>
+      <h2 class="text-3xl mt-6 ml-6 font-bold mb-2 underline text-yellow-500">2. LAS MANERAS</h2>
     </a>
 
     <% if @subsections['LAS MANERAS'].present? %>
-      <ul class="list-inside ml-12 mt-2">
+      <ul class="list-inside ml-12 mt-2 mb-12">
         <% @subsections['LAS MANERAS'].each_with_index do |sub_section, index| %>
-          <li>
-            <a href="<%= filosofia_subsection_path(section: 'las_maneras', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-yellow-400 text-lg font-bold underline">
+          <li class="mt-2">
+            <a href="<%= filosofia_subsection_path(section: 'las_maneras', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-yellow-500 mt-2 text-lg font-bold underline">
               <%= "2.#{index + 1} #{sub_section.capitalize}" %>
             </a>
           </li>
@@ -59,14 +59,14 @@
 
     <!-- LOS ELEMENTOS DE VIDA -->
     <a href="<%= filosofia_subsection_path(section: 'los_elementos_de_vida') %>" class="text-blue-400">
-      <h2 class="text-3xl mt-6 ml-6 font-bold mb-2 underline" style="color: #9200cc;">3. LOS ELEMENTOS DE VIDA</h2>
+      <h2 class="text-3xl mt-6 ml-6 font-bold mb-2 underline" style="color: #8000B3;">3. LOS ELEMENTOS DE VIDA</h2>
     </a>
 
     <% if @subsections['LOS ELEMENTOS DE VIDA'].present? %>
-      <ul class="list-inside ml-12 mt-2">
+      <ul class="list-inside ml-12 mt-2 mb-12">
         <% @subsections['LOS ELEMENTOS DE VIDA'].each_with_index do |sub_section, index| %>
-          <li>
-            <a href="<%= filosofia_subsection_path(section: 'los_elementos_de_vida', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" style="color: #9200cc;" class="text-lg font-bold underline">
+          <li class="mt-2">
+            <a href="<%= filosofia_subsection_path(section: 'los_elementos_de_vida', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" style="color: #8000B3;" class="mt-2 text-lg font-bold underline">
               <%= "3.#{index + 1} #{sub_section.capitalize}" %>
             </a>
           </li>
@@ -81,10 +81,10 @@
     </a>
 
     <% if @subsections['Ética'].present? %>
-      <ul class="list-inside ml-12 mt-2">
+      <ul class="list-inside ml-12 mt-2 mb-12">
         <% @subsections['Ética'].each_with_index do |sub_section, index| %>
-          <li>
-            <a href="<%= filosofia_subsection_path(section: 'etica', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-gray-500 text-lg font-bold underline">
+          <li class="mt-2">
+            <a href="<%= filosofia_subsection_path(section: 'etica', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-gray-500 mt-2 text-lg font-bold underline">
               <%= "4.#{index + 1} #{sub_section}" %>
             </a>
           </li>
@@ -95,14 +95,14 @@
 
     <!-- SOBRE TEOLOGIA -->
     <a href="<%= filosofia_subsection_path(section: 'teologia') %>" class="text-blue-400">
-      <h2 class="text-3xl mt-6 ml-6 font-bold mb-2 underline" style="color: #72b5b3;" >5. Sobre Teología</h2>
+      <h2 class="text-3xl mt-6 ml-6 font-bold mb-2 underline" style="color: #58A7A4;" >5. Sobre Teología</h2>
     </a>
 
     <% if @subsections['Teología'].present? %>
-      <ul class="list-inside ml-12 mt-2">
+      <ul class="list-inside ml-12 mt-2 mb-12">
         <% @subsections['Teología'].each_with_index do |sub_section, index| %>
-          <li>
-            <a href="<%= filosofia_subsection_path(section: 'teologia', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" style="color: #72b5b3;" class="text-lg font-bold underline">
+          <li class="mt-2">
+            <a href="<%= filosofia_subsection_path(section: 'teologia', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" style="color: #58A7A4;" class="mt-2 text-lg font-bold underline">
               <%= "5.#{index + 1} #{sub_section}" %>
             </a>
           </li>
@@ -117,10 +117,10 @@
     </a>
 
     <% if @subsections['Arte'].present? %>
-      <ul class="list-inside ml-12 mt-2">
+      <ul class="list-inside ml-12 mt-2 mb-12">
         <% @subsections['Arte'].each_with_index do |sub_section, index| %>
-          <li>
-            <a href="<%= filosofia_subsection_path(section: 'arte', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" style="color: #57380a;" class="text-lg font-bold underline">
+          <li class="mt-2">
+            <a href="<%= filosofia_subsection_path(section: 'arte', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" style="color: #57380a;" class="mt-2 text-lg font-bold underline">
               <%= "6.#{index + 1} #{sub_section}" %>
             </a>
           </li>
@@ -130,14 +130,14 @@
 
     <!-- SOBRE LA PSICOLOGÍA -->
     <a href="<%= filosofia_subsection_path(section: 'psicologia') %>" class="text-blue-400">
-      <h2 class="text-3xl mt-6 ml-6 font-bold mb-2 underline" style="color: #92cc2f;">7. Sobre la Psicología</h2>
+      <h2 class="text-3xl mt-6 ml-6 font-bold mb-2 underline" style="color: #83B72A;">7. Sobre la Psicología</h2>
     </a>
 
     <% if @subsections['Psicología'].present? %>
-      <ul class="list-inside ml-12 mt-2">
+      <ul class="list-inside ml-12 mt-2 mb-12">
         <% @subsections['Psicología'].each_with_index do |sub_section, index| %>
-          <li>
-            <a href="<%= filosofia_subsection_path(section: 'psicologia', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" style="color: #92cc2f;" class="text-lg font-bold underline">
+          <li class="mt-2">
+            <a href="<%= filosofia_subsection_path(section: 'psicologia', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" style="color: #83B72A;" class="mt-2 text-lg font-bold underline">
               <%= "7.#{index + 1} #{sub_section}" %>
             </a>
           </li>
