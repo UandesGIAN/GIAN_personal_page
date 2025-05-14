@@ -8,10 +8,10 @@
 </div>
 
 <div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
-  <section class="p-6 bg-gray-100 text-gray-800">
+  <section class="p-6 bg-gray-300 text-gray-800 rounded-2xl shadow-md flex-grow">
 
     <!-- PRESENTACION -->
-    <p class="mb-6 ml-6 mr-6 mt-6 text-lg">
+    <p class="mb-6 ml-6 mr-6 mt-6 text-lg leading-relaxed">
       Bienvenido al apartado sobre <strong>MIS PROYECTOS</strong>, donde presento una recopilación de todos los proyectos en los que he trabajado o en los que he participado. En este apartado, encontrarás diversas secciones dedicadas a cada proyecto o tema relevante.  
       <br><br>
       <strong>Un proyecto</strong>, en este caso, se considera todo trabajo realizado por mí, ya sea no remunerado o sin la intención de desarrollarse profesionalmente, sino como una actividad impulsada principalmente por la <strong>diversión, el aprendizaje o incluso el aburrimiento</strong>.  
@@ -88,16 +88,16 @@
     <% end %>
 
     <!-- 4 DIBUJOS -->
-    <a href="<%= proyectos_subsection_path(section: 'dibujos') %>" style="color: #decb00;">
+    <a href="<%= proyectos_subsection_path(section: 'dibujos') %>" style="color: #BDAD00;">
       <h2 class="text-3xl mt-6 ml-6 font-bold underline">4. Dibujos</h2>
     </a>
     <% if @subsections['Dibujos'].present? %>
-      <ul class="list-inside ml-12 mt-2" style="color: #decb00;">
+      <ul class="list-inside ml-12 mt-2" style="color: #BDAD00;">
         <% @subsections['Dibujos'].each_with_index do |sub_section, index| %>
           <li>
             <a href="<%= proyectos_subsection_path(section: 'dibujos', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center">
               <%= if @new_subsections['Dibujos'] && @new_subsections['Dibujos'].include?(sub_section)
-                    raw("<span class='underline'>4.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #decb00 !important;font-size: 22px;'>release_alert</span>")
+                    raw("<span class='underline'>4.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #BDAD00 !important;font-size: 22px;'>release_alert</span>")
                   else
                     raw("<span class='underline'>4.#{index + 1} #{sub_section}</span>")
                   end %>
@@ -228,16 +228,16 @@
     <% end %>
 
     <!-- 11. CONSOLAS DE VIDEOJUEGOS -->
-    <a href="<%= proyectos_subsection_path(section: 'consolas') %>" style="color: #5bc900;">
+    <a href="<%= proyectos_subsection_path(section: 'consolas') %>" style="color: #50B300;">
       <h2 class="text-3xl mt-6 ml-6 font-bold  underline">11. Consolas de Videojuegos</h2>
     </a>
     <% if @subsections['Consolas'].present? %>
-      <ul class="list-inside ml-12 mt-2" style="color: #5bc900;">
+      <ul class="list-inside ml-12 mt-2" style="color: #50B300;">
         <% @subsections['Consolas'].each_with_index do |sub_section, index| %>
           <li>
             <a href="<%= proyectos_subsection_path(section: 'consolas', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center">
               <%= if @new_subsections['Consolas'] && @new_subsections['Consolas'].include?(sub_section)
-                    raw("<span class='underline'>11.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #5bc900 !important;font-size: 22px;'>release_alert</span>")
+                    raw("<span class='underline'>11.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #50B300 !important;font-size: 22px;'>release_alert</span>")
                   else
                     raw("<span class='underline'>11.#{index + 1} #{sub_section}</span>")
                   end %>
