@@ -11,7 +11,7 @@
   <section class="p-6 bg-gray-300 text-gray-800 rounded-2xl shadow-md flex-grow">
 
     <!-- PRESENTACION -->
-    <p class="mb-6 ml-6 mr-6 mt-6 text-lg leading-relaxed">
+    <p class="ml-3 mt-4 mb-12 text-lg leading-9">
       Bienvenido al apartado sobre <strong>MIS PROYECTOS</strong>, donde presento una recopilación de todos los proyectos en los que he trabajado o en los que he participado. En este apartado, encontrarás diversas secciones dedicadas a cada proyecto o tema relevante.  
       <br><br>
       <strong>Un proyecto</strong>, en este caso, se considera todo trabajo realizado por mí, ya sea no remunerado o sin la intención de desarrollarse profesionalmente, sino como una actividad impulsada principalmente por la <strong>diversión, el aprendizaje o incluso el aburrimiento</strong>.  
@@ -32,10 +32,10 @@
       <h2 class="text-3xl mt-14 ml-6 font-bold mb-2 underline">1. Canales de Youtube</h2>
     </a>
     <% if @subsections['Youtube'].present? %>
-      <ul class="list-inside ml-12 mt-2 text-red-700">
+      <ul class="list-inside ml-12 mt-2 mb-12 mb-12 text-red-700">
         <% @subsections['Youtube'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'youtube', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center">
+            <a href="<%= proyectos_subsection_path(section: 'youtube', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="mt-2 text-lg font-bold flex items-center">
               <%= if @new_subsections['Youtube'] && @new_subsections['Youtube'].include?(sub_section)
                     raw("<span class='underline'>1.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #b91c1c !important;font-size: 22px;'>release_alert</span>")
                   else
@@ -52,12 +52,12 @@
       <h2 class="text-3xl mt-6 ml-6 font-bold text-mmd underline">2. MikuMikuDance Splatoon</h2>
     </a>
     <% if @subsections['MikuMikuDance'].present? %>
-      <ul class="list-inside ml-12 mt-2 text-mmd">
+      <ul class="list-inside ml-12 mt-2 mb-12 text-mmd">
         <% @subsections['MikuMikuDance'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'mikumikudance', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center">
+            <a href="<%= proyectos_subsection_path(section: 'mikumikudance', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="mt-2 text-lg font-bold flex items-center">
               <%= if @new_subsections['MikuMikuDance'] && @new_subsections['MikuMikuDance'].include?(sub_section)
-                    raw("<span class='underline'>2.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #26BAF5 !important;font-size: 22px;'>release_alert</span>")
+                    raw("<span class='underline'>2.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: ##00A4D8 !important;font-size: 22px;'>release_alert</span>")
                   else
                     raw("<span class='underline'>2.#{index + 1} #{sub_section}</span>")
                   end %>
@@ -72,10 +72,10 @@
       <h2 class="text-3xl mt-6 ml-6 font-bold text-green-700 underline">3. Desarrollo de videojuegos</h2>
     </a>
     <% if @subsections['Videojuegos'].present? %>
-      <ul class="list-inside ml-12 mt-2 text-green-700">
+      <ul class="list-inside ml-12 mt-2 mb-12 text-green-700">
         <% @subsections['Videojuegos'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'videojuegos', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center">
+            <a href="<%= proyectos_subsection_path(section: 'videojuegos', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="mt-2 text-lg font-bold flex items-center">
               <%= if @new_subsections['Videojuegos'] && @new_subsections['Videojuegos'].include?(sub_section)
                     raw("<span class='underline'>3.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #15803d !important;font-size: 22px;'>release_alert</span>")
                   else
@@ -92,10 +92,10 @@
       <h2 class="text-3xl mt-6 ml-6 font-bold underline">4. Dibujos</h2>
     </a>
     <% if @subsections['Dibujos'].present? %>
-      <ul class="list-inside ml-12 mt-2" style="color: #BDAD00;">
+      <ul class="list-inside ml-12 mt-2 mb-12" style="color: #BDAD00;">
         <% @subsections['Dibujos'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'dibujos', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center">
+            <a href="<%= proyectos_subsection_path(section: 'dibujos', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="mt-2 text-lg font-bold flex items-center">
               <%= if @new_subsections['Dibujos'] && @new_subsections['Dibujos'].include?(sub_section)
                     raw("<span class='underline'>4.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #BDAD00 !important;font-size: 22px;'>release_alert</span>")
                   else
@@ -112,10 +112,10 @@
       <h2 class="text-3xl mt-6 ml-6 font-bold underline">5. Música</h2>
     </a>
     <% if @subsections['Música'].present? %>
-      <ul class="list-inside ml-12 mt-2" style="color: #ff8000;">
+      <ul class="list-inside ml-12 mt-2 mb-12" style="color: #ff8000;">
         <% @subsections['Música'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'musica', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center">
+            <a href="<%= proyectos_subsection_path(section: 'musica', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="mt-2 text-lg font-bold flex items-center">
               <%= if @new_subsections['Música'] && @new_subsections['Música'].include?(sub_section)
                     raw("<span class='underline'>5.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #ff8000 !important;font-size: 22px;'>release_alert</span>")
                   else
@@ -132,10 +132,10 @@
       <h2 class="text-3xl mt-6 ml-6 font-bold underline">6. Rankings</h2>
     </a>
     <% if @subsections['Rankings'].present? %>
-      <ul class="list-inside ml-12 mt-2" style="color: #4e009c;">
+      <ul class="list-inside ml-12 mt-2 mb-12" style="color: #4e009c;">
         <% @subsections['Rankings'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'rankings', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center">
+            <a href="<%= proyectos_subsection_path(section: 'rankings', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="mt-2 text-lg font-bold flex items-center">
               <%= if @new_subsections['Rankings'] && @new_subsections['Rankings'].include?(sub_section)
                     raw("<span class='underline'>6.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #4e009c !important;font-size: 22px;'>release_alert</span>")
                   else
@@ -152,10 +152,10 @@
       <h2 class="text-3xl mt-6 ml-6 font-bold underline">7. PC</h2>
     </a>
     <% if @subsections['PC'].present? %>
-      <ul class="list-inside ml-12 mt-2" style="color: #1E90FF;">
+      <ul class="list-inside ml-12 mt-2 mb-12" style="color: #1E90FF;">
         <% @subsections['PC'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'pc', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center">
+            <a href="<%= proyectos_subsection_path(section: 'pc', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="mt-2 text-lg font-bold flex items-center">
               <%= if @new_subsections['PC'] && @new_subsections['PC'].include?(sub_section)
                     raw("<span class='underline'>7.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #1E90FF !important;font-size: 22px;'>release_alert</span>")
                   else
@@ -172,10 +172,10 @@
       <h2 class="text-3xl mt-6 ml-6 font-bold underline">8. Electrónica</h2>
     </a>
     <% if @subsections['Electrónica'].present? %>
-      <ul class="list-inside ml-12 mt-2" style="color: #001ee3;">
+      <ul class="list-inside ml-12 mt-2 mb-12" style="color: #001ee3;">
         <% @subsections['Electrónica'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'electronica', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center">
+            <a href="<%= proyectos_subsection_path(section: 'electronica', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="mt-2 text-lg font-bold flex items-center">
               <%= if @new_subsections['Electrónica'] && @new_subsections['Electrónica'].include?(sub_section)
                     raw("<span class='underline'>8.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #001ee3 !important;font-size: 22px;'>release_alert</span>")
                   else
@@ -192,10 +192,10 @@
       <h2 class="text-3xl mt-6 ml-6 font-bold underline">9. Scripts de Python</h2>
     </a>
     <% if @subsections['Scripts'].present? %>
-      <ul class="list-inside ml-12 mt-2" style="color: #436d94;">
+      <ul class="list-inside ml-12 mt-2 mb-12" style="color: #436d94;">
         <% @subsections['Scripts'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'electronica', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center">
+            <a href="<%= proyectos_subsection_path(section: 'electronica', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="mt-2 text-lg font-bold flex items-center">
               <%= if @new_subsections['Scripts'] && @new_subsections['Scripts'].include?(sub_section)
                     raw("<span class='underline'>9.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #436d94 !important;font-size: 22px;'>release_alert</span>")
                   else
@@ -212,10 +212,10 @@
       <h2 class="text-3xl mt-6 ml-6 font-bold underline">10. Universidad</h2>
     </a>
     <% if @subsections['Universidad'].present? %>
-      <ul class="list-inside ml-12 mt-2" style="color: #db0080;">
+      <ul class="list-inside ml-12 mt-2 mb-12" style="color: #db0080;">
         <% @subsections['Universidad'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'universidad', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center">
+            <a href="<%= proyectos_subsection_path(section: 'universidad', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="mt-2 text-lg font-bold flex items-center">
               <%= if @new_subsections['Universidad'] && @new_subsections['Universidad'].include?(sub_section)
                     raw("<span class='underline'>10.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #db0080 !important;font-size: 22px;'>release_alert</span>")
                   else
@@ -232,10 +232,10 @@
       <h2 class="text-3xl mt-6 ml-6 font-bold  underline">11. Consolas de Videojuegos</h2>
     </a>
     <% if @subsections['Consolas'].present? %>
-      <ul class="list-inside ml-12 mt-2" style="color: #50B300;">
+      <ul class="list-inside ml-12 mt-2 mb-12" style="color: #50B300;">
         <% @subsections['Consolas'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'consolas', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center">
+            <a href="<%= proyectos_subsection_path(section: 'consolas', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="mt-2 text-lg font-bold flex items-center">
               <%= if @new_subsections['Consolas'] && @new_subsections['Consolas'].include?(sub_section)
                     raw("<span class='underline'>11.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #50B300 !important;font-size: 22px;'>release_alert</span>")
                   else
@@ -252,10 +252,10 @@
       <h2 class="text-3xl mt-6 ml-6 font-bold underline">12. Celulares</h2>
     </a>
     <% if @subsections['Celulares'].present? %>
-      <ul class="list-inside ml-12 mt-2" style="color: #8600c9;">
+      <ul class="list-inside ml-12 mt-2 mb-12" style="color: #8600c9;">
         <% @subsections['Celulares'].each_with_index do |sub_section, index| %>
           <li>
-            <a href="<%= proyectos_subsection_path(section: 'celulares', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="text-lg font-bold flex items-center">
+            <a href="<%= proyectos_subsection_path(section: 'celulares', sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_')) %>" class="mt-2 text-lg font-bold flex items-center">
               <%= if @new_subsections['Celulares'] && @new_subsections['Celulares'].include?(sub_section)
                     raw("<span class='underline'>12.#{index + 1} #{sub_section}</span> <span class='ml-1 mr-1 material-symbols-outlined' style='color: #8600c9 !important;font-size: 22px;'>release_alert</span>")
                   else

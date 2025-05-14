@@ -43,7 +43,7 @@
         <ul class="list-inside ml-4 mt-2">
           <% subsections[subsections_key].each_with_index do |sub_section, sub_index| %>
             <li>
-              <a href="<%= send("#{type_url}_subsection_path", section: section_fix, sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_').gsub(',', '') ) %>" class="text-gray-700 text-lg font-bold underline">
+              <a href="<%= send("#{type_url}_subsection_path", section: section_fix, sub_section: sub_section.downcase.gsub(/[áéíóúñ]/, 'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ñ' => 'n').gsub(' ', '_').gsub(',', '') ) %>" class="text-gray-800 text-lg font-bold underline">
                 <%= "#{index + 1}.#{sub_index + 1} #{sub_section}" %>
               </a>
             </li>

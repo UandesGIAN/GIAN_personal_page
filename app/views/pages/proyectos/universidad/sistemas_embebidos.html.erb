@@ -18,10 +18,10 @@
     <h2 class="text-4xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #db0080;">1. Sistemas Embebidos</h2>
 
     <!-- INTRODUCCION -->
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       En la primera mitad de 2024 cursé la asignatura <strong>Sistemas Embebidos</strong>, donde aprendimos a implementar código ejecutable en un dispositivo portátil sin necesidad de conexión a la red o a una computadora.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       En esta asignatura se nos pidió usar modelos de inteligencia artificial convolucionales para implementarlos en un <strong>ESP32-CAM</strong>, un dispositivo con capacidad de conectar circuitos electrónicos simples. Durante el curso, desarrollamos un proyecto que hiciera uso de la cámara del ESP32, el intérprete <strong>esp-idf</strong>, y <strong>TensorFlow Micro</strong> para dispositivos con poca potencia y almacenamiento.
     </p>
     <div class="flex flex-col items-center mb-6">
@@ -30,8 +30,8 @@
     </div>
 
     <!-- INDICE -->
-    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #db0080">Índice</h2>
-    <div class="flex justify-center mb-8" style="color: #db0080">
+    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-40 text-center font-bold mb-4" style="color: #db0080">Índice</h2>
+    <div class="flex justify-center mb-40" style="color: #db0080">
       <ul class="list-disc text-lg">
         <li><a href="#11-sobre-el-proyecto" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #db0080">1.1 Sobre el proyecto</a></li>
         <li><a href="#12-desarrollo" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #db0080">1.2 Desarrollo</a></li>
@@ -43,36 +43,36 @@
     <h2 id="11-sobre-el-proyecto" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #db0080">
       1.1 Sobre el proyecto
     </h2>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       En mi grupo, hicimos un proyecto de <strong>reconocimiento de autos y motos</strong>. La idea era desarrollar un sistema que identificara el tipo de vehículo que ingresaba a un estacionamiento para indicarle si debía dirigirse a un espacio para autos o motos. También podría utilizarse para calcular peajes en una autopista o para registrar la cantidad de vehículos en un área determinada.
     </p>
     <h2 id="12-desarrollo" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #db0080">
       1.2 Desarrollo
     </h2>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       El proyecto tuvo varias fases. Lo más difícil fue instalar todo en el <strong>ESP32</strong>, entrenar el modelo y corregir los detalles, ya que la cámara del ESP tenía varios problemas con la luz, el ángulo y la distancia. Hubo que hacer muchas pruebas para ajustar correctamente las variables del modelo.
     </p>
     <div class="flex flex-col items-center mb-6">
       <img src="/assets/./experimentos_images/emb1.png" alt="Esquema de funcionamiento del proyecto" class="w-1/2">
       <p class="mt-2 text-lg text-center">Esquema de funcionamiento del proyecto</p>
     </div>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Para entrenar la IA, usamos <strong>dos datasets de Kaggle</strong> y un código de entrenamiento de <strong>redes convolucionales (CNN)</strong> con modificaciones para clasificar tres categorías: <strong>Nada, Auto y Moto</strong>.
     </p>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Se usaron dos conjuntos de datos para evitar el <strong>overfitting</strong>, y sorprendentemente, logramos cerca de <strong>95% de precisión</strong> en las pruebas, incluso aplicando filtros a las imágenes para simular las condiciones reales del ESP32.
     </p>
     <h2 id="13-demo" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #db0080">
       1.3 Demo
     </h2>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Para la demostración final, tuvimos que preparar un <strong>paper</strong>, un <strong>póster científico</strong> y una <strong>demo en vivo</strong>, donde utilizamos vehículos de juguete semirrealistas. A pesar de algunas imprecisiones, el sistema funcionó dentro de los márgenes esperados.
     </p>
     <div class="flex flex-col items-center mb-6">
       <img src="/assets/./experimentos_images/emb_poster.png" alt="Póster científico sobre el proyecto (En inglés)" class="w-1/2">
       <p class="mt-2 text-lg text-center">Póster científico sobre el proyecto (En inglés)</p>
     </div>
-    <p class="mb-6 text-lg">
+    <p class="mb-12 text-lg leading-9">
       Al final nos fue muy bien, y aunque gran parte del trabajo lo realizó quien tenía acceso al <strong>ESP32</strong> (pues solo teníamos uno), todos colaboramos en las entregas y la presentación.
     </p>
 
