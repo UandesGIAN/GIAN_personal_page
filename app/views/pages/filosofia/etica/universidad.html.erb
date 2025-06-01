@@ -10,16 +10,430 @@
 
 <%= @indice_content %>
 
+<!-- ESTRUCTURA -->
 <div class="text-container max-w-7xl mx-auto mt-20 px-4 flex flex-col pb-8">
   <section id="bg-articulos" class="p-6 
     <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %> 
     <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
     rounded-2xl shadow-md flex-grow">
+    <!-- TÍTULO -->
     <h2 class="text-4xl sm:text-3xl lg:text-5xl text-center font-bold mb-4 text-gray-500">1. Universidad</h2>
 
-    <p class="mb-6 text-lg">
-      <i>Work In Progress...</i>
+    <!-- INTRODUCCIÓN -->
+    <p class="mb-12 text-lg leading-9">
+      Durante el primer semestre del segundo año de mi carrera en la universidad tenía que realizar un curso de ética. Aquí se recopilan los temas más relevantes que se enseñaron y apunté en ese entonces, también reflexiones personales.
     </p>
+
+    <!-- INDICE -->
+    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-40 text-center font-bold mb-4 text-gray-500">Índice</h2>
+    <div class="flex justify-center mb-40 text-gray-500">
+      <ul class="list-disc text-lg">
+        <li><a href="#11-opinión-del-curso" class="text-xl mt-2 text-center font-bold mb-4 underline text-gray-500">1.1 Opinión del curso</a></li>
+        <li><a href="#12-introducción" class="text-xl mt-2 text-center font-bold mb-4 underline text-gray-500">1.2 Introducción</a></li>
+        <li><a href="#13-ética-desde-la-fragilidad" class="text-xl mt-2 text-center font-bold mb-4 underline text-gray-500">1.3 Ética desde la fragilidad</a></li>
+        <li><a href="#14-ética-tradicional" class="text-xl mt-2 text-center font-bold mb-4 underline text-gray-500">1.4 Ética tradicional</a></li>
+        <li><a href="#15-controles-en-clase-y-preguntas" class="text-xl mt-2 text-center font-bold mb-4 underline text-gray-500">1.5 Controles en clase y preguntas</a></li>
+        <li><a href="#16-resumen-personal" class="text-xl mt-2 text-center font-bold mb-4 underline text-gray-500">1.6 Resumen personal</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTENIDO -->
+    <h2 id="11-opinión-del-curso" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4 text-gray-500">
+      1.1 Opinión del curso
+    </h2>
+    <p class="mb-12 text-lg leading-9">
+      Inicialmente no tenía ningún interés en la materia, recuerdo haberla adelantado pues en realidad se debía tomar en el segundo semestre, pero tenía cupos libres y al ser una asignatura de 3 créditos la adelanté para quitármela de encima como hizo un amigo. Las clases eran los viernes a las 8:30 am, y luego de ellas tenía otra asignatura de formación personal, mi minor "AFECTOS Y RELACIONES EN LA CONSTRUCCIÓN DE UNA PERSONALIDAD SALUDABLE". Pero en fin, a lo que voy es que no tenía expectativas de disfrutar u odiar el curso, simplemente lo hice porque tocaba. Nunca me disgustó la filosofía, sobre todo cuando la estudié en mi escuela, pero todos en ese entonces sabiamos que gran parte del crédito lo tenía mi profesor, quien hacía clases muy interesantes y entretenidas.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Y bien, cuando comencé a ir cada viernes a clase, pues siempre fuí responsable con la asistencia dado que desde pequeño me lo inculcaron. Me lleve una grata sorpresa al encontrar a algunos conocidos, así como que pese a que el primer día el profesor llegó tardé, su tono de voz, actitud e iniciativa, así como humor y propuestas, no se, me interesaron y aquello provocó que disfrutase en demasía el curso. Era no solo una clase de historia antigua y formación civíl, sino sobre todo una especie de terapia y ayuda semanal, una guia, una postura sobre el bien y la justicia, sobre el próposito y lo correcto. A muchos no les gustaba la asignatura, o eso creo, pero yo realmente la disfruté incluso mucho más que varias asignaturas de mi carrera profesional. Algo gracioso del profesor que recuerdo es que la primera clase mencionó que no respondía correos ni mensajes directos, sólo aparecería y "existía" en la sala de clases los viernes a las 8:30. Además que las clases eran más cortas de lo habitual, pues la última hora era para realizar controles "de asistencia". Les digo así porque tan solo por hacerlos ya era la nota máxima, lo destacable es que eran controles personales, las respuestas eran de introspección y reflexión personal. El profesor simplemente evaluaba si realmente pensabas en serio o no, y es que de eso se trata la filosofía y la ética, en pensar y definir lo que uno es, quiere ser y le parece lo correcto o positivo. Pero bien, claro que hubo pruebas, tareas y actividades, pero las clases eran breves, algunas muy interesantes y de reflexión interesante, pero sobre todo, muy útiles si se piensa más allá del texto.
+    </p>
+    <h2 id="12-introducción" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4 text-gray-500">
+      1.2 Introducción
+    </h2>
+    <p class="mb-12 text-lg leading-9">
+      Para introducirnos en la ética el profesor exploró definiciones y conceptos previos. Entre ellos estaba el de filosofía. El cual se explicó que provenía del griego y significaba "Amor a la Sabiduría".<br>Adjunto parte de mis anotaciones de esta introducción, la cual se extiende hasta entender el objetivo de la filosofía y la relación con la ética.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      ¿Alguien que ama a la sabiduria, la tiene?... No necesariamente. El filosofo sabe que no tiene ese "algo", pero lo busca.<br>Para Pitágoras, ser filosofo era ver con la mente. Mientras que para Platón corresponde a buscar conocer más, es la naturaleza humana.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Sobre la ética, hay mucha gente que juzga y nota la moral de las personas. Sin embargo, es DIFICIL reflexionar en temas éticos, si se parte de la base de lo que está "bien" y "mal", se debe analizar el origen, de donde proviene esa base, ¿Cómo vas a aprender por tu cuenta si es algo que ya conoces?
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      La vida humana se puede comparar con los juegos olimpicos y se encontrarían similitudes. Cada participante tiene un rol con un objetivo a cumplir. Los atletas tienen como objetivo Ganar. El público, ver el espectáculo. Y los Vendedores, obtener dinero. Ya se vió que ser filosofo está vinculado a la vida humana, así, el filosofo tiene como objetivo ver con la mente, y obteniendo con ello y simplemente con ello su satisfacción. Pensar, Analizar, Reflexionar...<br>Según Platón, pensar es el dialogo entre el alma y su mente. Todos somos pensadores, el simple hecho de detenerse y reflexionar un poco sobre cualquier asunto.<br>Con todo esto en mente, durante este curso se verán 2 posturas sobre la ética. La <strong>ética desde la fragilidad</strong>, y la <strong>ética desde lo tradicional</strong>.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Todos los seres humanos aman a la sabiduría, piensan. Son filosofos. Los que no lo son son Dioses (Ya saben todo) o seres sin conciencia (Son ignorantes, no saben que son ignorantes). La combinación de ambos, es el ser humano, aquel que es ignorante, pero puede saber, y es consciente de ello. Ser filosofo significa ser humilde, pues se sabe que se es ignorante.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      CONDICIONES DE LA FILOSOFÍA.
+    </p>
+    <ul class="mb-12 text-lg leading-9">
+      <li class="items-center flex">
+        <p>1. Para pensar se necesita <strong>Razón</strong>. Esto es común para todos los seres humanos.</p>
+      </li>
+      <li class="items-center flex">
+        <p>2. Tener las necesidades materiales satisfechas. Esto no es común para todos (ej. Estar estudiando en una universidad, no se necesita comer, dormir, abrigarse o beber, se tienen las necesidades materiales resueltas).</p>
+      </li>
+      <li class="items-center flex">
+        <p>3. Tener tiempo, capacidad de ocio (Actividades no renumeradas). Tampoco es común para todos, no todos se dedican en forma sistemática a la reflexión.</p>
+      </li>
+    </ul>
+    <p class="mb-12 text-lg leading-9">
+      CAUSAS DE LA FILOSOFÍA
+    </p>
+    <ul class="mb-12 text-lg leading-9">
+      <li class="items-center flex">
+        <p>1. Algo que sorprende y te hace pensar. Una conmoción interior que provoca una reflexión. La naturaleza hace pensar, es una experiencia espiritual, puede hacerte pensar y cambiar.</p>
+      </li>
+      <li class="items-center flex">
+        <p>2. Cuando algo me sorprente:</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>Factor emocional</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>Factor intelecual</p>
+      </li>
+    </ul>
+    <p class="mb-12 text-lg leading-9">
+      La dispoción de la mente a reflexión, eso es lo que permite abarca la ética. Un ser humano es discursivo, da discurso, discurso racional para decir lo que siente.
+    </p>
+    <h2 id="13-ética-desde-la-fragilidad" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4 text-gray-500">
+      1.3 Ética desde la fragilidad
+    </h2>
+    <p class="mb-12 text-lg leading-9">
+      Cuando hablamos de ética, debe entenderse que se refiere a cómo nos comportamos. Nuestro comportamiento está regido por nuestro sentido de la vida. Con esto en mente, la vida es un camino de busqueda hacia el sentido de ella.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Este camino puede analizarse desde dos posturas:
+    </p>
+    <ul class="mb-12 text-lg leading-9">
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>Desde el Deber ser: ¿Cómo debería ser? Parte desde un ídeal, acuerdos sociales y presiones externas sobre lo que se espera de uno mismo.</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>Desde el ser (Lo que es): ¿Cómo soy realmente? Parte desde la realidad, desde uno mismo.</p>
+      </li>
+    </ul>
+    <p class="mb-12 text-lg leading-9">
+      Aún así, aquí, el deber ser tiene un problema, y es que parte desde un ídeal, se fija un "norte", una seguridad, pero ese camino puede ser irreflexivo, no pasa por uno mismo, si por algún motivo no se puede cumplir el ideal, el resultado será sólo de frustración y aquello puede provocar cambios en el norte, o también las influencias externas pueden hacerlo cambiar. Si el ideal es demasiado rígido y externo, muy probablemente termine ocultado el Ser, lo que provoca la frustración tras el fracaso.<br>Además, el camino del querer ser, es elegir entre el deber ser y el ser.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Y bien, analizando el camino del ser, debemos remontarnos a lo dicho por San Pablo (Religión cristiana): "Porque cuando soy debil, entonces soy fuerte".<br>Esto significa que si aceptas tu debilidad, tendrás más fuerza.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      La vida es un camino en busqueda del sentido de vivirla. Este sentido forja un ESTILO DE VIDA (ética):
+    </p>
+    <ul class="mb-12 text-lg leading-9">
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>Disposición del carácter de actuar de cierta manera.</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>El sentido se basa en metas u objetivos.</p>
+      </li>
+    </ul>
+    <p class="mb-12 text-lg leading-9">
+      ¿Si el sentido es el placer, que estilo de vida forjo?<br>Con lo dicho anteriormente, hay 2 opciones para deciri un norte, un estilo de vida, una ética.<br>Desde el deber ser inicias con un ideal externo, demasiado grande y desvinculado a lo que se es. Da seguridad, pero dejas de verte a tí, cuando fracasas, sólo ves frustración, ¿No es lo que eres y quieres realmente?<br>En cambio, desde el ser, inicias desde tu propia identidad "¿Quien Soy? ¿Porque soy así? ¿Qué me gusta?", desde tu realidadd existencial, es concreta, no cambia fácilmente. Es Máxima, pero para serlo, el "norte" (Propósito) debe ser lo suficientemente vivificante como para dar sentido a la vida, si lo es, mi estilo de vida (ética), es coherente con quien se es. Aunque se fracase, eso sólo será un aprendizaje para lograr la meta, te volveras a levantar. Despues de todo, nadie llega a la verdad si no es por el propio conocimiento que se adquiere.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Bien, sin embargo, ¿Cómo se puede determinar el sentido de la vida para dar origen a esta ética? ¿Cuál es mi ética?<br>Para responder ello se debe explorar la realidad existencial y concreta (filosofica).
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      <strong>¿Qúe es el ser humano?</strong><br>El mundo esta conformado de seres vivos y no vivos (muertos). Los seres vivos tienen en común que poseen UNIDAD, son ÚNICOS. Poseen automovimiento, autorealización e inmanencia (poseen memoria). Explorandolo más a fondo, los seres vivos son un único ser porque todas sus partes las hacen lo que son, no es relativo como con los objetivos inanimados. Pueden moverse por cuenta propia, están vivos, pueden deslegarse en el tiempo con etapas, poseen desarrollo, autorealización, crecen y evolucionan. Y finalmente y principal, poseen un mundo interior, capacidad de guardar realidad, de tener memoria (En caso de microorganismos y plantas, memoria material, supervivencia. En el caso de animales hasta pueden tener memoria sensible, recuerdos de su vida).<br>La particular diferencia entre seres vivos y seres humanos es que el humano capta la esencia de las cosas. Esta postura de la vida y el mundo, es la que se propone en la filosofía clásica. Sin embargo, está va más allá, y es que respecto a la inmanencia, existe una jerarquia en el orden natural de los seres vivos, la cual está, determinada según la interiorisidad de su inmanenica, de su mundo interior.<br>Seres vegetales (Seres vivos) < Seres animales (Seres sensibles, 5 sentidos, también sensibilidad interna, placer y dolor) < Seres humanos (Seres racionales, lo anterior, pero es consciente de ello).<br>Los sentidos internos de los seres animales y racionales son la Percepción (Unificar datos sensibles en un objeto), la Imaginación (Recordar y combinar las unificaciones), Estimación (Asociar las imagenes con placer o dolor) y la Memoria (Recordar las estimaciones).
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Sin embargo, el ser racional además posee Razón y Voluntad, Es capaz de captar el ser con independencia de la necesidad biologica, el porqué o para qué de las cosas, es curioso y busca saber, busca encontrar lo que conecta a todas las cosas.<br>Por lo tanto, la razón permite acceder a sentidos intelectuales:
+    </p>
+    <ul class="mb-12 text-lg leading-9">
+      <li class="items-center flex">
+        <p>1. Captar el concepto.</p>
+      </li>
+      <li class="items-center flex">
+        <p>2. Unir el concepto mediante la palabra, definir el ser, someterlo a juicio.</p>
+      </li>
+      <li class="items-center flex">
+        <p>3. Unir el juicio, realizar un razonamiento.</p>
+      </li>
+    </ul>
+    <p class="mb-12 text-lg leading-9">
+      En cambio, la voluntad corresponde a la capacidad de hacer el bien, presentado desde la razón, independientemente de la necesidad biológica. Es decir, pueden detenerse los impulsos naturales (animal), y elegir. El humano es animal, pero posee voluntad para autocontrolarse y elegir. Es por estos dos sentidos que el ser humano es el único ser vivo capaz de escribir su propia historia de vida.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Este consenso sobre la naturaleza del ser humano, puede ser representado con el mito del carro alado de Fedro, por Platon.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      <strong>Mito del Carro Alado</strong><br>La auriga representa la razón, ve el norte (Lo "bueno"), mientras que el caballo blanco representa la voluntad, aquella fuerza para acomodar a la auriga y orientar al otro caballo, el cabello negro representa los deseos sensibles (energía).
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      SABIDURÍA - FORTALEZA - TEMPLANZA.<br>La sabiduría aplica justicia sobre la fortaleza y la fortaleza sobre la templanza. Tal que la templanza obedece a la fortaleza y la fortaleza, a la sabiduria. El valor, la fortaleza, es un alma irascible que representa los impulsos, la voluntad. Mientras que la templanza son aquellos deseos, un alma concupiscible.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      La ética es ser quien se es, en función de cómo debe uno comportarse. La voluntad me incita el deseo... "No hago el bien que quiero y hago el mal que no quiero".<br>Entender al ser humano es complejo, la participación activa entre razón y voluntad, así como el sentimiento, que regula la voluntad, razón y deseos... es diferente en cada humano.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Los sentimientos corresponden a una realidad estrictamente humana, donde se unan la dimensión racional y espiritual y la dimensión corporal y racional.<br>Los sentimientos corresponden a una realidad sobre la cual no hay cobierno despotico, sino solo ejercicio politico.<br>Es imposible gobernar los sentimientos, pero con razón y voluntad uno puede ser conciente y ser quien se es, a través de la ética.<br>Así, es posible realizar pequeñas acciones con razón y voluntad, para controlar tus sentimientos. Puedes expresarlos a través de un díalogo interno (Autocontrol). Puedes reprimirlo, aunque aquello solo formaría una "bomba de tiempo" donde a la larga no podrías contenerlo más, aunque si el sentimiento atenta contra otro, es la opción correcta, pero de alguna u otra forma debe expresarse, y allí está la tercera alternativa, expresarlo al exterior, que se te escuche y conozca.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      <strong>Anselm Grün, monje escritor</strong>
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      "Ética desde la fragilidad", relación con la espiritualidad: Desde arriba (El deber ser; Cómo debo comportarme) o Desde abajo (El Ser; Realidad existencial, aceptar quien se es).
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Desde el tradicional cristianismo la santicidad lleva a la perfección, y para ello, basta con esfuerzo (Un acto absoluto desde la voluntad), lo cual se consigue a través de las virtudes y la ascética.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Sin embargo, ¿Es esto realmente asi? Alguien santo es quien tuvo la voluntad para dedicarse a actividades y a una vida sagrada... exacto, es santo no por que es o fue perfecto, sino porque aceptó quien es.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Inicialmente se habló del deber ser como un ideal que perseguir el cual podría llevar a constantes fracasos que siempre terminarían en frustración y hasta arrepentimiento. Pero cuando se acepta quien es y se define un norte desde la realidad existencial, la humillación ante fallas y ser insuficiente, se convertiran en aprendizaje, es la voluntad, la gracia. "A mayor debilidad, más queda en manifiesto la eficacia de la gracia" El ser no es mera fuerza de voluntad, CUANDO SE ES DÉBIL, ENTONCES SE ES FUERTE, se halla fortaleza en la gracia del aprendizaje, sin necesidad de esforzarse.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      No existe algo como "SER más fuerte", es a partir de la experiencia, de episodios de fragilidad, que se logra ver cúanto y cómo se puede remontar para alcanzar una plenitud. PARA APRENDER HAY QUE DESCENDER. Sólo se llega a una plenitud cuando uno vuelve a uno mismo. La madurez se alcanza llegando a ese descenso.
+    </p>
+    <h2 id="14-ética-tradicional" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4 text-gray-500">
+      1.4 Ética tradicional
+    </h2>
+    <p class="mb-12 text-lg leading-9">
+      Ahora veamos la ética desde el DEBER SER, la ética clásica. Esta se compone de virtudes: Prudencia, Fortaleza, Templanza y Justicia.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      La ética proviene de <i>ethos</i>, lo que significa carácter, osea, modo de ser. Es la "costumbre".<br>La costumbre posee una estricta relación con la moral.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      "La ética es el estrudio del comportamiento humano orientado a su perfeccionamiento o plenitud, es decir, su felicidad".<br>Antiguamente el poder se obtenia únicamente a través del discurso, del convencimiento. Esto es lo que se conoce como rétorica. Los sofistas eran "sabios" que enseñaban a hablar bien, tal de convencer independientemente de lo que es bueno o malo. Eso es lo que se comprendía como VIRTUD.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      El objeivo de la virtud sólo es alcanzar el poder, independiente de lo "bueno o malo", pues aquello realmente "no existe" (son tradiciones). En sociedad, lo que se considera buenom, lo es cúando la gran mayoría lo piensa (Es un acuerdo), no hay un motivo moral detrás (Como hacían los sofistas).
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Fue en esa época que Sócrates hizo de opositor y reinterpreta el concepto de VIRTUD: "Autodominio de las pasiones conforme a la razón". La virtud busca el cuidado del alma o el "interior" del ser humano. Con esto, se supone una LEY, la cual el ser humano debe DESCUBRIR y APLICAR en ÉL, LE GUSTE O NO, pues le hace pleno en el mediano-largo plazo. Esto es lo que desde entonces se definió cómo ética desde el debber ser, o al menos, ese fue su origen y lo que buscaba ser, una ley para mantener armonía y autodominar las pasiones usando razón y voluntad, le guste o no a cada persona.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      La ley fue mutando en cada era, pero se conoce como ÉTICA DE LA VIRTUD. Esta fue adquirida posteriormente por la tradición cristiana en su propia reflexión.
+    </p>
+    <ul class="mb-12 text-lg leading-9">
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>Plantea que el ser humano tiene un mecanismo para perfeccionarse: Virtud.</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>La virtud se aplica siguiendo una ley que lo orienta: Ley Natural.</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>Básicamente una estructura correcta del funcionamiento del alma humana.</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>Armonía: Auriga, caballo blanco y negro -> Lo que es "correcto" (Autocontrol).</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>La virtud busca el perfeccionamiento humano: Felicidad.</p>
+      </li>
+    </ul>
+    <p class="mb-12 text-lg leading-9">
+      Con esto, la virtud, se convierte en un habito operativo (lo que es bueno): "Repetición de actos que se convierten en una manera de ser que otorga facilidad para ejecutar acciones, y que a su vez se vuelve dificil de erradicar."<br>La virtud es un habito bueno porque tiende a la perfección, a través de la repetición.<br>La virtud que mantiene la balanza entre los 2 extremos en los vicios, es llamada JUSTO MEDIO. Los vicios por defecto son provocados cuando falta voluntad, cobardía. Mientras que los vicios por exceso corresponden a temeridad, acciones imprudentes. El justo medio es lo que se conoce como PRUDENCIA, el punto medio entre valentía y fortaleza. Esta es ESENCIAL para saber cómo operar las distintas dimensiones del ser humano. Esto mismo es de lo que hablaba el mito del carro alado. La auriga es la razón, se perfecciona a través de la virtud de la PRUDENCIA. Mientras que el caballo blanco corresponde a la voluntad, se perfecciona con la FORTALEZA (Estar dispuesto a sufrir para conquistar o defender el bien). Y el caballo negro representando los deseos, se perfecciona con la TEMPLANZA (Controlar los deseos). Y los 3 juntos, forman lo que es la JUSTICIA "Dar a cada uno, lo que es suyo".
+    </p>
+    <h2 id="15-controles-en-clase-y-preguntas" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4 text-gray-500">
+      1.5 Controles en clase y preguntas
+    </h2>
+    <p class="mb-12 text-lg leading-9">
+      A continuación comparto todas las preguntas que fueron realizadas en pruebas y controles de la asignatura, o bueno, las que pude recuperar.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      <strong>PREGUNTAS PERSONALES</strong>
+    </p>
+    <ul class="mb-12 text-lg leading-9">
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>Elija una serie, pelicula, libro, música o videojuego que le guste mucho. Y narre en primera persona la historia o una escena/momento que le haya llamado la atención. ¿Qué sentimiento le provoca?</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>¿Qué cosas le hacen reflexionar? ¿Por qué?</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>Situese a los 80 años. Relate su vida.</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>Respecto a los 5 sentidos básicos, indique brevemente que sensación o persepción particular para cada uno lo asocia al placer o algo positivo. Luego, indique cual es el que predomina sobre los demás ¿Por Qué?</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p>¿Qué piensa mientras está aburrido en clase?</p>
+      </li>
+    </ul>
+    <p class="mb-12 text-lg leading-9">
+      <strong>PREGUNTAS TEÓRICAS</strong>
+    </p>
+    <ul class="mb-12 text-lg leading-9">
+      <li class="items-center flex">
+        <p>1. ¿Qué significa la expresión "Amor a la sabiduría"? Utilice en la explicación la analogía con los juegos olimpicos de Pitagoras y el Mito de Eros de Platón.</p>
+      </li>
+      <li class="items-center flex">
+        <p>2. Distinga las aproximaciones éticas desde el "deber ser" y el "ser". Explique cada una de las posiciones.</p>
+      </li>
+      <li class="items-center flex">
+        <p>3. Indique dos carácteristicas que vinculan al ser humano con otros seres vivos.</p>
+      </li>
+      <li class="items-center flex">
+        <p>4. Haga una breve caracterización de la vida vegetal, sensitiva y racional.</p>
+      </li>
+      <li class="items-center flex">
+        <p>5. Explique el mito del carro alado, y dé un ejemplo de cómo se vive la armonía o tensión en el interior del ser humano.</p>
+      </li>
+      <li class="items-center flex">
+        <p>6. En el contexto del curso, hemos realizado constantes reflexiones sobre la sentencia "Conócete a tí mismo", ¿Cree que le han aportado? Justifique.</p>
+      </li>
+    </ul>
+    <h2 id="16-resumen-personal" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4 text-gray-500">
+      1.6 Resumen personal
+    </h2>
+    <p class="mb-12 text-lg leading-9">
+      Con todo lo mencionado anteriormente, debo decir que durante este curso aprendí el origen de la ética, cómo y porqué se estudia, qué se entiende por ética, qué es la ética desde la fragilidad y desde lo tradicional, que es la filosofía, condiciones de la filosofía, causas de la filosofía, qué es la ética, el deber ser y el ser, reflexiones internas a mano, qué es el ser humano, que compone la realidad, el mito del carro Alado, el discurso y su relación con la ética, ética de la virtud, las cuatro virtudes, “Cuando estoy débil, entonces soy fuerte” y las bases de una conducta ética. Esto mediante las clases de mi profesor, las participaciones en clases, algunos textos que compartió mi profesor, las reflexiones tipo control de la asignatura y la prueba del curso. Fue una asignatura que aportó mucho a mi persona, y que me dejó con ganas de aprender más al respecto y sobre todo, las aplicaciones de esta teoría y por qué es lo “correcto”, qué hacer ante aquellos que no la comparten y cómo aportar positivamente a otros para que sea partícipe de la misma. Fue a la clase final, donde quizá hubiese podido solventar estas dudas, a la que no pude ir, y eso es lo único que me dejó insatisfecho, así como que no tuvimos clases durante junio… pero a pesar de ello, los aprendizajes y lecciones me los llevo para reflexionar y aprender por mi cuenta los usos de estos conocimientos tan vastos e importantes que aprendí durante el curso:
+    </p>
+    <ul class="text-lg font-bold">
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Es contraproducente reflexionar en temas éticos/morales, si desde el principio se parte de la base de conocer lo que está “bien” o “mal” ”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “El filósofo ve con la mente, obteniendo con ello su satisfacción. Pensar”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “La Fragilidad da Fortaleza”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “El ser humano es filósofo, es HUMILDE”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “La capacidad de sentir es mucho más compleja de lo que creemos”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Ética -> cómo nos comportamos (estilo de vida) -> La vida cómo el camino de búsqueda al sentido de ella”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Lo que quiero ser, es elegir entre el Deber Ser (Ideal) y el Ser (Yo)”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Mantener a margen los ideales autoimpuestos y no olvidar el Quién Soy, evitar la frustración”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Acepta tu debilidad, entonces ganarás fuerza”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “A veces el ideal está muy lejos de quien soy”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Nadie llega a la verdad si no es por el propio conocimiento”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Para tener una ética coherente con quien soy, es necesario poseer un objetivo lo suficientemente vivificante para dar sentido a la vida”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “El animal es más de lo que creemos”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “La vida animal tiene fines impuestos por la naturaleza que siempre se ejecutarán si se dan las condiciones necesarias”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Sin razón ni voluntad, no habría amistad (por virtud)”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “La voluntad implica no hacer el mal que no quiero, y hacer el bien que quiero”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “El ser humano es el único que tiene la capacidad de “escribir” la propia vida”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Sabiduría/Razón -controla los- | Impulsos/Voluntad -limita los- Deseos (sin esfuerzo, mayor satisfacción)”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “El gran peligro para un profesor con vocación, es perpetuarse con el alumno”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Los sentimientos son enormes, pero exageran mucho las cosas”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “En función de cómo te conoces a ti mismo, actúas”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Los sentimientos son un área ignorada, pero muy fuerte, es donde la dimensión racional-espiritual y la dimensión corporal-racional se unen”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “El esfuerzo es el acto absoluto de la voluntad”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “El Ser no es mera fuerza de voluntad, es Gracia (aceptar quien se es con voluntad y entendimiento)”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Para aprender hay que descender, y llegando a ese descenso, se puede alcanzar la Madurez”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “La moral es la costumbre. La retórica es la habilidad de expresarse y convencer independiente de lo bueno/malo. El bien y el mal es una convención. Y la virtud, busca el cuidado del alma (interior) del Ser, la felicidad”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Uno se equivoca cuándo no alcanza el autodominio”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “La prudencia es el Justo medio (punto medio entre dos extremos), poner en práctica “lo bueno” ”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Prudencia <-> Razón | Fortaleza <-> Voluntad | Templanza <-> Deseos”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “La justicia es dar a cada uno lo suyo, con prudencia, fortaleza y templanza”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “Es la cantidad de tiempo lo que produce la experiencia”
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        “CUANDO SOY DÉBIL, ENTONCES SOY FUERTE”
+      </li>
+    </ul>
 
     <div class="flex justify-end">
         <div>
