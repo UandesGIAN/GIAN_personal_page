@@ -197,7 +197,7 @@
       menu.classList.toggle('hidden'); 
 
       // Rotar la flecha
-      icon.classList.toggle('rotate');
+      icon.classList.toggle('rotate-180');
     });
 
     // EFECTOS VISUALES
@@ -359,7 +359,7 @@
 
       if (!menu.contains(event.target) && !button.contains(event.target)) {
         menu.classList.add("hidden");
-        icon.classList.remove("rotate");
+        icon.classList.remove("rotate-180");
       }
       if (!menuMobile.contains(event.target) && !buttonMobile.contains(event.target)) {
         menuMobile.classList.add("hidden");

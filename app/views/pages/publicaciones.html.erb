@@ -12,8 +12,37 @@
 <div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
   <section class="p-6 text-gray-800">
     <div class="space-y-8">
-        
+    
         <!-- PUBLICACIONES -->
+        <div class="flex items-start space-x-6 <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %>
+            <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
+            p-6 rounded-2xl shadow-lg">
+            <div class="flex-shrink-0">
+                <%= image_tag "GIANlogo.png", alt: "Mi Logo", class: "rounded-full h-16 w-16" %>
+            </div>
+            <div class="flex-grow">
+
+                <div class="flex justify-between items-center mb-4">
+                    <span class="font-semibold text-lg">GIAN (Creador de la página)</span>
+                    <span class="text-sm text-gray-500">Domingo 31, Mayo, 2025</span>
+                </div>
+
+                <div class="prose text-lg leading-9">
+                    <p>¡Hola a quien sea que lea esto!<br>Tras unas semanas agitadas, no estoy seguro al 100% pero creo que ya esto listo para pasar a trabajar
+                        en la <a href="/versiones" class="text-blue-700 underline">versión alpha 0.4</a> de la página, donde actualizaré MUCHO la sección
+                        <a href="/filosofia" class="font-bold filosofia-home underline">Filosofia de GIAN</a> y tengo pensado agregar una que otra sección en 
+                        <a href="/proyectos" class="font-bold text-blue-700 underline">MIS PROYECTOS</a>.<br><br>
+                        Hasta entonces, espero que tengan interés y el resultado mejore la página web :)<br>
+                    <br>¡Hasta pronto!</p>
+                    </p>
+                </div>
+                
+                <div class="mt-4 text-left text-sm text-gray-500">
+                    <p>- GIAN</p>
+                </div>
+            </div>
+        </div>
+
         <div class="flex items-start space-x-6 <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %>
             <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
             p-6 rounded-2xl shadow-lg">
@@ -30,7 +59,7 @@
                 <div class="prose text-lg leading-9">
                     <p>Ha sido un largo tiempo... He estado ocupado con intenciones de volver a hacer alguna que otra cosa en mi proyecto de 
                         <a href="/proyectos/mikumikudance" class="font-bold underline text-mmd" style="color:#26BAF5;">MikuMikuDance Splatoon</a>, pero ahora tengo ganas 
-                        añadir alguna que otra cosa a la página y sobretodo, actualizar el apartado de <a href="/versiones" class="font-bold filosofia-home underline">Filosofia de GIAN.</a><br>
+                        añadir alguna que otra cosa a la página y sobretodo, actualizar el apartado de <a href="/filosofia" class="font-bold filosofia-home underline">Filosofia de GIAN.</a><br>
                         <br>Esta ya sería la <a href="/versiones" class="text-blue-700 underline">versión alpha 0.4 del sitio web..</a>. Pero creo que antes intentaré mejorar algunas cosas visuales y estéticas. Es curioso pensar que no quedan muchos más 
                         registros que esto que escribo, sobre cómo se veía la página en cierta versión. Al menos como constancia puedo comprometerme a que cada versión sea mejor que la anterior, al menos en 
                         lo estético.<br><br>En fin, los mantendré al tanto, a propósito, me gustaría saber si hay algo que les gustaría ver en el sitio, así que no duden en contactarme por mis redes sociales.<br>
