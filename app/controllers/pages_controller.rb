@@ -26,13 +26,8 @@ class PagesController < ApplicationController
     
     # Lista de subsecciones nuevas
     @new_subsections = {
-      "Youtube" => ["Mejores Trabajos", "GIAN Random"],
-      "MikuMikuDance" => ["Origen", "WoomyGIAN", "EL TUTORIAL DE MMD SPLATOON DEFINITIVO"],
-      "Música" => ["Remixes que he imaginado en mi cabeza", "Mashups realizados"],
-      "Rankings" => ["Los MEJORES capítulos de algunas series que he visto", "TOP 3 Canciones X Tipo", "Todos los Videojuegos que he PROBADO y COMPLETADO", "Mis Canales de Youtube Preferidos"],
+      "Dibujos" => ["2015", "2016", "2017", "2018-19", "2023-24"],
       "PC" => ["Mi setup (historia)"],
-      "Electrónica" => ["Reparar enchufes y cables", "Adaptadores y Extensores", "Enchufe 220V portátil", "Luces LED"],
-      "Universidad" => ["Sistemas Embebidos", "Reconocimiento de gestos para apertura de casilleros"],
     }
 
     @indice_content = render_to_string(partial: "shared/indice", locals: {
@@ -98,9 +93,17 @@ class PagesController < ApplicationController
     "LAS MANERAS" => ["Teoría", "Aplicaciones"],
     "LOS ELEMENTOS DE VIDA" => ["Las definiciones", "Los Apartados Esenciales de Vida", "Las Sub-formas de vida", "Los Estados Compuestos", "El Ser Total", "Sobre la Amistad"],
     "Ética" => ["Universidad", "Por Gian"],
-    "Teología" => ["Universidad I (Teologia I)", "Universidad II (Teologia II)", "Universidad III (Teologia III Desafios Sociales del Cristianismo)"],
+    "Teología" => ["Universidad I (Teología I)", "Universidad II (Teología II)", "Universidad III (Teología III Desafios Sociales del Cristianismo)"],
     "Arte" => ["Universidad (La belleza del Arte)"],
     "Psicología" => ["Universidad I (Los afectos y su relación con la construcción de una personalidad madura y saludable)", "Universidad II (Sociedad y Personalidad)", "Universidad III (Psicología Positiva)"],
+    }
+
+    @new_subsections = {
+      "LOS ELEMENTOS DE VIDA" => ["Las definiciones", "Los Apartados Esenciales de Vida", "Las Sub-formas de vida", "Los Estados Compuestos", "El Ser Total", "Sobre la Amistad"],
+      "Ética" => ["Universidad", "Por Gian"],
+      "Teología" => ["Universidad I (Teología I)", "Universidad II (Teología II)", "Universidad III (Teología III Desafios Sociales del Cristianismo)"],
+      "Arte" => ["Universidad (La belleza del Arte)"],
+      "Psicología" => ["Universidad I (Los afectos y su relación con la construcción de una personalidad madura y saludable)", "Universidad II (Sociedad y Personalidad)", "Universidad III (Psicología Positiva)"],
     }
 
     @indice_content = render_to_string(partial: "shared/indice", locals: {

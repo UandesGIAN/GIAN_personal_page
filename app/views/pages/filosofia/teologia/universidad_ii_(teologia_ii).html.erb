@@ -17,12 +17,270 @@
     <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
     rounded-2xl shadow-md flex-grow">
     <!-- TITULO -->
-    <h2 class="text-4xl sm:text-3xl lg:text-5xl text-center font-bold mb-" style="color: #58A7A4;">2. Universidad II (Teologia II)</h2>
+    <h2 class="text-4xl sm:text-3xl lg:text-5xl text-center font-bold mb-4" style="color: #58A7A4;">2. Universidad II (Teología II)</h2>
+
+    <!-- INTRODUCCION -->
+    <p class="mb-12 text-lg leading-9">
+      Bueno, el <u style="color:#58A7A4;"><%= link_to 'apartado 1', filosofia_subsection_path(section: 'teologia', sub_section: 'universidad_i_(teologia_i)')%></u> fue sobre todo lo que tenía sobre Teología I. De Teología II tengo algo más, pero me es menos relevante, ya que se centra mucho en la historia de Jesucristo, sus milagros y por qué es el Mesías.
+    </p>
+
+    <!-- INDICE -->
+    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-40 text-center font-bold mb-4" style="color: #72b5b3">Índice</h2>
+    <div class="flex justify-center mb-40" style="color: #72b5b3">
+      <ul class="list-disc text-lg">
+        <li><a href="#21-introducción" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #72b5b3">2.1 Introducción</a></li>
+        <li><a href="#22-la-historia-de-jesus" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #72b5b3">2.2 LA HISTORIA DE JESUS</a></li>
+      </ul>
+    </div>
 
     <!-- CONTENIDO -->
-    <p class="mb-6 text-lg">
-      <i>Work In Progress...</i>
+    <h2 id="21-introducción" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #72b5b3">
+      2.1 Introducción
+    </h2>
+    <p class="mb-12 text-lg leading-9">
+      La debilidad humana es el episodio de la historia que narra cómo quedamos después del pecado original. Surge el problema: ¿qué es lo correcto? ¿Acaso todos los humanos somos pecadores? ¿Vivir bien, ser productivo, buena persona... es suficiente?<br>Desconcierta la libertad. Todos los actos libres dejan huella. ¿Qué impide que hagamos lo que queramos?
     </p>
+    <ul class="mb-12">
+      <li class="items-center flex ml-5">
+        <span class="mr-4 ml-3 text-lg leading-9">1.</span>
+        <p class="text-lg leading-9">Atractivo desordenado de los bienes.</p>
+      </li>
+      <li class="items-center flex ml-5">
+        <span class="mr-4 ml-3 text-lg leading-9">2.</span>
+        <p class="text-lg leading-9">La pereza.</p>
+      </li>
+      <li class="items-center flex ml-5">
+        <span class="mr-4 ml-3 text-lg leading-9">3.</span>
+        <p class="text-lg leading-9">Presión social o cultura.</p>
+      </li>
+    </ul>
+    <p class="mb-12 text-lg leading-9">
+      <strong>AMOR</strong><br>Espíritu de servicio: orientar la vida al servicio de los demás. No se puede vivir equidistantemente.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      <strong>RUPTURA</strong><br>División interna del hombre: <i>“No todo es bueno”</i>.<br>Cuesta socializar y relacionarse.<br>Con la naturaleza, debemos aprender a convivir.
+    </p>
+    <h2 id="22-la-historia-de-jesus" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #72b5b3">
+      2.2 LA HISTORIA DE JESUS
+    </h2>
+    <ul class="mb-12">
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">La revelación de Jesús fue gradual.</p>
+      </li>
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9"><i>El Verbo se hizo carne.</i></p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">El cristianismo no es filosofía ni un mito. Él nació y vivió en un tiempo y lugar determinado.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Jesús es el rostro de Dios, es la revelación de Dios.</p>
+      </li>
+    </ul>
+    <ul class="mb-12">
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Objeciones:</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Transmitida de generación en generación. ¿Realmente pasó?</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">¿Los discípulos engañaron a todos con la resurrección? ¿Es acaso el cristianismo un fraude?</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Y si los evangelios son relatos místicos, ¿no son reales? ¿Es Jesús el Mesías?</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Según <i>El Código Da Vinci</i>, la Biblia es un libro creado por el Imperio Romano para controlar a las masas (el Nuevo Testamento).</p>
+      </li>
+    </ul>
+    <ul class="mb-12">
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Fuentes:</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Escritos, textos, inscripciones, monedas, edificios, etc.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Es un personaje de la antigüedad. La mayor huella es la Iglesia y cómo su comunidad se remonta a la época de Jesús de Nazaret.</p>
+      </li>
+    </ul>
+    <ul class="mb-12">
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Convicciones:</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">El cristianismo en el Nuevo Testamento está basado en lo dicho por Jesús.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">¿Cuál es el fundamento? Algo debió pasar antes de la crucifixión para que surgiera la Iglesia.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Resurrección: efusión del Espíritu Santo, hay recuerdos.</p>
+      </li>
+    </ul>
+    <ul class="mb-12">
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Carácter histórico de la revelación cristiana:</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">La creación.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">La inteligencia de la naturaleza.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Dios como origen y fin del mundo.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">No obliga al creyente.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Para el creyente, la fe está basada en la historia. <i>Es razonable creer</i>.</p>
+      </li>
+    </ul>
+    <p class="mb-12 text-lg leading-9">
+      <strong>Anunciación o encarnación</strong><br>Dios envió al ángel Gabriel para avisar a la Virgen María que sería concebida con el nacimiento de Jesús.<br>Nace en Belén, entre animales. Vive de forma pobre y común.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      <strong>Vida oculta de Jesús</strong><br>Decidió ser artesano, vivir en familia, trabajar y tener una vida normal.<br>Pero entonces despierta su vida espiritual y comienza a trascender. Uno de los episodios es cuando es bautizado por Juan.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Jesús adulto revela que es el Mesías. El bautizo de Juan era un símbolo para dejar atrás los pecados de la vida pasada. Por eso Jesús debía ser crucificado y resucitar: condena de Dios.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      Aún hay muchos misterios de Jesús, pero quedan sus enseñanzas, la redención obrada por Cristo, y dudas por resolver.
+    </p>
+    <ul class="mb-12">
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Ser hijo de Dios y a la vez hombre demuestra que su sangre es divina, pero el cuerpo es imagen y semejanza de Dios.</p>
+      </li>
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Lo humano de Jesús y lo divino se unen: <strong>GRACIA</strong>.</p>
+      </li>
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Los milagros son dones de Dios, sobrenaturales. La resurrección es un milagro e ícono de la grandeza de Dios.</p>
+      </li>
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Jesús fue un maestro que enseñaba valores y el amor de Dios.</p>
+      </li>
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Los milagros, doctrina y personalidad eran señales de la autenticidad de Jesús.</p>
+      </li>
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">La catequesis en la llamada de los 12 discípulos, el sermón de la montaña...</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9"><i>La felicidad no viene de lo que se tiene, sino de lo que se es.</i></p>
+      </li>
+    </ul>
+    <ul class="mb-12">
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Tres parábolas: oveja, moneda, hijo pródigo...</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Se resalta la alegría de recuperar lo perdido. Dios no abandona al perdedor.</p>
+      </li>
+    </ul>
+    <ul class="mb-12">
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Reino de los cielos para quienes sufran a causa de su fe.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Intervención soberana y misericordiosa de Dios.</p>
+      </li>
+    </ul>
+    <ul class="mb-12">
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Los evangelios presentan los relatos y enseñanzas acerca de Jesús.</p>
+      </li>
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Los apóstoles son testigos.</p>
+      </li>
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Jesús es la salvación de la humanidad, con su pasión y fallecimiento.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Murió en una cruz para redimir al hombre y permitirle acceso al cielo, librándolo del pecado original.</p>
+      </li>
+    </ul>
+    <ul class="mb-12">
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Formó discípulos para transmitir sus enseñanzas.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Él buscaba perdonar a la humanidad.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">El Espíritu Santo es entregado a los discípulos: la <strong>GRACIA</strong> divina.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">40 días después del domingo de resurrección.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Edificar la Iglesia, repartir dones y carismas. Don que sale del Padre y del Hijo.</p>
+      </li>
+    </ul>
+    <ul class="mb-12">
+      <li class="items-center flex ml-5">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Vida santa y divina... <strong>GRACIA</strong>.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Comunión total con Dios e impulso para obrar por el bien.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Eso es lo que nos lleva al cielo y a la vida eterna: <i>gracia santificante</i>.</p>
+      </li>
+      <li class="items-center flex ml-14">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="text-lg leading-9">Actos buenos en convivencia permiten la vida en el cielo. Ese es el regalo de Dios.</p>
+      </li>
+    </ul>
 
     <!-- BOTONES -->
     <div class="flex justify-between items-center">
