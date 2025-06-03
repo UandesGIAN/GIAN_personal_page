@@ -13,7 +13,7 @@ class PagesController < ApplicationController
       "Youtube" => ["Origen", "Contenidos y Eras", "Mejores Trabajos", "GIAN Random", "Tier List"],
       "MikuMikuDance" => ["Origen", "WoomyGIAN", "EL TUTORIAL DE MMD SPLATOON DEFINITIVO"],
       "Videojuegos" => ["Origen", "BrinCalamar", "SquidBeatz3"],
-      "Dibujos" => ["2015", "2016", "2017", "2018-19", "2023-24"],
+      "Dibujos" => ["2015", "2016", "2017", "2018-19", "2023-24", "Dígitales"],
       "Música" => ["Remixes que he imaginado en mi cabeza", "Mashups realizados"],
       "Rankings" => ["Los MEJORES capítulos de algunas series que he visto", "TOP 3 Canciones X Tipo", "Todos los Videojuegos que he PROBADO y COMPLETADO", "Mis Canales de Youtube Preferidos", "Asignaturas de mi Universidad"],
       "PC" => ["Mi setup (historia)", "Montaje de computadoras", "Reparación de componentes", "Dual Boot", "Wake-On-Lan y control remoto"],
@@ -26,7 +26,7 @@ class PagesController < ApplicationController
     
     # Lista de subsecciones nuevas
     @new_subsections = {
-      "Dibujos" => ["2015", "2016", "2017", "2018-19", "2023-24"],
+      "Dibujos" => ["2015", "2016", "2017", "2018-19", "2023-24", "Dígitales"],
       "PC" => ["Mi setup (historia)"],
     }
 
