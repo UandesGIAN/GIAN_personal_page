@@ -15,11 +15,109 @@
     <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %> 
     <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
     rounded-2xl shadow-md flex-grow">
-    <h2 class="text-4xl sm:text-3xl lg:text-5xl text-center font-bold mb-" style="color: #9200cc;">6. Sobre la Amistad</h2>
+    <!-- TITULO -->
+    <h2 class="text-4xl sm:text-3xl lg:text-5xl text-center font-bold mb-4" style="color: #9200cc;">6. Sobre la Amistad</h2>
 
-    <p class="mb-6 text-lg">
-      <i>Work In Progress...</i>
+    <!-- INTRODUCCIÓN -->
+    <p class="mb-12 text-lg leading-9">
+      Anteriormente ya se definió la amistad, sin embargo, dado que este es un vínculo subjetivo y único entre dos personas, puede ser analizada y cuantificada mediante una estructura que considera sus diferentes dimensiones.<br>A través de la fórmula propuesta, es posible evaluar la relación en términos de su utilidad, complementariedad y complejidad, ponderadas por los factores de voluntad, confianza y apego.
     </p>
+
+    <!-- INDICE -->
+    <h2 class="text-4xl sm:text-4xl lg:text-5xl mt-40 text-center font-bold mb-4" style="color: #8000B3">Índice</h2>
+    <div class="flex justify-center mb-40" style="color: #8000B3">
+      <ul class="list-disc text-lg">
+        <li><a href="#61-las-variables" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #8000B3">6.1 Las variables</a></li>
+        <li><a href="#62-formula" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #8000B3">6.2 Formula</a></li>
+        <li><a href="#63-posibles-escalas" class="text-xl mt-2 text-center font-bold mb-4 underline" style="color: #8000B3">6.3 Posibles escalas</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTENIDO -->
+    <h2 id="61-las-variables" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #8000B3">
+      6.1 Las variables
+    </h2>
+    <p class="mb-12 text-lg leading-9">
+      Cada amistad tiene características que pueden medirse de manera relativa:
+    </p>
+    <ul class="mb-12 text-lg leading-9">
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="mt-1"><strong>Utilidad (IMPORTANCIA):</strong> ¿Qué función cumple la amistad en la vida de cada persona? ¿Qué tan relevante es para el desarrollo personal y emocional?</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="mt-1"><strong>Complementariedad (SIGNIFICADO):</strong> ¿Qué impacto tiene la relación en la evolución de ambos individuos? ¿Cómo se enriquecen mutuamente?</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="mt-1"><strong>Complejidad (ABSTRACCIÓN):</strong> ¿Cuán profundo es el vínculo? ¿Cuántas capas de conexión existen en términos de experiencias compartidas, entendimiento mutuo y compatibilidad?</p>
+      </li>
+    </ul>
+    <p class="mb-12 text-lg leading-9">
+      Estos tres factores se ponderan con otros tres elementos que reflejan la fortaleza y permanencia de la amistad:
+    </p>
+    <ul class="mb-12 text-lg leading-9">
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="mt-1"><strong>Voluntad (PERSISTENCIA):</strong> La intención de ambas partes de mantener la relación activa.</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="mt-1"><strong>Confianza (PROYECCIÓN):</strong> La seguridad que cada uno deposita en el otro y su expectativa de que la amistad perdure en el futuro.</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="mt-1"><strong>Apego (ORIGEN Y UNIÓN):</strong> La cercanía emocional y la conexión que une a ambos individuos, considerando su historia y vínculo inicial.</p>
+      </li>
+    </ul>
+    <h2 id="62-formula" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #8000B3">
+      6.2 Formula
+    </h2>
+    <p class="mb-12 text-lg leading-9">
+      Cada persona asigna un porcentaje subjetivo a estos valores según su percepción personal. Esto significa que la amistad se cuantiza desde la perspectiva de quien la evalúa, sin representar una medida absoluta.
+    </p>
+    <p class="mb-12 text-lg leading-9">
+      <%= raw '\[
+                \left( \frac{\text{Voluntad}_{\text{amigo}}}{\text{Voluntad}_{\text{yo}}} \cdot 0.25 \right) +
+                \left( \frac{\text{Confianza}_{\text{amigo}}}{\text{Confianza}_{\text{yo}}} \cdot 0.5 \right) +
+                \left( \frac{\text{Apego}_{\text{amigo}}}{\text{Apego}_{\text{yo}}} \cdot 0.25 \right)
+                \cdot
+                \left( \frac{\text{Utilidad} + \text{Complementariedad} + \text{Complejidad}}{3} \right)
+                \]' %>
+    </p>
+    <h2 id="63-posibles-escalas" class="text-xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4" style="color: #8000B3">
+      6.3 Posibles escalas
+    </h2>
+    <p class="mb-12 text-lg leading-9">
+      Como se mencionó, la amistad no es absoluta, este cálculo y sus interpretaciones no son más que una forma de representar la importancia personal que se tiene sobre distintos vínculos. Así, la cuantización es siempre relativa, puede variar con el tiempo dependiendo de las experiencias compartidas, las decisiones de cada individuo y las circunstancias externas. No se trata de establecer un valor absoluto, sino de comprender cómo se percibe la amistad en cada momento y qué tan importante es para cada persona. Aquí solo se proporcionan algunas escalas genéricas para entender el uso del cálculo. Es muy probable que los resultados varién mucho, la formula no es más que representativa, se debe tener un análisis muy crítico y objetivo, con ello se notará que muchas grandes amistades no siempre son tan importantes para uno como se creía, esto intenta ayudar a establecer correctamente las expectativas sobre cada ser y comprender cúanto se complementan y aportan mutuamente, tenerse amor propio es fundamental para poder recibir y dar amor a otros.
+    </p>
+    <ul class="mb-12 text-lg leading-9">
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="mt-1"><strong>< 20%</strong> → Relación frágil, basada en desconfianza o falta de conexión.</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="mt-1"><strong>20% - 40%</strong> → Amistad en el presente, sin certeza de futuro ni profundidad significativa.</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="mt-1"><strong>40% - 60%</strong> → Relación confiable y estable, pero sin un impacto determinante en la vida de cada uno.</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="mt-1"><strong>60% - 80%</strong> → Amistad relevante, con una influencia positiva y duradera.</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="mt-1"><strong>80% - 95%</strong> → Amistad importante, considerada como una parte esencial en la vida de ambos.</p>
+      </li>
+      <li class="items-center flex">
+        <span class="text-2xl ml-5 mr-8 text-black-800">•</span>
+        <p class="mt-1"><strong>> 95%</strong> → Amistad fundamental, un vínculo profundo e irremplazable.</p>
+      </li>
+    </ul>
 
     <div class="flex justify-between items-center">
         <div>
