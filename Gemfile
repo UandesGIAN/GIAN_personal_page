@@ -59,5 +59,7 @@ end
 
 gem "tailwindcss-rails", "~> 2.7"
 
-gem 'sitemap_generator'
+gem "sitemap_generator"
 
+gem "redcarpet"
+gem "rouge"

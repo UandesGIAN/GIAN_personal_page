@@ -6,8 +6,8 @@
   <!-- BANNER PRINCIPAL -->
   <div class="relative w-full min-h-screen flex flex-col items-center justify-start text-center pt-8"
       style="background: <%= @modo_luz == 'oscuro' ? 
-      "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/assets/banner.png')" : 
-      "url('/assets/banner.png')" %>; center/cover no-repeat; margin: 0; padding: 0;">
+      "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/banner.png')" : 
+      "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/assets/banner.png')" %>; center/cover no-repeat; margin: 0; padding: 0;">
     <h1 class="font-bold text-5xl sm:text-6xl mb-2 <%= 'text-gray-100' if @modo_luz == 'claro' %>
             <%= 'text-gray-300 bg-black bg-opacity-40' if @modo_luz == 'oscuro' %>  animate__animated animate__fadeInDown mt-48">
       BIENVENIDO A LA PÁGINA WEB DE GIAN.
@@ -195,8 +195,6 @@
       observer.observe(element);
     });
 
-    document.body.style.overflow = "hidden";
-
     document.addEventListener("DOMContentLoaded", () => {
       const botonExplorar = document.getElementById("explorar-contenidos");
 
@@ -214,8 +212,6 @@
   });
 
   document.addEventListener("DOMContentLoaded", function () {
-    // Bloquea el scroll al principio
-    document.body.style.overflow = "hidden";
 
     if (window.location.hash === "#contenido") {
       document.body.style.overflow = "auto";

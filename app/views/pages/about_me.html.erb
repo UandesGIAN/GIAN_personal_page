@@ -302,6 +302,30 @@
   </section>
 </div>
 
+<% stats = stats_for_page(request.path) %>
+<div class="text-container max-w-5xl mx-auto mt-20 px-4 flex flex-col pb-8">
+    <section id="bg-articulos" class="p-6 
+    <%= 'bg-gray-200 sm:bg-gray-300 text-gray-800' if @modo_luz == 'claro' %> 
+    <%= 'bg-gray-900 text-gray-300' if @modo_luz == 'oscuro' %> 
+    rounded-2xl shadow-md flex-grow">
+    <h2 class="text-5xl mt-4 text-center font-bold mb-8 <%= 'text-black' if @modo_luz == 'claro' %> 
+        <%= 'text-gray-200' if @modo_luz == 'oscuro' %>">Estadísticas de esta página</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+        <div class="bg-indigo-100 rounded-lg p-4">
+        <p class="text-lg font-semibold text-indigo-800">Visitas totales</p>
+        <p class="text-3xl font-bold"><%= stats["visits"] %></p>
+        </div>
+        <div class="bg-green-100 rounded-lg p-4">
+        <p class="text-lg font-semibold text-green-800">Usuarios activos</p>
+        <p class="text-3xl font-bold"><%= stats["current_users"].length %></p>
+        </div>
+        <div class="bg-yellow-100 rounded-lg p-4">
+        <p class="text-lg font-semibold text-yellow-800">Última visita</p>
+        <p class="text-md font-mono"><%= stats["last_visit"] %></p>
+        </div>
+    </section>
+    </div>
+</div>
 
 <!-- JAVASCRIPT PARA ANIMACIONES -->
 <script>

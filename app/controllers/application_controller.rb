@@ -10,5 +10,6 @@ class ApplicationController < ActionController::Base
     # Establecer el valor de la cookie en una variable de instancia
     @modo_luz = cookies[:modo_luz] || "claro"  # "claro" es el valor por defecto
   end
-  
+
+  helper :page_stats
 end
