@@ -13,42 +13,33 @@
     rounded-2xl shadow-md flex-grow">
     <h2 class="text-4xl sm:text-3xl lg:text-5xl mt-2 text-center font-bold mb-4 text-blue-700">1. Introducción</h2>
     
-		<p class="mb-6 text-lg">
-			<strong>Para darle un valor a una variable se hace:</strong> <br>
-			var = <span class="text-red-700">string</span>/<span class="text-green-700">int</span>/<span class="text-blue-700">float</span>
-			<br>
-			<span class="text-red-700">strings en “ ”</span>, <span style="color: rgba(200, 125, 0, 1.0);">carácteres en ‘ ’</span>.
-		</p>
+<p class="mb-6 text-lg leading-9"><strong>Para darle un valor a una variable se hace:</strong></p>
+<pre class="mb-6 overflow-x-auto rounded-lg bg-gray-800"><code class="language-python">var = &quot;texto&quot;   # string
+var2 = 10       # int
+var3 = 0.5      # float</code></pre>
+<p class="mb-6 text-lg leading-9">strings en “ ”, caracteres en ‘ ‘.</p>
+<p class="mb-6 text-lg leading-9"><strong>Funciones básicas para interactuar con la consola:</strong></p>
+<pre class="mb-6 overflow-x-auto rounded-lg bg-gray-800"><code class="language-python">print() # Imprime un string, con ',' se agrega un espacio y con '+' se juntan
+print("Hola",'y'+"Adios") # Tendrá de output: Hola yAdios
 
-		<p class="mb-6 text-lg">
-		<strong>Funciones básicas para interactuar con la consola</strong> 
-		<br>
-		</p>
-		<div class="console flex flex-center w-3/4 mb-6 text-lg">
-        <code>
-            <span class="function">print</span>()<span class="comment"> # Imprime un string, con ',' se agrega un espacio y con '+' se juntan</span><br>
-            <span class="function">print</span>(<span class="string">"Hola"</span>,<span class="string">'y'</span>+<span class="string">"Adios"</span>)
-			<span class="comment"> # Tendrá de output: Hola yAdios</span><br>
-			<br>
-			<span class="function">input</span>()<span class="comment"> # Entrada del usuario. Lee strings.</span><br>
-			<span class="function">input</span>(<span class="string">"Tambien puede imprimir texto"</span>)<br>
-        </code>
-    	</div>
+input() # Entrada del usuario. Lee strings.
+input("Tambien puede imprimir texto")</code></pre>
+<p class="mb-6 text-lg leading-9">Convertir...</p>
+<pre class="mb-6 overflow-x-auto rounded-lg bg-gray-800"><code class="language-python"># A int (número)
+int(*var*) 
 
-		<p class="mb-6 text-lg">
-		Convertir variable a <u>int</u>: <span class="text-green-700">int</span>(<i style="color: rgba(100,100,100,1.0);">variable</i>) 
-		<br>
-		A <u>string</u>: <span style="color: rgba(255,0,0,1.0);">str</span>(<i style="color: rgba(100,100,100,1.0);">variable</i>) 
-		<br>
-		A <u>float</u>: <span class="text-blue-700">float</span>(<i style="color: rgba(100,100,100,1.0);">variable</i>) 
-		<br><br>
-		De carácter a <u>unicode</u>:
-		<div class="console flex flex-center w-3/4 mb-8 text-lg">
-		<code><span class="function">ord</span>()<span class="comment"> # ej. ord(‘A’) retorna 65.</span></code></div>
-		De ASCII a <u>carácter</u>:
-		<div class="console flex flex-center w-3/4 mb-6 text-lg">
-		<code><span class="function">chr</span>()<span class="comment"> # ej. chr(95) retorna ‘A’.</span></code></div>
-		</p>
+# A string (texto)
+str(*var*)
+
+# A float (decimal)
+float(*var*) 
+
+for i in list((0,213,12)):
+    print(i)</code></pre>
+<p class="mb-6 text-lg leading-9">De carácter a unicode:</p>
+<pre class="mb-6 overflow-x-auto rounded-lg bg-gray-800"><code class="language-python">ord().  # ej. ord(‘A’) retorna 65.</code></pre>
+<p class="mb-6 text-lg leading-9">De ASCII a carácter:</p>
+<pre class="mb-6 overflow-x-auto rounded-lg bg-gray-800"><code class="language-python">chr()  # ej. chr(95) retorna ‘A’. </code></pre>
 
 		<p class="mb-6 text-lg">
 		<strong>Operadores</strong>
