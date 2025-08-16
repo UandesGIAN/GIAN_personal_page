@@ -1,5 +1,7 @@
 # config/initializers/page_stats.rb
 require "yaml"
+require "tempfile"
+require "fileutils"
 
 class PageStatsMiddleware
   STATS_FILE = Rails.root.join("tmp", "page_stats.yml")
@@ -10,10 +12,19 @@ class PageStatsMiddleware
 
   def call(env)
     path = env["PATH_INFO"]
-    ip = env["REMOTE_ADDR"]
-    now = Time.now
+    ip   = env["REMOTE_ADDR"]
+    now  = Time.now
 
-    stats = File.exist?(STATS_FILE) ? YAML.load_file(STATS_FILE) : {}
+    # Leer YAML de forma segura
+    stats = if File.exist?(STATS_FILE)
+              begin
+                YAML.load_file(STATS_FILE) || {}
+              rescue Psych::SyntaxError
+                {}
+              end
+    else
+              {}
+    end
 
     stats[path] ||= {
       "visits" => 0,
@@ -30,7 +41,11 @@ class PageStatsMiddleware
       Time.parse(t) < now - 300
     end
 
-    File.write(STATS_FILE, stats.to_yaml)
+    # Escritura atómica para evitar corrupción
+    tmpfile = Tempfile.new("page_stats")
+    tmpfile.write(stats.to_yaml)
+    tmpfile.close
+    FileUtils.mv(tmpfile.path, STATS_FILE)
 
     @app.call(env)
   end
